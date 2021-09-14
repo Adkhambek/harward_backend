@@ -30,5 +30,3 @@ fetchAll = async (query, ...values) => {
     client.release();
   }
 };
-
-fetchAll("select * from info");
