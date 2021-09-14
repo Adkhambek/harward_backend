@@ -1,32 +1,34 @@
 require("dotenv").config({ path: "../../.env" });
 const { Pool } = require("pg");
-const keys = require("../config/keys");
+const { connectionString } = require("../config/keys");
 const pool = new Pool({
-    connectionString: "postgres://xcvzbrss:6ri0v7zWQrdP1Xzrhl66deFnDih7Qg66@chunee.db.elephantsql.com/xcvzbrss"
+  connectionString,
 });
 
 exports.fetch = async (query, ...values) => {
-    const client = await pool.connect();
-    try {
-        const {
-            rows: [row],
-        } = await client.query(query, values.length ? values : null);
-        return row;
-    } catch (error) {
-        console.log(error);
-    } finally {
-        client.release();
-    }
+  const client = await pool.connect();
+  try {
+    const {
+      rows: [row],
+    } = await client.query(query, values.length ? values : null);
+    return row;
+  } catch (error) {
+    console.log(error);
+  } finally {
+    client.release();
+  }
 };
 
-exports.fetchAll = async (query, ...values) => {
-    const client = await pool.connect();
-    try {
-        const { rows } = await client.query(query, values.length ? values : null);
-        return rows;
-    } catch (error) {
-        console.log(error);
-    } finally {
-        client.release();
-    }
+fetchAll = async (query, ...values) => {
+  const client = await pool.connect();
+  try {
+    const { rows } = await client.query(query, values.length ? values : null);
+    console.log(rows);
+  } catch (error) {
+    console.log(error);
+  } finally {
+    client.release();
+  }
 };
+
+fetchAll("select * from info");
