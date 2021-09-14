@@ -1,7 +1,9 @@
 require("dotenv").config({ path: "../../.env" });
 const { Pool } = require("pg");
 const keys = require("../config/keys");
-const pool = new Pool(keys.database);
+const pool = new Pool({
+    connectionString: "postgres://xcvzbrss:6ri0v7zWQrdP1Xzrhl66deFnDih7Qg66@chunee.db.elephantsql.com/xcvzbrss"
+});
 
 exports.fetch = async (query, ...values) => {
     const client = await pool.connect();
