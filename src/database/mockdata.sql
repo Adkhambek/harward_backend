@@ -7,8 +7,54 @@ INSERT INTO info (
 ) VALUES 
 ('Harvard@gmail.com', '+998941756227', '+998941756227', 'Mirzo Ulug''bek ko''chasi 70-uy');
 
+-- inser home_contact
+INSERT INTO home_contact(
+    name,
+    number
+) VALUES 
+(
+    'Palonchi1',
+    '+998999999999'
+),
+(
+    'Palonchi2',
+    '+998999999999'
+),
+(
+    'Palonchi3',
+    '+998999999999'
+),
+(
+    'Palonchi4',
+    '+998999999999'
+);
+
 -- insert contact
-INSERT INTO contact() VALUES ();
+INSERT INTO contact(
+    name,
+    number,
+    body
+) VALUES 
+(
+    'Palonchi1',
+    '+998999999999',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.'
+),
+(
+    'Palonchi2',
+    '+998999999999',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.'
+),
+(
+    'Palonchi3',
+    '+998999999999',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.'
+),
+(
+    'Palonchi4',
+    '+998999999999',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.'
+);
 
 -- insert news
 INSERT INTO news (

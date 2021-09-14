@@ -8,12 +8,19 @@ CREATE TABLE info(
     address varchar(100) not null
 );
 
+-- create home_contact
+CREATE TABLE home_contact(
+    name varchar(70) not null,
+    number varchar(13) not null,
+    time timestamptz default current_timestamp
+);
+
 -- create contact table
 CREATE TABLE contact(
     name varchar(70) not null,
     number varchar(13) not null,
     body text not null,
-    time timestamptz default current_timestamp,
+    time timestamptz default current_timestamp
 );
 
 -- create news table
@@ -23,7 +30,7 @@ CREATE TABLE news(
     body text not null,
     image varchar(100) not null,
     author varchar(70) not null,
-    time timestamptz default current_timestamp,
+    time timestamptz default current_timestamp
 );
 
 -- create courses table
@@ -40,7 +47,7 @@ CREATE TABLE comment_course(
     comment_id serial primary key,
     name varchar(70) not null,
     body text not null,
-    time timestamptz default current_timestamp,
+    time timestamptz default current_timestamp
 );
 
 -- create table about
