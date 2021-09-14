@@ -19,7 +19,7 @@ exports.fetch = async (query, ...values) => {
   }
 };
 
-fetchAll = async (query, ...values) => {
+exports.fetchAll = async (query, ...values) => {
   const client = await pool.connect();
   try {
     const { rows } = await client.query(query, values.length ? values : null);
