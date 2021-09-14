@@ -8,6 +8,7 @@ const routes = require("./routes");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
+app.use("/admin", express.static(path.join(__dirname, "public/dashboard")));
 app.use(helmet());
 
 //ejs setting:
