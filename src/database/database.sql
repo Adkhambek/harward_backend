@@ -20,6 +20,7 @@ CREATE TABLE contact(
     name varchar(70) not null,
     number varchar(13) not null,
     body text not null,
+    checked smallint default 0,
     time timestamptz default current_timestamp
 );
 
