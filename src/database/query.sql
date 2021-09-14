@@ -7,14 +7,14 @@ SET mail = '',
 
 -- select info
 SELECT 
-    name,
-    number,
-    TO_CHAR(date, 'yyyy-MM-dd HH24:MI:SS') as time
+    *
 FROM info;
 
 -- select home_contact
 SELECT 
-    *
+    name,
+    number,
+    TO_CHAR(time, 'yyyy-MM-dd HH24:MI:SS') as time
 FROM home_contact;
 
 -- select contact
@@ -22,20 +22,22 @@ SELECT
     name,
     number,
     body,
-    TO_CHAR(date, 'yyyy-MM-dd HH24:MI:SS') as time
-FROM contact;
+    TO_CHAR(time, 'yyyy-MM-dd HH24:MI:SS') as time
+FROM contact
+WHERE checked = 0;
 
 SELECT 
     name,
     number,
     body,
-    TO_CHAR(date, 'yyyy-MM-dd HH24:MI:SS') as time
+    TO_CHAR(time, 'yyyy-MM-dd HH24:MI:SS') as time
 FROM contact
 WHERE checked = 1;
 
 -- update contact
 UPDATE contact
-SET checked = 1;
+SET checked = 1
+WHERE contact_id = 1;
 
 -- select news
 SELECT 
@@ -43,15 +45,18 @@ SELECT
     body,
     image,
     author,
-    TO_CHAR(date, 'yyyy-MM-dd HH24:MI:SS') as time
+    TO_CHAR(time, 'yyyy-MM-dd HH24:MI:SS') as time
 FROM news;
 
 -- select courses
 SELECT 
-    *
+    image,
+    title,
+    teacher,
+    prise || '$' as prise
 FROM courses;
 
 -- select table
 SELECT 
     *
-FROM table;
+FROM about;
