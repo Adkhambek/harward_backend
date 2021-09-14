@@ -10,6 +10,7 @@ CREATE TABLE info(
 
 -- create home_contact
 CREATE TABLE home_contact(
+    home_contact_id serial primary key,
     name varchar(70) not null,
     number varchar(13) not null,
     time timestamptz default current_timestamp
@@ -17,9 +18,11 @@ CREATE TABLE home_contact(
 
 -- create contact table
 CREATE TABLE contact(
+    contact_id serial primary key,
     name varchar(70) not null,
     number varchar(13) not null,
     body text not null,
+    checked smallint default 0,
     time timestamptz default current_timestamp
 );
 
