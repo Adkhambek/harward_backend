@@ -46,12 +46,12 @@ CREATE TABLE courses(
 );
 
 -- create table comment_course
-CREATE TABLE comment_course(
-    comment_id serial primary key,
-    name varchar(70) not null,
-    body text not null,
-    time timestamptz default current_timestamp
-);
+-- CREATE TABLE comment_course(
+--     comment_id serial primary key,
+--     name varchar(70) not null,
+--     body text not null,
+--     time timestamptz default current_timestamp
+-- );
 
 -- create table about
 CREATE TABLE about(
