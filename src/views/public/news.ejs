@@ -15,30 +15,14 @@
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="sass/style.css">
     
-
+    
 </head>
 <body>
-  
+    
     <section class="news" id="news">
-         <div class="container">
-            <div class="row navbar">
-                <div class="col-lg-4 col-md-4">
-                    <div class="hamb" onclick="add()">
-                        <img src="images/main/menu.svg" alt="" id="hamb">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 d-flex justify-content-center">
-                    <a href="/" class="logo">      
-                        <img src="images/main/logo.png" alt="">
-                   </a>
-                </div>
-                <div class="col-lg-4 col-md-4 d-flex justify-content-end">
-                    <div class="links">
-                        <a href="registr2" class="enter">Kirish</a>
-                        <a href="registr" class="register">Ro'yxatdan o'tish</a>
-                    </div>
-                </div>
-            </div>
+        <div class="container">
+            <%- include("header.ejs") %> 
+            
             <div class="menu" id="menu">
                 <div class="logon">
                     <img src="images/main/logo.png" alt="">
@@ -46,9 +30,9 @@
                 <div class="close" onclick="remove()">
                     <img src="images/main/close.svg" alt="" id="close">
                 </div>
-
-                <div class="links additional">
                 
+                <div class="links additional">
+                    
                     <a href="registr" class="register">Ro'yxatdan o'tish</a>
                     <a href="registr2" class="enter">Kirish</a>
                 </div>
@@ -61,26 +45,26 @@
                     <li><a href="about">Biz haqimizda</a></li>
                     <li><a href="subjects">Test topshirish</a></li>
                     <li><a href="aloqa">Aloqa</a></li>
-                  </ul>
+                </ul>
             </div>
-         </div>
-
-
-            <section class="asosiy">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h2>Yangiliklar</h2>
-                        </div>
-                       
+        </div>
+        
+        
+        <section class="asosiy">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2>Yangiliklar</h2>
                     </div>
-
-
-                    <div class="row">
-                        <div class="col-lg-12 boxes">
-                           <div class="row">
-                               <div class="col-lg-6 col-md-8">
-                                  <div class="box1">
+                    
+                </div>
+                
+                
+                <div class="row">
+                    <div class="col-lg-12 boxes">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-8">
+                                <div class="box1">
                                     <img src="images/yangiliklar/picture1.png" alt="picture1">
                                     <div class="contents">
                                         <p>21 May 2021</p>
@@ -88,47 +72,47 @@
                                         <p class="one">Ramazon oyi munosabati bilan katta chegirmalarni kutib oling.Nemis tili 50% va boshqa nimadur nimadur va yana nimadur</p>
                                         <a href="text">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                                     </div>
-                                  </div>
-                               </div>
-        
-                               <div class="col-lg-6 col-md-4 col-sm-12 divide">
-                                  <div class="box2">
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6 col-md-4 col-sm-12 divide">
+                                <div class="box2">
                                     <img src="images/yangiliklar/picture2.png" alt="picture2">
                                     <div class="content">
                                         <h4>Ramazon oyi munosabati bilan juda katta chegirmalarni kutib oling</h4>
                                         <a href="text">Davomi  <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                                         <p>21 May 2021</p>
                                     </div>
-                                  </div>
-                                  <div class="box2">
+                                </div>
+                                <div class="box2">
                                     <img src="images/yangiliklar/picture3.png" alt="picture2">
                                     <div class="content">
                                         <h4>Ramazon oyi munosabati bilan juda katta chegirmalarni kutib oling</h4>
                                         <a href="text">Davomi  <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                                         <p>21 May 2021</p>
                                     </div>
-                                  </div>
-                                  <div class="box2 remove">
+                                </div>
+                                <div class="box2 remove">
                                     <img src="images/yangiliklar/picture4.png" alt="picture2">
                                     <div class="content">
                                         <h4>Ramazon oyi munosabati bilan juda katta chegirmalarni kutib oling</h4>
                                         <a href="text">Davomi  <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                                         <p>21 May 2021</p>
                                     </div>
-                                  </div>
-                               </div>
-                               
-                           </div>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
-                    <br>
-                    <br>
-                    <br><br><br>
-
-                    <div class="row mb-5" data-aos="fade-up">
-                        <div class="col-lg-12 boxes">
-                           <div class="row">
-                               <div class="col-md-12">
+                </div>
+                <br>
+                <br>
+                <br><br><br>
+                
+                <div class="row mb-5" data-aos="fade-up">
+                    <div class="col-lg-12 boxes">
+                        <div class="row">
+                            <div class="col-md-12">
                                 <div class="box1 new">
                                     <img src="images/yangiliklar/picture1.png" alt="picture1">
                                     <div class="contents">
@@ -137,11 +121,11 @@
                                         <p class="one">Ramazon oyi munosabati bilan katta chegirmalarni kutib oling.Nemis tili 50% va boshqa nimadur nimadur va yana nimadur</p>
                                         <a href="text">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                                     </div>
-                                  </div>
-                               </div>
-                               <div class="col-lg-6 col-md-8 smth">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-8 smth">
                                 
-                                  <div class="box3">
+                                <div class="box3">
                                     <img src="images/yangiliklar/church.png" alt="picture1">
                                     <div class="contents">
                                         <p>21 May 2021</p>
@@ -149,8 +133,8 @@
                                         <p class="one">Ramazon oyi munosabati bilan katta chegirmalarni kutib oling.Nemis tili 50% va boshqa nimadur nimadur va yana nimadur</p>
                                         <a href="text">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                                     </div>
-                                  </div>
-                                  <div class="box3">
+                                </div>
+                                <div class="box3">
                                     <img src="images/yangiliklar/church2.png" alt="picture1">
                                     <div class="contents">
                                         <p>21 May 2021</p>
@@ -158,167 +142,133 @@
                                         <p class="one">Ramazon oyi munosabati bilan katta chegirmalarni kutib oling.Nemis tili 50% va boshqa nimadur nimadur va yana nimadur</p>
                                         <a href="text">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                                     </div>
-                                  </div>
-                               </div>
-        
-                               <div class="col-lg-6 col-md-4 divide">
-                                  <div class="box2">
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6 col-md-4 divide">
+                                <div class="box2">
                                     <img src="images/yangiliklar/picture2.png" alt="picture2">
                                     <div class="content">
                                         <h4>Ramazon oyi munosabati bilan juda katta chegirmalarni kutib oling</h4>
                                         <a href="text">Davomi  <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                                         <p>21 May 2021</p>
                                     </div>
-                                  </div>
-                                  <div class="box2">
+                                </div>
+                                <div class="box2">
                                     <img src="images/yangiliklar/picture3.png" alt="picture2">
                                     <div class="content">
                                         <h4>Ramazon oyi munosabati bilan juda katta chegirmalarni kutib oling</h4>
                                         <a href="text">Davomi  <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                                         <p>21 May 2021</p>
                                     </div>
-                                  </div>
-                                  <div class="box2 remove">
+                                </div>
+                                <div class="box2 remove">
                                     <img src="images/yangiliklar/picture4.png" alt="picture2">
                                     <div class="content">
                                         <h4>Ramazon oyi munosabati bilan juda katta chegirmalarni kutib oling</h4>
                                         <a href="text">Davomi  <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                                         <p>21 May 2021</p>
                                     </div>
-                                  </div>
-                               </div>
-                               
-                           </div>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
-                    <br><br><br>
-        
-                    <div class="row" data-aos="fade-up">
-                        <div class="col-lg-3 col-md-4 col-sm-4 church">
-                            <img src="images/yangiliklar/church.png" alt="Church">
-                            <div class="contents">
-                                <p>21 May 2021</p>
-                                <h2>Ramazon oyi munosabati bilan katta chegirmalarni kutib oling</h2>
-        
-                                <a href="text">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-4 church">
-                            <img src="images/yangiliklar/church.png" alt="Church">
-                            <div class="contents">
-                                <p>21 May 2021</p>
-                                <h2>Ramazon oyi munosabati bilan katta chegirmalarni kutib oling</h2>
-                                
-                                <a href="text">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-4 church">
-                            <img src="images/yangiliklar/church.png" alt="Church">
-                            <div class="contents">
-                                <p>21 May 2021</p>
-                                <h2>Ramazon oyi munosabati bilan katta chegirmalarni kutib oling</h2>
-                                
-                                <a href="text">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-4 church">
-                            <img src="images/yangiliklar/church.png" alt="Church">
-                            <div class="contents">
-                                <p>21 May 2021</p>
-                                <h2>Ramazon oyi munosabati bilan katta chegirmalarni kutib oling</h2>
-                                
-                                <a href="text">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-4 church">
-                            <img src="images/yangiliklar/church.png" alt="Church">
-                            <div class="contents">
-                                <p>21 May 2021</p>
-                                <h2>Ramazon oyi munosabati bilan katta chegirmalarni kutib oling</h2>
-                                
-                                <a href="text">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-4 church">
-                            <img src="images/yangiliklar/church.png" alt="Church">
-                            <div class="contents">
-                                <p>21 May 2021</p>
-                                <h2>Ramazon oyi munosabati bilan katta chegirmalarni kutib oling</h2>
-                                
-                                <a href="text">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-4 church">
-                            <img src="images/yangiliklar/church.png" alt="Church">
-                            <div class="contents">
-                                <p>21 May 2021</p>
-                                <h2>Ramazon oyi munosabati bilan katta chegirmalarni kutib oling</h2>
-                                
-                                <a href="text">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-4 church">
-                            <img src="images/yangiliklar/church.png" alt="Church">
-                            <div class="contents">
-                                <p>21 May 2021</p>
-                                <h2>Ramazon oyi munosabati bilan katta chegirmalarni kutib oling</h2>
-                                
-                                <a href="text">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-        
-                    </div>
-                   
                 </div>
-               
-            </section>
-
-            <section class="footer">
-                <div class="container">
-                    <div class="row firsts">
-                        <div class="col-lg-4 col-md-4 col-sm-12">
-                            <div class="links">
-                                <div class="link">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                </div>
-                                <div class="link">
-                                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                                </div>
-                                <div class="link">
-                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                                </div>
-                                <div class="link">
-                                    <img src="images/main/telegram.png" alt="telegram">
-                                </div>
-                                <div class="link">
-                                   <img src="images/main/tik-tok.png" alt="tik-tok">
-                                </div>
-                            </div>
-                        </div>
-        
-                        <div class="col-lg-4 col-md-4 col-sm-12 d-flex justify-content-center">
-                            <div class="logo">
-                                <img src="images/main/logo.png" alt="Logo">
-                            </div>
-                        </div>
-        
-                        <div class="col-lg-4 col-md-4 d-flex justify-content-end listss">
-                            <ul class="list p-0">
-                                <li><a href="news">Yangiliklar</a></li>
-                                <li><a href="blog">Blog</a></li>
-                                <li><a href="aloqa">Aloqa</a></li>
-                            </ul>
+                <br><br><br>
+                
+                <div class="row" data-aos="fade-up">
+                    <div class="col-lg-3 col-md-4 col-sm-4 church">
+                        <img src="images/yangiliklar/church.png" alt="Church">
+                        <div class="contents">
+                            <p>21 May 2021</p>
+                            <h2>Ramazon oyi munosabati bilan katta chegirmalarni kutib oling</h2>
+                            
+                            <a href="text">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                         </div>
                     </div>
+                    <div class="col-lg-3 col-md-4 col-sm-4 church">
+                        <img src="images/yangiliklar/church.png" alt="Church">
+                        <div class="contents">
+                            <p>21 May 2021</p>
+                            <h2>Ramazon oyi munosabati bilan katta chegirmalarni kutib oling</h2>
+                            
+                            <a href="text">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-4 church">
+                        <img src="images/yangiliklar/church.png" alt="Church">
+                        <div class="contents">
+                            <p>21 May 2021</p>
+                            <h2>Ramazon oyi munosabati bilan katta chegirmalarni kutib oling</h2>
+                            
+                            <a href="text">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-4 church">
+                        <img src="images/yangiliklar/church.png" alt="Church">
+                        <div class="contents">
+                            <p>21 May 2021</p>
+                            <h2>Ramazon oyi munosabati bilan katta chegirmalarni kutib oling</h2>
+                            
+                            <a href="text">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-4 church">
+                        <img src="images/yangiliklar/church.png" alt="Church">
+                        <div class="contents">
+                            <p>21 May 2021</p>
+                            <h2>Ramazon oyi munosabati bilan katta chegirmalarni kutib oling</h2>
+                            
+                            <a href="text">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-4 church">
+                        <img src="images/yangiliklar/church.png" alt="Church">
+                        <div class="contents">
+                            <p>21 May 2021</p>
+                            <h2>Ramazon oyi munosabati bilan katta chegirmalarni kutib oling</h2>
+                            
+                            <a href="text">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-4 church">
+                        <img src="images/yangiliklar/church.png" alt="Church">
+                        <div class="contents">
+                            <p>21 May 2021</p>
+                            <h2>Ramazon oyi munosabati bilan katta chegirmalarni kutib oling</h2>
+                            
+                            <a href="text">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-4 church">
+                        <img src="images/yangiliklar/church.png" alt="Church">
+                        <div class="contents">
+                            <p>21 May 2021</p>
+                            <h2>Ramazon oyi munosabati bilan katta chegirmalarni kutib oling</h2>
+                            
+                            <a href="text">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </section>
         
-                    <div class="row seconds d-flex align-items-start start">
-                       <div class="col-lg-4 col-md-4 col-sm-4 d-flex justify-content-end end">
-                           <div class="contact">
-                              <i class="fa fa-envelope" aria-hidden="true"></i>
-                              <a href="#">Harvard@gmail.com</a>
-                           </div>
-                       </div>
-                       <div class="col-lg-4 col-md-4 col-sm-4 d-flex justify-content-center end">
+        <section class="footer">
+            <div class="container">
+                <%- include("footer.ejs") %>
+                
+                <div class="row seconds d-flex align-items-start start">
+                    <div class="col-lg-4 col-md-4 col-sm-4 d-flex justify-content-end end">
+                        <div class="contact">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <a href="#">Harvard@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 d-flex justify-content-center end">
                         <div class="contact">
                             <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
                             <p class="p-0 m-0">+998941756227</p>
@@ -328,17 +278,17 @@
                     <div class="col-lg-4 col-md-4 col-sm-4 d-flex justify-content-start end">
                         <div class="contact">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
-                           <p>Mirzo Ulug'bek ko'chasi 70-uy</p>
+                            <p>Mirzo Ulug'bek ko'chasi 70-uy</p>
                         </div>
                     </div>
-                    </div>
                 </div>
-            </section>
-  
+            </div>
+        </section>
+        
     </section>
-
     
-	<script src="/js/jquery.min.js"></script>
+    
+    <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/owl.carousel.min.js"></script>
     <script src="/js/slick.js"></script>
