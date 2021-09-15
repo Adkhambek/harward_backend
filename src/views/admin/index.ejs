@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Responsive Bootstrap 4 Admin &amp; Dashboard Template"
+    />
+    <meta name="author" content="Bdtask" />
+    <title>Main Page</title>
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/admin/dist/img/favicon.png" />
+    <!--Global Styles(used by all pages)-->
+    <link
+      href="/admin/plugins/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="/admin/plugins/metisMenu/metisMenu.min.css" rel="stylesheet" />
+    <link href="/admin/plugins/fontawesome/css/all.min.css" rel="stylesheet" />
+    <link
+      href="/admin/plugins/typicons/src/typicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="/admin/plugins/themify-icons/themify-icons.min.css"
+      rel="stylesheet"
+    />
+    <!--Start Your Custom Style Now-->
+    <link href="/admin/dist/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Page loader -->
+    <%- include("includes/loader.ejs")%>
+
+    <div class="wrapper">
+      <!-- Sidebar  -->
+      <%- include("includes/sidebar.ejs") %>
+
+      <div class="content-wrapper">
+        <div class="main-content">
+          <!-- Header -->
+          <%- include("includes/header.ejs")%>
+
+          <div class="content-header row align-items-center m-0">
+            <nav
+              aria-label="breadcrumb"
+              class="col-sm-4 order-sm-last mb-3 mb-sm-0 p-0"
+            >
+              <ol
+                class="
+                  breadcrumb
+                  d-inline-flex
+                  font-weight-600
+                  fs-13
+                  bg-white
+                  mb-0
+                  float-sm-right
+                "
+              >
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Forms</a></li>
+                <li class="breadcrumb-item active">Select</li>
+              </ol>
+            </nav>
+            <div class="col-sm-8 header-title p-0">
+              <div class="media">
+                <div class="header-icon text-success mr-3">
+                  <i class="typcn typcn-puzzle-outline"></i>
+                </div>
+                <div class="media-body">
+                  <h1 class="font-weight-bold">Starter</h1>
+                  <small>From now on you will start your activities.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="body-content"></div>
+        </div>
+        <!--Footer-->
+        <%- include("includes/footer.ejs")%>
+
+        <div class="overlay"></div>
+      </div>
+    </div>
+
+    <!--Global script(used by all pages)-->
+    <script
+      data-cfasync="false"
+      src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script src="/admin/plugins/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="/admin/dist/js/popper.min.js"></script>
+    <script src="/admin/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/admin/plugins/metisMenu/metisMenu.min.js"></script>
+    <script src="/admin/plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+    <script src="/admin/dist/js/sidebar.js"></script>
+  </body>
+</html>

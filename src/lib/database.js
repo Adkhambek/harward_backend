@@ -19,16 +19,14 @@ exports.fetch = async (query, ...values) => {
   }
 };
 
-fetchAll = async (query, ...values) => {
+exports.fetchAll = async (query, ...values) => {
   const client = await pool.connect();
   try {
     const { rows } = await client.query(query, values.length ? values : null);
-    console.log(rows);
+    return rows
   } catch (error) {
     console.log(error);
   } finally {
     client.release();
   }
 };
-
-fetchAll("select * from info");
