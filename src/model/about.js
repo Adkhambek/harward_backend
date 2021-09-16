@@ -16,6 +16,7 @@ SELECT
     teacher_detail
 FROM teachers;
 `
+const SELECT_INFO = `SELECT * FROM info;`
 
 exports.selectAllData = () => fetch(SELECT_ALL);
 
@@ -30,3 +31,5 @@ exports.updateAbout = (data, videoName) => fetch(UPDATE,
 exports.getAbout = () => fetch(SELECT_ALL);
 
 exports.getTeachers = () => fetchAll(SELECT_TEACHERS)
+
+exports.getInfo = () => fetch(SELECT_INFO)
