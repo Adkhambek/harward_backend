@@ -57,13 +57,7 @@ SELECT
 FROM courses;
 
 -- select table about
-SELECT 
-    body,
-    about.vidoe,
-    students,
-    teachers,
-    exprience || ' yil'
-FROM about;
+SELECT * FROM about;
 
 -- update about
 UPDATE about
