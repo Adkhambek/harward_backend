@@ -67,7 +67,9 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6">
                     <h2>Biz haqimizda</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fuga eveniet expedita tenetur consectetur voluptatibus molestiae tempore, ducimus corrupti sed optio porro eius, nam harum explicabo. Laboriosam vel dicta quo aut, laudantium sunt. Corrupti culpa praesentium magnam nam quis provident, possimus tempore sapiente ducimus natus similique maiores eum quam cumque.</p>
+                    <p>
+                        <%= body %>
+                    </p>
                     
                     <h3>Diqqat batafsil malumotni quyidagi video orqali olishingiz mumkin</h3>
                     <div class="sign">
@@ -79,7 +81,7 @@
                 <div class="col-lg-6 col-md-6 hand" >
                     <div class="vid" data-aos="fade-up">
                         <video  controls loop>
-                            <source src="video/two.mp4" type="video/mp4">
+                            <source src="/video/<%= vidoe%>" type="video/mp4">
                         </video>
                     </div>
                     <div class="hands">
@@ -95,19 +97,19 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12 centers" data-aos="fade-up">
                     <div class="number">
-                        <h1>876</h1>
+                        <h1><%= students %></h1>
                         <p>O'quvchilar soni</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 d-flex justify-content-center centers" data-aos="fade-up">
                     <div class="number">
-                        <h1>56</h1>
+                        <h1><%= teachers %></h1>
                         <p>O'qituvchilar soni</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12  centers" data-aos="fade-up">
                     <div class="number">
-                        <h1>5 yil</h1>
+                        <h1><%= exprience%> yil</h1>
                         <p>O'qituvchilarning o'rtacha ish tajribasi</p>
                     </div>
                 </div>

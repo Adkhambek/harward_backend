@@ -18,3 +18,5 @@ exports.updateAbout = (data, videoName) => fetch(UPDATE,
     data.experience,
     videoName
     )
+
+exports.getAbout = () => fetch(SELECT_ALL);
