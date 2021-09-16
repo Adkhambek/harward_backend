@@ -10,10 +10,16 @@
     <nav class="sidebar-nav">
       <ul class="metismenu">
         <li class="nav-label">Main Menu</li>
-        <li class="<?php if ($page == 'dash') {echo 'mm-active';}?>">
-          <a href="/">
+        <li class="mm-active">
+          <a href="/admin">
             <i class="typcn typcn-home-outline mr-2"></i>
             Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="/admin/statistics">
+            <i class="typcn typcn-chart-bar-outline mr-2"></i>
+            Statistics
           </a>
         </li>
 
@@ -23,13 +29,13 @@
             Tables
           </a>
           <ul class="nav-second-level">
-            <li class="<?php if ($page == 'blogt') {echo 'mm-active';}?>">
+            <li class="">
               <a href="blog_table">Blog</a>
             </li>
-            <li class="<?php if ($page == 'bookt') {echo 'mm-active';}?>">
+            <li class="">
               <a href="book_table">Books</a>
             </li>
-            <li class="<?php if ($page == 'courset') {echo 'mm-active';}?>">
+            <li class="">
               <a href="course_table">Courses</a>
             </li>
           </ul>
@@ -40,22 +46,22 @@
             Forms
           </a>
           <ul class="nav-second-level">
-            <li class="<?php if ($page == 'blog') {echo 'mm-active';}?>">
+            <li class="">
               <a href="blog">Blog post adding</a>
             </li>
-            <li class="<?php if ($page == 'book') {echo 'mm-active';}?>">
+            <li class="">
               <a href="book">Book adding</a>
             </li>
-            <li class="<?php if ($page == 'course') {echo 'mm-active';}?>">
+            <li class="">
               <a href="course">Course adding</a>
             </li>
-            <li class="<?php if ($page == 'quote') {echo 'mm-active';}?>">
+            <li class="">
               <a href="quote">Quote adding</a>
             </li>
-            <li class="<?php if ($page == 'blogc') {echo 'mm-active';}?>">
+            <li class="">
               <a href="blog_category">Blog category</a>
             </li>
-            <li class="<?php if ($page == 'bookc') {echo 'mm-active';}?>">
+            <li class="">
               <a href="book_category">Book category</a>
             </li>
           </ul>
@@ -66,13 +72,13 @@
             Sending public
           </a>
           <ul class="nav-second-level">
-            <li class="<?php if ($page == 'mail') {echo 'mm-active';}?>">
+            <li class="">
               <a href="gmail">Mail</a>
             </li>
-            <li class="<?php if ($page == 'telegram') {echo 'mm-active';}?>">
+            <li class="">
               <a href="telegrams">Telegram</a>
             </li>
-            <li class="<?php if ($page == 'newsletter') {echo 'mm-active';}?>">
+            <li class="">
               <a href="newsletter">Newsletter</a>
             </li>
           </ul>
@@ -83,17 +89,17 @@
             Contact & Comments
           </a>
           <ul class="nav-second-level">
-            <li class="<?php if ($page == 'contact') {echo 'mm-active';}?>">
+            <li class="">
               <a href="contact">Contact</a>
             </li>
-            <li class="<?php if ($page == 'comments') {echo 'mm-active';}?>">
+            <li class="">
               <a href="comments">Comments</a>
             </li>
           </ul>
         </li>
         <li class="nav-label">Pages</li>
 
-        <li class="<?php if ($page == 'about') {echo 'mm-active';}?>">
+        <li class="">
           <a href="aboutus"
             ><i class="typcn typcn-info-large mr-2"></i>AboutUs</a
           >
@@ -103,16 +109,16 @@
             ><i class="typcn typcn-contacts mr-2"></i>Portfolio</a
           >
           <ul class="nav-second-level">
-            <li class="<?php if ($page == 'portfolio') {echo 'mm-active';}?>">
+            <li class="">
               <a href="portfolio">Portfolio</a>
             </li>
-            <li class="<?php if ($page == 'service') {echo 'mm-active';}?>">
+            <li class="">
               <a href="service">Services</a>
             </li>
-            <li class="<?php if ($page == 'mywork') {echo 'mm-active';}?>">
+            <li class="">
               <a href="mywork">My works</a>
             </li>
-            <li class="<?php if ($page == 'knowledge') {echo 'mm-active';}?>">
+            <li class="">
               <a href="knowledge">Knowledge</a>
             </li>
           </ul>

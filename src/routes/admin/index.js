@@ -1,3 +1,4 @@
 const homeRoute = require("./homeRoute");
+const statisticsRoute = require("./statisticsRoute");
 
-module.exports = [homeRoute];
+module.exports = [homeRoute, statisticsRoute];
