@@ -55,7 +55,10 @@ CREATE TABLE courses(
 
 -- create table about
 CREATE TABLE about(
-    title varchar(50) not null,
     body text not null,
-    iframe text not null
+    vidoe text not null,
+    students int not null,
+    teachers int not null,
+    exprience smallint not null,
+    checked smallint default 0
 );

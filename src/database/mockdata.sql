@@ -148,11 +148,15 @@ INSERT INTO courses (
 
 -- insert about
 INSERT INTO about (
-    title,
     body,
-    iframe
+    vidoe,
+    students,
+    teachers,
+    exprience
 ) VALUES (
-    'Lorem ipsum dolor sit amet consectetur',
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.',
-    '<iframe width="560" height="315" src="https://www.youtube.com/embed/A2PKZlzbOtI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    'https://youtu.be/HV7DtH3J2PU',
+    876,
+    56,
+    5
 );
