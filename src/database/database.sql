@@ -60,5 +60,4 @@ CREATE TABLE about(
     students int not null,
     teachers int not null,
     exprience smallint not null,
-    checked smallint default 0
 );
