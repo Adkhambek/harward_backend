@@ -1,4 +1,4 @@
 const homeRoute = require("./homeRoute");
-const statisticsRoute = require("./statisticsRoute");
+const aboutRoute = require("./aboutRoute");
 
-module.exports = [homeRoute, statisticsRoute];
+module.exports = [homeRoute, aboutRoute];
