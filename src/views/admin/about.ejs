@@ -70,35 +70,40 @@
                                 </div>
                             </div>
                             <div class="card-body">
-                                <form action="" method="post"
-                                    enctype="multipart/form-data">
+                                <form action="/admin/about" method="POST" enctype ="multipart/form-data">
                                     <div class="form-group">
                                         <label for="exampleFormControlSelect1" class="font-weight-600">About body</label>
-                                        <textarea id="summernote" name="body" required></textarea>
+                                        <textarea id="summernote" name="body" required>
+                                            <%= body%>
+                                        </textarea>
                                     </div> 
                                     <div class="form-group">
                                         <label for="exampleInputEmail1" class="font-weight-600">Student number:</label>
                                         <input name="student" type="number" class="form-control mt-2"
-                                        value="32">
+                                        value=<%= students%>>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1" class="font-weight-600">Teacher number:</label>
                                         <input name="teacher" type="number" class="form-control mt-2"
-                                            value="">
+                                            value=<%= teachers%>>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1" class="font-weight-600">Teachers' experience :</label>
-                                        <input name="experience" type="number" class="form-control mt-2" value="">
+                                        <input name="experience" type="number" class="form-control mt-2" value=<%= exprience %>>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1" class="font-weight-600">Video:</label>
-                                        <input type="file" name="file-2" id="file-2" class="custom-input-file custom-input-file--2" data-multiple-caption="{count} files selected">
+                                        <label for="exampleInputEmail1" class="font-weight-600"> <p>Video:</p> 
+                                            <video controls="" loop="" width="300">
+                                                <source src="<%= vidoe%>"  type="video/mp4">
+                                            </video>   
+                                        </label>
+                                        <input type="file" name="video" id="file-2" class="custom-input-file custom-input-file--2" data-multiple-caption="{count} files selected">
                                         <label for="file-2">
                                             <i class="fa fa-upload"></i>
                                             <span>Choose a file…</span>
                                         </label>
                                     </div>
-                                    <button type="submit" name="Submit"
+                                    <button type="submit" 
                                         class="btn btn-primary mt-5">O'zgartirish</button>
                                 </form>
                             </div>

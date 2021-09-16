@@ -57,23 +57,9 @@ SELECT
 FROM courses;
 
 -- select table about
-SELECT 
-    body,
-    about.vidoe,
-    students,
-    teachers,
-    exprience || ' yil'
-FROM about
-WHERE checked = 1;
 
-SELECT 
-    body,
-    about.vidoe,
-    students,
-    teachers,
-    exprience || ' yil'
-FROM about
-WHERE checked = 0;
+SELECT * FROM about
+
 
 -- update about
 UPDATE about
