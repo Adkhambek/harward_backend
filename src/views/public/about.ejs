@@ -127,110 +127,76 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="owl-carousel">
-                        <div class="teacher">
-                            <div class="img">
-                                <img src="images/aloqa/teach.png" alt="Teacher">
+                        <% for(let teacher of teacherss) { %>
+                            <div class="teacher">
+                                <div class="img">
+                                    <img src="<%= teacher.teacher_image %>" alt="Teacher">
+                                </div>
+                                <div class="info">
+                                    <h3> <%= teacher.teacher_name %> </h3>
+                                    <p> <%= teacher.teacher_detail %> </p>
+                                </div>
                             </div>
-                            <div class="info">
-                                <h3>Xudoyberdi Sotvoldiyev</h3>
-                                <p>Professional web dasturchi "Merasoft" asoschilaridan biri, ma'lumotlar bazasi va web bo'yicha 12 yillik tajribaga,dizayn sohasi bo'yicha esa 14 yillik tajribaga ega.</p>
-                            </div>
-                        </div>
-                        <div class="teacher">
-                            <div class="img">
-                                <img src="images/aloqa/teach.png" alt="Teacher">
-                            </div>
-                            <div class="info">
-                                <h3>Xudoyberdi Sotvoldiyev</h3>
-                                <p>Professional web dasturchi "Merasoft" asoschilaridan biri, ma'lumotlar bazasi va web bo'yicha 12 yillik tajribaga,dizayn sohasi bo'yicha esa 14 yillik tajribaga ega.</p>
-                            </div>
-                        </div>
-                        <div class="teacher">
-                            <div class="img">
-                                <img src="images/aloqa/teach.png" alt="Teacher">
-                            </div>
-                            <div class="info">
-                                <h3>Xudoyberdi Sotvoldiyev</h3>
-                                <p>Professional web dasturchi "Merasoft" asoschilaridan biri, ma'lumotlar bazasi va web bo'yicha 12 yillik tajribaga,dizayn sohasi bo'yicha esa 14 yillik tajribaga ega.</p>
-                            </div>
-                        </div>
-                        <div class="teacher">
-                            <div class="img">
-                                <img src="images/aloqa/teach.png" alt="Teacher">
-                            </div>
-                            <div class="info">
-                                <h3>Xudoyberdi Sotvoldiyev</h3>
-                                <p>Professional web dasturchi "Merasoft" asoschilaridan biri, ma'lumotlar bazasi va web bo'yicha 12 yillik tajribaga,dizayn sohasi bo'yicha esa 14 yillik tajribaga ega.</p>
-                            </div>
-                        </div>
-                        <div class="teacher">
-                            <div class="img">
-                                <img src="images/aloqa/teach.png" alt="Teacher">
-                            </div>
-                            <div class="info">
-                                <h3>Xudoyberdi Sotvoldiyev</h3>
-                                <p>Professional web dasturchi "Merasoft" asoschilaridan biri, ma'lumotlar bazasi va web bo'yicha 12 yillik tajribaga,dizayn sohasi bo'yicha esa 14 yillik tajribaga ega.</p>
-                            </div>
+                        <% } %>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <section class="girl">
-        <div class="container">
-            <div class="row d-flex align-items-center">
-                <div class="col-lg-6 col-md-6">
-                    <div class="girls">
-                        <img src="images/aloqa/girl.png" alt="Girl">
-                        
+        </section>
+        
+        <section class="girl">
+            <div class="container">
+                <div class="row d-flex align-items-center">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="girls">
+                            <img src="images/aloqa/girl.png" alt="Girl">
+                            
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="chegirma">
-                        <h3>Hozirni o'zida ro'yxatdan o't va barcha o'quv kurslarimizga <span>30% chegirmaga</span> ega bo'l</h3>
-                        
-                        <a href="registr" class="registr">Ro'yxatdan o'tish</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="footer">
-        <div class="container">
-            <%- include("footer.ejs") %>
-            
-            <div class="row seconds d-flex align-items-start start">
-                <div class="col-lg-4 col-md-4 col-sm-4 d-flex justify-content-end end">
-                    <div class="contact">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <a href="#">Harvard@gmail.com</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 d-flex justify-content-center end">
-                    <div class="contact">
-                        <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
-                        <p class="p-0 m-0">+998941756227</p>
-                        <p class="p-0 m-0">+998941756227</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 d-flex justify-content-start end">
-                    <div class="contact">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        <p>Mirzo Ulug'bek ko'chasi 70-uy</p>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="chegirma">
+                            <h3>Hozirni o'zida ro'yxatdan o't va barcha o'quv kurslarimizga <span>30% chegirmaga</span> ega bo'l</h3>
+                            
+                            <a href="registr" class="registr">Ro'yxatdan o'tish</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/owl.carousel.min.js"></script>
-    <script src="/js/slick.js"></script>
-    <script src="/css/aos.js"></script>
-    <script src="/js/main.js"></script>
-</body>
-</html>
+        </section>
+        
+        <section class="footer">
+            <div class="container">
+                <%- include("footer.ejs") %>
+                
+                <div class="row seconds d-flex align-items-start start">
+                    <div class="col-lg-4 col-md-4 col-sm-4 d-flex justify-content-end end">
+                        <div class="contact">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <a href="#">Harvard@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 d-flex justify-content-center end">
+                        <div class="contact">
+                            <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+                            <p class="p-0 m-0">+998941756227</p>
+                            <p class="p-0 m-0">+998941756227</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 d-flex justify-content-start end">
+                        <div class="contact">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <p>Mirzo Ulug'bek ko'chasi 70-uy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/owl.carousel.min.js"></script>
+        <script src="/js/slick.js"></script>
+        <script src="/css/aos.js"></script>
+        <script src="/js/main.js"></script>
+    </body>
+    </html>

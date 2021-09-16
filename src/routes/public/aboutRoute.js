@@ -3,7 +3,8 @@ const model = require("../../model/about");
 
 router.get("/about", async (req, res) => {
 	let data = await model.getAbout();
-    res.render("public/about", { ...data });
+	let teacherss = await model.getTeachers();
+    res.render("public/about", { ...data, teacherss });
 });
 
 module.exports = router;
