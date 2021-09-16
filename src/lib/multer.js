@@ -6,8 +6,7 @@ const storage = multer.diskStorage({
     callback(null, path.join(process.cwd(), "src", "public/video"));
   },
   filename: function (req, file, callback) {
-    const videoName = "" + file.fieldname;
-    callback(null, videoName.split(" ").join("_"));
+    callback(null, file.originalname.split(" ").join("_"));
   },
 });
 const upload = multer({ storage: storage });
