@@ -68,4 +68,10 @@ SET body =  ,
     checked = 1,
 RETURNING;
 
+-- select teachers
+SELECT 
+    teacher_image,
+    teacher_first_name || ' ' || teacher_last_name teacher_name,
+    teacher_detail
+FROM teachers;
 
