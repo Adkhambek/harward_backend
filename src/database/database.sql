@@ -70,3 +70,9 @@ CREATE TABLE teachers(
     teacher_last_name varchar(30) not null,
     teacher_detail text not null
 );
+
+CREATE TABLE more_about(
+    title varchar(100) not null,
+    body text not null,
+    vidoe text not null
+);

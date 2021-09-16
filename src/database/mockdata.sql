@@ -192,3 +192,15 @@ INSERT INTO teachers(
     'Palonchiyev4',
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.'
 );
+
+-- insert more_about
+INSERT INTO more_about (
+    title,
+    body,
+    vidoe
+) VALUES 
+(
+    'About us',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque',
+    'nimadir_birnima.mp4'
+);

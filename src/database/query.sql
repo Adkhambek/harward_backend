@@ -75,3 +75,12 @@ SELECT
     teacher_detail
 FROM teachers;
 
+
+-- select more_about
+SELECT * FROM more_about;
+
+-- update more_about
+UPDATE
+SET title = '',
+    body = '',
+    vidoe = '';
