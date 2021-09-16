@@ -63,22 +63,12 @@ SELECT
     students,
     teachers,
     exprience || ' yil'
-FROM about
-WHERE checked = 1;
-
-SELECT 
-    body,
-    about.vidoe,
-    students,
-    teachers,
-    exprience || ' yil'
-FROM about
-WHERE checked = 0;
+FROM about;
 
 -- update about
 UPDATE about
 SET body = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam. x',
-    vidoe = 'https://youtu.be/HV7DtH3J2PU',
+    vidoe = '/video/two.mp4',
     students = 876,
     teachers = 56,
     exprience = 5,
