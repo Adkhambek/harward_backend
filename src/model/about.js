@@ -14,11 +14,6 @@ UPDATE about
 SET body = $1, students = $2, teachers = $3, exprience = $4
 `
 
-<<<<<<< HEAD
-const GET_VIDEO_NAME = `
-SELECT vidoe FROM about
-`;
-=======
 const SELECT_TEACHERS = `
 SELECT 
     teacher_image,
@@ -27,7 +22,6 @@ SELECT
 FROM teachers;
 `
 const SELECT_INFO = `SELECT * FROM info;`
->>>>>>> a56bfe89b540db81471e83eafed4a3fcf914a272
 
 exports.selectAllData = () => fetch(SELECT_ALL);
 
@@ -39,7 +33,6 @@ exports.updateAbout = (data, videoName) =>
     data.teacher,
     data.experience,
     videoName
-<<<<<<< HEAD
   );
 
 exports.updateWithoutVideo = (data) => {
@@ -54,12 +47,8 @@ exports.updateWithoutVideo = (data) => {
 
 exports.getVideoName = () => fetch(GET_VIDEO_NAME);
 
-=======
-    )
-
 exports.getAbout = () => fetch(SELECT_ALL);
 
 exports.getTeachers = () => fetchAll(SELECT_TEACHERS)
 
 exports.getInfo = () => fetch(SELECT_INFO)
->>>>>>> a56bfe89b540db81471e83eafed4a3fcf914a272
