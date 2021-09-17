@@ -63,6 +63,11 @@
             <div class="body-content">
                 <div class="row">
                     <div class="col-md-12 col-lg-10 mx-auto">
+                        <% if(message != "") { %>
+                        <div class="alert alert-success" role="alert">
+                            <%= message%>
+                          </div>
+                        <% } %>
                         <div class="card mb-4">
                             <div class="card-header">
                                 <div>
