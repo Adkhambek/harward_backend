@@ -4,6 +4,10 @@ const SELECT_ALL = `
 SELECT * FROM about
 `;
 
+const GET_VIDEO_NAME =`
+SELECT vidoe FROM about
+`
+
 const UPDATE = `
 UPDATE about
 SET body = $1, students = $2, teachers = $3, exprience = $4, vidoe = $5

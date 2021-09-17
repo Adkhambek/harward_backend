@@ -24,7 +24,4 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 app.use(routes);
-app.get("/sss", (req, res) => {
-    res.send("test")
-})
 module.exports = { PORT, app };

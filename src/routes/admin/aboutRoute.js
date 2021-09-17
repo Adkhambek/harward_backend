@@ -7,7 +7,7 @@ const path = require("path");
 router.get("/about", async (req, res) => {
   console.log("test");
   const data = await model.selectAllData();
-  res.render("admin/about", { ...data, message: req.flash("message") });
+  res.render("admin/about", { ...data, successMessage: req.flash("success") });
 });
 
 router.post("/about", uploadVideo.single("video"), async (req, res) => {
@@ -15,11 +15,12 @@ router.post("/about", uploadVideo.single("video"), async (req, res) => {
     const { vidoe } = await model.getVideoName();
     fs.unlinkSync(path.join(process.cwd(), "src/public/video", vidoe));
     await model.updateAbout(req.body, req.file.filename);
-    req.flash("message", "updated successfully")
+    req.flash("success", "updated successfully")
     res.redirect("/admin/about");
   } else {
+    console.log(req.body);
     await model.updateWithoutVideo(req.body);
-    req.flash("message", "updated successfully")
+    req.flash("success", "updated successfully")
     res.redirect("/admin/about");
   }
 });
