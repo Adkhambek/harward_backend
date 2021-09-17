@@ -61,3 +61,18 @@ CREATE TABLE about(
     teachers int not null,
     exprience smallint not null,
 );
+
+-- create table teachres
+CREATE TABLE teachers(
+    teacher_id serial primary key,
+    teacher_image varchar(100) not null,
+    teacher_first_name varchar(30) not null,
+    teacher_last_name varchar(30) not null,
+    teacher_detail text not null
+);
+
+CREATE TABLE more_about(
+    title varchar(100) not null,
+    body text not null,
+    vidoe text not null
+);

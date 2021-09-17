@@ -9,6 +9,15 @@ UPDATE about
 SET body = $1, students = $2, teachers = $3, exprience = $4, vidoe = $5
 `
 
+const SELECT_TEACHERS = `
+SELECT 
+    teacher_image,
+    teacher_first_name || ' ' || teacher_last_name teacher_name,
+    teacher_detail
+FROM teachers;
+`
+const SELECT_INFO = `SELECT * FROM info;`
+
 exports.selectAllData = () => fetch(SELECT_ALL);
 
 exports.updateAbout = (data, videoName) => fetch(UPDATE, 
@@ -18,3 +27,9 @@ exports.updateAbout = (data, videoName) => fetch(UPDATE,
     data.experience,
     videoName
     )
+
+exports.getAbout = () => fetch(SELECT_ALL);
+
+exports.getTeachers = () => fetchAll(SELECT_TEACHERS)
+
+exports.getInfo = () => fetch(SELECT_INFO)

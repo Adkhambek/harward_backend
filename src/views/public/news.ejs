@@ -178,121 +178,59 @@
                 <br><br><br>
                 
                 <div class="row" data-aos="fade-up">
-                    <div class="col-lg-3 col-md-4 col-sm-4 church">
-                        <img src="images/yangiliklar/church.png" alt="Church">
-                        <div class="contents">
-                            <p>21 May 2021</p>
-                            <h2>Ramazon oyi munosabati bilan katta chegirmalarni kutib oling</h2>
-                            
-                            <a href="text">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                    <% for(let item of news) { %>
+                        <div class="col-lg-3 col-md-4 col-sm-4 church">
+                            <img src="/images/<%= item.image %> " alt="Church">
+                            <div class="contents">
+                                <p><%= item.time %></p>
+                                <h2> <%= item.title %> </h2>
+                                
+                                <a href="text?id=<%= item.news_id %>">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-4 church">
-                        <img src="images/yangiliklar/church.png" alt="Church">
-                        <div class="contents">
-                            <p>21 May 2021</p>
-                            <h2>Ramazon oyi munosabati bilan katta chegirmalarni kutib oling</h2>
-                            
-                            <a href="text">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-4 church">
-                        <img src="images/yangiliklar/church.png" alt="Church">
-                        <div class="contents">
-                            <p>21 May 2021</p>
-                            <h2>Ramazon oyi munosabati bilan katta chegirmalarni kutib oling</h2>
-                            
-                            <a href="text">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-4 church">
-                        <img src="images/yangiliklar/church.png" alt="Church">
-                        <div class="contents">
-                            <p>21 May 2021</p>
-                            <h2>Ramazon oyi munosabati bilan katta chegirmalarni kutib oling</h2>
-                            
-                            <a href="text">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-4 church">
-                        <img src="images/yangiliklar/church.png" alt="Church">
-                        <div class="contents">
-                            <p>21 May 2021</p>
-                            <h2>Ramazon oyi munosabati bilan katta chegirmalarni kutib oling</h2>
-                            
-                            <a href="text">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-4 church">
-                        <img src="images/yangiliklar/church.png" alt="Church">
-                        <div class="contents">
-                            <p>21 May 2021</p>
-                            <h2>Ramazon oyi munosabati bilan katta chegirmalarni kutib oling</h2>
-                            
-                            <a href="text">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-4 church">
-                        <img src="images/yangiliklar/church.png" alt="Church">
-                        <div class="contents">
-                            <p>21 May 2021</p>
-                            <h2>Ramazon oyi munosabati bilan katta chegirmalarni kutib oling</h2>
-                            
-                            <a href="text">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-4 church">
-                        <img src="images/yangiliklar/church.png" alt="Church">
-                        <div class="contents">
-                            <p>21 May 2021</p>
-                            <h2>Ramazon oyi munosabati bilan katta chegirmalarni kutib oling</h2>
-                            
-                            <a href="text">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        </div>
+                    <% } %>
                     </div>
                     
                 </div>
                 
-            </div>
+            </section>
             
-        </section>
-        
-        <section class="footer">
-            <div class="container">
-                <%- include("footer.ejs") %>
-                
-                <div class="row seconds d-flex align-items-start start">
-                    <div class="col-lg-4 col-md-4 col-sm-4 d-flex justify-content-end end">
-                        <div class="contact">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                            <a href="#">Harvard@gmail.com</a>
+            <section class="footer">
+                <div class="container">
+                    <%- include("footer.ejs") %>
+                    
+                    <div class="row seconds d-flex align-items-start start">
+                        <div class="col-lg-4 col-md-4 col-sm-4 d-flex justify-content-end end">
+                            <div class="contact">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <a href="#">Harvard@gmail.com</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 d-flex justify-content-center end">
-                        <div class="contact">
-                            <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
-                            <p class="p-0 m-0">+998941756227</p>
-                            <p class="p-0 m-0">+998941756227</p>
+                        <div class="col-lg-4 col-md-4 col-sm-4 d-flex justify-content-center end">
+                            <div class="contact">
+                                <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+                                <p class="p-0 m-0">+998941756227</p>
+                                <p class="p-0 m-0">+998941756227</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 d-flex justify-content-start end">
-                        <div class="contact">
-                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            <p>Mirzo Ulug'bek ko'chasi 70-uy</p>
+                        <div class="col-lg-4 col-md-4 col-sm-4 d-flex justify-content-start end">
+                            <div class="contact">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <p>Mirzo Ulug'bek ko'chasi 70-uy</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+            
         </section>
         
-    </section>
-    
-    
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/owl.carousel.min.js"></script>
-    <script src="/js/slick.js"></script>
-    <script src="css/aos.js"></script>
-    <script src="/js/main.js"></script>
-</body>
-</html>
+        
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/owl.carousel.min.js"></script>
+        <script src="/js/slick.js"></script>
+        <script src="css/aos.js"></script>
+        <script src="/js/main.js"></script>
+    </body>
+    </html>
