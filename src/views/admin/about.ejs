@@ -26,7 +26,7 @@
 <body>
      <%- include("includes/loader.ejs")%>
     <div class="wrapper">
-        <%- include("includes/sidebar.ejs") %>
+        <%- include("includes/sidebar.ejs", {page: "about"}) %>
     <div class="content-wrapper">
         <div class="main-content">
             <%- include("includes/header.ejs")%>
@@ -46,7 +46,7 @@
                     float-sm-right
                   "
                 >
-                  <li class="breadcrumb-item"><a href="/admin">Home</a></li>
+                  <li class="breadcrumb-item"><a href="/admin">Admin</a></li>
                   <li class="breadcrumb-item active">About</li>
                 </ol>
               </nav>

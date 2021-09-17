@@ -69,11 +69,20 @@ SET body =  ,
 RETURNING;
 
 -- select teachers
-SELECT 
+SELECT
     teacher_image,
     teacher_first_name || ' ' || teacher_last_name teacher_name,
     teacher_detail
 FROM teachers;
+
+-- delete teacher
+
+SELECT
+    teacher_id,
+    teacher_first_name,
+    teacher_last_name
+FROM teachers;
+
 
 
 -- select more_about

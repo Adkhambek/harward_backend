@@ -8,13 +8,13 @@
     <nav class="sidebar-nav">
       <ul class="metismenu">
         <li class="nav-label">Main Menu</li>
-        <li class="mm-active">
+        <li class="<% if(page == 'dashboard') { %>mm-active<% }%>">
           <a href="/admin">
             <i class="typcn typcn-home-outline mr-2"></i>
             Dashboard
           </a>
         </li>
-        <li>
+        <li class="<% if(page == 'about') { %>mm-active<% }%>">
           <a href="/admin/about">
             <i class="typcn typcn-info-large-outline mr-2"></i>
             About
@@ -23,18 +23,12 @@
 
         <li>
           <a class="has-arrow material-ripple" href="#">
-            <i class="typcn typcn-archive mr-2"></i>
-            Tables
+            <i class="typcn typcn-mortar-board mr-2"></i>
+            Teacher
           </a>
           <ul class="nav-second-level">
-            <li class="">
-              <a href="blog_table">Blog</a>
-            </li>
-            <li class="">
-              <a href="book_table">Books</a>
-            </li>
-            <li class="">
-              <a href="course_table">Courses</a>
+            <li class="<% if(page == 'teacherTable') { %>mm-active<% }%>">
+              <a href="/admin/teacher/table">Table</a>
             </li>
           </ul>
         </li>
