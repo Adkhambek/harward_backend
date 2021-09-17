@@ -15,12 +15,12 @@ router.post("/about", uploadVideo.single("video"), async (req, res) => {
     const { vidoe } = await model.getVideoName();
     fs.unlinkSync(path.join(process.cwd(), "src/public/video", vidoe));
     await model.updateAbout(req.body, req.file.filename);
-    req.flash("success", "updated successfully")
+    req.flash("success", "updated successfully");
     res.redirect("/admin/about");
   } else {
     console.log(req.body);
     await model.updateWithoutVideo(req.body);
-    req.flash("success", "updated successfully")
+    req.flash("success", "updated successfully");
     res.redirect("/admin/about");
   }
 });
