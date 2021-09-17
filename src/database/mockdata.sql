@@ -66,26 +66,68 @@ INSERT INTO news (
 (
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptas!', 
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.', 
-    'https://picsum.photos/400?random=1', 
-    'Palonchi Palonchiyev1'
+    'https://picsum.photos/400?random=5', 
+    'Palonchi Palonchiyev5'
 ),
 (
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptas!', 
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.', 
-    'https://picsum.photos/400?random=2', 
-    'Palonchi Palonchiyev2'
+    'https://picsum.photos/400?random=6', 
+    'Palonchi Palonchiyev6'
 ),
 (
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptas!', 
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.', 
-    'https://picsum.photos/400?random=3', 
-    'Palonchi Palonchiye3'
+    'https://picsum.photos/400?random=7', 
+    'Palonchi Palonchiye7'
 ),
 (
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptas!', 
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.', 
-    'https://picsum.photos/400?random=4', 
-    'Palonchi Palonchiye4'
+    'https://picsum.photos/400?random=8', 
+    'Palonchi Palonchiye8'
+),
+(
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptas!', 
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.', 
+    'https://picsum.photos/400?random=8', 
+    'Palonchi Palonchiye9'
+),
+(
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptas!', 
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.', 
+    'https://picsum.photos/400?random=8', 
+    'Palonchi Palonchiye10'
+),
+(
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptas!', 
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.', 
+    'https://picsum.photos/400?random=8', 
+    'Palonchi Palonchiye11'
+),
+(
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptas!', 
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.', 
+    'https://picsum.photos/400?random=8', 
+    'Palonchi Palonchiye12'
+),
+(
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptas!', 
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.', 
+    'https://picsum.photos/400?random=8', 
+    'Palonchi Palonchiye13'
+),
+(
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptas!', 
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.', 
+    'https://picsum.photos/400?random=8', 
+    'Palonchi Palonchiye14'
+),
+(
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptas!', 
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.', 
+    'https://picsum.photos/400?random=8', 
+    'Palonchi Palonchiye15'
 );
 
 -- insert courses
