@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <meta name="author" content="Bdtask">
-    <title>Teacher form</title>
+    <title>News form</title>
     <!-- App favicon -->
     <link rel="shortcut icon" href="/admin/dist/img/favicon.png">
     <!--Global Styles(used by all pages)-->
@@ -26,7 +26,7 @@
 <body>
      <%- include("includes/loader.ejs")%>
     <div class="wrapper">
-        <%- include("includes/sidebar.ejs", {page: "teacherForm"}) %>
+        <%- include("includes/sidebar.ejs", {page: "newsForm"}) %>
     <div class="content-wrapper">
         <div class="main-content">
             <%- include("includes/header.ejs")%>
@@ -47,7 +47,7 @@
                   "
                 >
                   <li class="breadcrumb-item"><a href="/admin">Admin</a></li>
-                  <li class="breadcrumb-item"><a href="/admin"></a>Teacher</a></li>
+                  <li class="breadcrumb-item"><a href="/admin"></a>News</a></li>
                   <li class="breadcrumb-item active">Add</li>
                 </ol>
               </nav>
@@ -55,8 +55,8 @@
                     <div class="media">
                         <div class="header-icon text-success mr-3"><i class="typcn typcn-puzzle-outline"></i></div>
                         <div class="media-body">
-                            <h1 class="font-weight-bold">Teacher Form section</h1>
-                            <small>Add new teacher</small>
+                            <h1 class="font-weight-bold">News Form section</h1>
+                            <small>Add new news</small>
                         </div>
                     </div>
                 </div>
@@ -75,26 +75,26 @@
                         <div class="card mb-4">
                             <div class="card-header">
                                 <div>
-                                    <h6 class="fs-17 font-weight-600 mb-0">Adding teacher</h6>
+                                    <h6 class="fs-17 font-weight-600 mb-0">Adding news</h6>
                                 </div>
                             </div>
                             <div class="card-body">
-                                <form action="/admin/teacher/add" method="POST" enctype ="multipart/form-data">
+                                <form action="/admin/news/add" method="POST" enctype ="multipart/form-data">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1" class="font-weight-600">Teacher first name:</label>
-                                        <input name="firstname" type="text" class="form-control mt-2" required>
+                                        <label for="exampleInputEmail1" class="font-weight-600">Title:</label>
+                                        <input name="title" type="text" class="form-control mt-2" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1" class="font-weight-600">Teacher last name:</label>
-                                        <input name="lastname" type="text" class="form-control mt-2" required>
+                                        <label for="exampleInputEmail1" class="font-weight-600">Author:</label>
+                                        <input name="author" type="text" class="form-control mt-2" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleFormControlSelect1" class="font-weight-600">Teacher detail:</label>
-                                        <textarea id="summernote" name="detail" required>
+                                        <label for="exampleFormControlSelect1" class="font-weight-600">Body:</label>
+                                        <textarea id="summernote" name="body" required>
                                         </textarea>
                                     </div> 
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1" class="font-weight-600"> <p>Profile image:</p> 
+                                        <label for="exampleInputEmail1" class="font-weight-600"> <p>Image:</p> 
                                         </label>
                                         <input type="file" name="image" id="file-2" class="custom-input-file custom-input-file--2" data-multiple-caption="{count} files selected" required>
                                         <label for="file-2">

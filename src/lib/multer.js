@@ -10,7 +10,7 @@ const fileUpload = (folderName) => {
       callback(null, file.originalname.split(" ").join("_"));
     },
   });
-  return multer({ storage: storage });
+  return multer({ storage: storage }).single("image");
 };
 
 module.exports = fileUpload;

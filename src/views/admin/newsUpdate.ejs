@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <meta name="author" content="Bdtask">
-    <title>Teacher form</title>
+    <title>About</title>
     <!-- App favicon -->
     <link rel="shortcut icon" href="/admin/dist/img/favicon.png">
     <!--Global Styles(used by all pages)-->
@@ -24,9 +24,9 @@
 </head>
 
 <body>
-     <%- include("includes/loader.ejs")%> 
+     <%- include("includes/loader.ejs")%>
     <div class="wrapper">
-        <%- include("includes/sidebar.ejs", {page: "teacherForm"}) %>
+        <%- include("includes/sidebar.ejs", {page: "UpdateNews"} ) %>
     <div class="content-wrapper">
         <div class="main-content">
             <%- include("includes/header.ejs")%>
@@ -47,16 +47,16 @@
                   "
                 >
                   <li class="breadcrumb-item"><a href="/admin">Admin</a></li>
-                  <li class="breadcrumb-item"><a href="/admin"></a>Teacher</a></li>
-                  <li class="breadcrumb-item active">Add</li>
+                  <li class="breadcrumb-item"><a href="/admin">News</a></li>
+                  <li class="breadcrumb-item active">Update</li>
                 </ol>
               </nav>
                 <div class="col-sm-8 header-title p-0">
                     <div class="media">
                         <div class="header-icon text-success mr-3"><i class="typcn typcn-puzzle-outline"></i></div>
                         <div class="media-body">
-                            <h1 class="font-weight-bold">Teacher Form section</h1>
-                            <small>Add new teacher</small>
+                            <h1 class="font-weight-bold">Update News</h1>
+                            <small>Update old news</small>
                         </div>
                     </div>
                 </div>
@@ -65,46 +65,49 @@
                 <div class="row">
                     <div class="col-md-12 col-lg-10 mx-auto">
                         <% if(successMessage != "") { %>
-                            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                <%= successMessage %>
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
-                              </div>
-                            <% } %>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <%= successMessage %>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                        <% } %>
                         <div class="card mb-4">
                             <div class="card-header">
                                 <div>
-                                    <h6 class="fs-17 font-weight-600 mb-0">Adding teacher</h6>
+                                    <h6 class="fs-17 font-weight-600 mb-0">Editting News</h6>
                                 </div>
                             </div>
                             <div class="card-body">
-                                <form action="/admin/teacher/add" method="POST" enctype ="multipart/form-data">
+                                <form action="/admin/news/update/<%= news_id%>" method="POST" enctype ="multipart/form-data">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1" class="font-weight-600">Teacher first name:</label>
-                                        <input name="firstname" type="text" class="form-control mt-2" required>
+                                        <label for="exampleInputEmail1" class="font-weight-600">Title:</label>
+                                        <input name="title" type="text" class="form-control mt-2"
+                                        value=<%=title %>>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1" class="font-weight-600">Teacher last name:</label>
-                                        <input name="lastname" type="text" class="form-control mt-2" required>
+                                        <label for="exampleInputEmail1" class="font-weight-600">Author:</label>
+                                        <input name="author" type="text" class="form-control mt-2"
+                                        value=<%=author%>>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleFormControlSelect1" class="font-weight-600">Teacher detail:</label>
-                                        <textarea id="summernote" name="detail" required>
+                                        <label for="exampleFormControlSelect1" class="font-weight-600">News body</label>
+                                        <textarea id="summernote" name="body" required>
+                                            <%= body%>
                                         </textarea>
                                     </div> 
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1" class="font-weight-600"> <p>Profile image:</p> 
+                                        <label for="exampleInputEmail1" class="font-weight-600"> <p>Image:</p> 
+                                            <img src="/images/yangiliklar/<%= image%>" class="mb-2" width="150" alt="image">
                                         </label>
-                                        <input type="file" name="image" id="file-2" class="custom-input-file custom-input-file--2" data-multiple-caption="{count} files selected" required>
+                                        <input type="file" name="image" id="file-2" class="custom-input-file custom-input-file--2" data-multiple-caption="{count} files selected">
                                         <label for="file-2">
                                             <i class="fa fa-upload"></i>
-                                            <span>Choose an image…</span>
+                                            <span>Choose a image…</span>
                                         </label>
                                     </div>
                                     <button type="submit" 
-                                        class="btn btn-primary mt-5">Publish
-                                    </button>
+                                        class="btn btn-primary mt-5">Update</button>
                                 </form>
                             </div>
                         </div>

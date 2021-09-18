@@ -9,7 +9,7 @@ router.get("/about", async (req, res) => {
   res.render("admin/about", { ...data, successMessage: req.flash("success") });
 });
 
-router.post("/about", multer("video").single("video"), async (req, res) => {
+router.post("/about", multer("video"), async (req, res) => {
   if (req.file) {
     const { vidoe } = await model.getVideoName();
     fs.unlinkSync(path.join(process.cwd(), "src/public/video", vidoe));

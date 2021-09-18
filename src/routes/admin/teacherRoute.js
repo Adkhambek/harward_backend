@@ -11,7 +11,7 @@ router.get("/teacher/table", async (req, res) => {
         page: "teacherTable",
         successMessage: req.flash("success"),
     });
-});
+}); 
 
 router.get("/teacher/delete/:id", async (req, res) => {
     const teacherId = req.params.id * 1;
@@ -31,13 +31,12 @@ router.get("/teacher/add", async (req, res) => {
     res.render("admin/teacherForm", { successMessage: req.flash("success") });
 });
 
-router.post(
-    "/teacher/add",
-    multer("images/ustozlar").single("image"),
-    async (req, res) => {
-        await model.addTeacher(req.body, req.file.filename);
-        req.flash("success", "new teacher was added successfully");
-        res.redirect("/admin/teacher/add");
+router.post("/teacher/add", 
+            multer("images/ustozlar"), 
+            async(req, res) => {
+                await model.addTeacher(req.body, req.file.filename);
+                req.flash("success", "new teacher was added successfully");
+                res.redirect("/admin/teacher/add");
     }
 );
 

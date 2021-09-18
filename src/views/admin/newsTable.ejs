@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <meta name="author" content="Bdtask">
-    <title>Blog Table</title>
+    <title>News Table</title>
     <!-- App favicon -->
     <link rel="shortcut icon" href="/admin/dist/img/favicon.png">
     <!--Global Styles(used by all pages)-->
@@ -26,7 +26,7 @@
 
     <div class="wrapper">
         <!-- Sidebar  -->
-        <%- include("includes/sidebar.ejs", {page: "teacherTable"}) %>
+        <%- include("includes/sidebar.ejs", {page: "newsTable"}) %>
 
         <div class="content-wrapper">
             <div class="main-content">
@@ -36,7 +36,7 @@
                     <nav aria-label="breadcrumb" class="col-sm-4 order-sm-last mb-3 mb-sm-0 p-0 ">
                         <ol class="breadcrumb d-inline-flex font-weight-600 fs-13 bg-white mb-0 float-sm-right">
                             <li class="breadcrumb-item"><a href="/admin">Admin</a></li>
-                            <li class="breadcrumb-item"><a href="/admin">Teacher</a></li>
+                            <li class="breadcrumb-item"><a href="/admin">News</a></li>
                             <li class="breadcrumb-item active">Table</li>
                         </ol>
                     </nav>
@@ -44,8 +44,8 @@
                         <div class="media">
                             <div class="header-icon text-success mr-3"><i class="typcn typcn-puzzle-outline"></i></div>
                             <div class="media-body">
-                                <h1 class="font-weight-bold">Teacher Table</h1>
-                                <small>In this page, you can delete teachers</small>
+                                <h1 class="font-weight-bold">News Table</h1>
+                                <small>In this page, you see all news</small>
                             </div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
                         <div class="card-header">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
-                                    <h6 class="fs-17 font-weight-600 mb-0">Teachers table</h6>
+                                    <h6 class="fs-17 font-weight-600 mb-0">News table</h6>
                                 </div>
 
                             </div>
@@ -75,21 +75,31 @@
                             
                             <tr>
                                 <th>Number</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Delete</th>
+                                <th>Title</th>
+                                <th>Date</th>
+                                <th>Image</th>
+                                <th>Actions</th>
                             </tr>
                             
                         </thead>
                         <tbody>
                             <% let i = 0 %>
-                            <% for(teacher of teachers){%>
+                            <% for(item of news){%>
                             <tr>
                                 <td><%= ++i %></td>
-                                <td><%= teacher.teacher_first_name %></td>
-                                <td><%= teacher.teacher_last_name %></td>
+                                <td><%= item.title %></td>
+                                <td><%= item.time %></td>
                                 <td>
-                                    <a href="/admin/teacher/delete/<%= teacher.teacher_id %>" class="btn btn-danger">
+                                    <img src="/images/yangiliklar/<%= item.image%>" width="150" alt="news image">
+                                </td>
+                                <td class="d-flex">
+                                    <a href="/news/<%= item.news_id %>" class="btn btn-primary mr-1">
+                                        <span class="fas fa-eye" ></span>
+                                    </a>
+                                    <a href="/admin/news/update/<%= item.news_id %>" class="btn btn-warning mr-1">
+                                        <span class="fas fa-edit" ></span>
+                                    </a>
+                                    <a href="/admin/news/delete/<%= item.news_id %>" class="btn btn-danger">
                                         <span class="fas fa-trash-alt" ></span>
                                     </a>
                                 </td>
