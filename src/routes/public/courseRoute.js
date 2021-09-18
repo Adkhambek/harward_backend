@@ -11,4 +11,9 @@ router.get("/lesson/:id", async (req, res) => {
 	res.render("public/lesson", { ...course });
 });
 
+router.post("/lesson/:id", async (req, res) => {
+	await model.inserData(req.body);
+	res.redirect("/lesson/" + req.params.id);
+})
+
 module.exports = router;
