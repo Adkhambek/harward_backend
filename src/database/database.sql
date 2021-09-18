@@ -40,8 +40,11 @@ CREATE TABLE news(
 CREATE TABLE courses(
     course_id serial primary key,
     image varchar(100) not null,
+    name varchar(70) not null,
     title varchar(100) not null,
+    body text not null,
     teacher varchar(100) not null,
+    counts smallint not null,
     prise int not null
 );
 
