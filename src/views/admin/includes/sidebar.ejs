@@ -30,31 +30,22 @@
             <li class="<% if(page == 'teacherTable') { %>mm-active<% }%>">
               <a href="/admin/teacher/table">Table</a>
             </li>
+            <li class="<% if(page == 'teacherForm') { %>mm-active<% }%>">
+              <a href="/admin/teacher/add">Add teacher</a>
+            </li>
           </ul>
         </li>
         <li>
           <a class="has-arrow material-ripple" href="#">
-            <i class="typcn typcn-clipboard mr-2"></i>
-            Forms
+            <i class="typcn typcn-news mr-2"></i>
+            News
           </a>
           <ul class="nav-second-level">
-            <li class="">
-              <a href="blog">Blog post adding</a>
+            <li class="<% if(page == 'newsForm') { %>mm-active<% }%>">
+              <a href="blog">Table</a>
             </li>
-            <li class="">
-              <a href="book">Book adding</a>
-            </li>
-            <li class="">
-              <a href="course">Course adding</a>
-            </li>
-            <li class="">
-              <a href="quote">Quote adding</a>
-            </li>
-            <li class="">
-              <a href="blog_category">Blog category</a>
-            </li>
-            <li class="">
-              <a href="book_category">Book category</a>
+            <li class="<% if(page == 'newsForm') { %>mm-active<% }%>">
+              <a href="book">Add news</a>
             </li>
           </ul>
         </li>
