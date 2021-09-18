@@ -50,10 +50,13 @@ FROM news;
 
 -- select courses
 SELECT 
+    course_id,
     image,
+    name,
     title,
+    body,
     teacher,
-    prise || '$' as prise
+    prise
 FROM courses;
 
 -- select table about
