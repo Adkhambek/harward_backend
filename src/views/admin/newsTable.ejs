@@ -35,9 +35,13 @@
                 <div class="content-header row align-items-center m-0">
                     <nav aria-label="breadcrumb" class="col-sm-4 order-sm-last mb-3 mb-sm-0 p-0 ">
                         <ol class="breadcrumb d-inline-flex font-weight-600 fs-13 bg-white mb-0 float-sm-right">
-                            <li class="breadcrumb-item"><a href="/admin">Admin</a></li>
-                            <li class="breadcrumb-item"><a href="/admin">News</a></li>
-                            <li class="breadcrumb-item active">Table</li>
+                            <% for(const item of breadcrumb) {%>
+                                <% if(breadcrumb.indexOf(item) === breadcrumb.length - 1) {%>
+                                    <li class="breadcrumb-item active"><%= item.name %></li>
+                                <%} else {%>
+                                    <li class="breadcrumb-item"><a href="<%= item.url %>"><%= item.name %></a></li>
+                                <%}%>   
+                            <%}%>
                         </ol>
                     </nav>
                     <div class="col-sm-8 header-title p-0">

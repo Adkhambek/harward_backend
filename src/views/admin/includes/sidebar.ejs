@@ -51,18 +51,15 @@
         </li>
         <li>
           <a class="has-arrow material-ripple" href="#">
-            <i class="typcn typcn-mail mr-2"></i>
-            Sending public
+            <i class="typcn typcn-tags mr-2"></i>
+             Courses
           </a>
           <ul class="nav-second-level">
-            <li class="">
-              <a href="gmail">Mail</a>
+            <li class="<% if(page == 'courseTable') { %>mm-active<% }%>">
+              <a href="#">Table</a>
             </li>
-            <li class="">
-              <a href="telegrams">Telegram</a>
-            </li>
-            <li class="">
-              <a href="newsletter">Newsletter</a>
+            <li class="<% if(page == 'courseForm') { %>mm-active<% }%>">
+              <a href="#">Add course</a>
             </li>
           </ul>
         </li>

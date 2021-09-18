@@ -1,15 +1,17 @@
 const router = require("express").Router();
 const model = require("../../model/teacher");
 const multer = require("../../lib/multer");
+const breadcrumb = require("../../middleware/breadcrumb");
 const fs = require("fs");
 const path = require("path");
 
-router.get("/teacher/table", async (req, res) => {
+router.get("/teacher/table", breadcrumb, async (req, res) => {
     const data = await model.allTeachers();
     res.render("admin/teacherTable", {
         teachers: data,
         page: "teacherTable",
         successMessage: req.flash("success"),
+        breadcrumb: req.breadcrumb,
     });
 }); 
 
@@ -20,15 +22,15 @@ router.get("/teacher/delete/:id", async (req, res) => {
         path.join(process.cwd(), "src/public/images/ustozlar", teacher_image)
     );
     await model.deleteTeacher(teacherId);
-    req.flash(
-        "success",
-        `the teacher (id = ${teacherId}) successfully deleted`
-    );
+    req.flash("success", `the teacher (id = ${teacherId}) successfully deleted`);
     res.redirect("/admin/teacher/table");
 });
 
-router.get("/teacher/add", async (req, res) => {
-    res.render("admin/teacherForm", { successMessage: req.flash("success") });
+router.get("/teacher/add", breadcrumb, async (req, res) => {
+    res.render("admin/teacherForm", { 
+        successMessage: req.flash("success"),
+        breadcrumb: req.breadcrumb,
+    });
 });
 
 router.post("/teacher/add", 

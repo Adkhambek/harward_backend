@@ -46,10 +46,14 @@
                     float-sm-right
                   "
                 >
-                  <li class="breadcrumb-item"><a href="/admin">Admin</a></li>
-                  <li class="breadcrumb-item"><a href="/admin"></a>News</a></li>
-                  <li class="breadcrumb-item active">Add</li>
-                </ol>
+                <% for(const item of breadcrumb) {%>
+                    <% if(breadcrumb.indexOf(item) === breadcrumb.length - 1) {%>
+                        <li class="breadcrumb-item active"><%= item.name %></li>
+                    <%} else {%>
+                        <li class="breadcrumb-item"><a href="<%= item.url %>"><%= item.name %></a></li>
+                    <%}%>   
+                <%}%>
+            </ol>
               </nav>
                 <div class="col-sm-8 header-title p-0">
                     <div class="media">
