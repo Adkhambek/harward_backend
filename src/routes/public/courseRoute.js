@@ -3,6 +3,7 @@ const model = require("../../model/course");
 
 router.get("/kurslar", async (req, res) => {
 	let courses = await model.getCourses();
+	console.log(courses);
 	res.render("public/kurslar", { courses });
 });
 

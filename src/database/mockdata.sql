@@ -133,7 +133,6 @@ INSERT INTO news (
 -- insert courses
 INSERT INTO courses (
     image,
-    name,
     title,
     body,
     teacher,
