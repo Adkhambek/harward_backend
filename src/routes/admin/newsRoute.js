@@ -1,13 +1,15 @@
 const router = require("express").Router();
 const model = require("../../model/news");
 const multer = require("../../lib/multer");
+const breadcrumb = require("../../middleware/breadcrumb");
 const fs = require("fs");
 const path = require("path");
 
-router.get("/news/add", async (req, res) => {
+router.get("/news/add", breadcrumb, async (req, res) => {
     res.render("admin/newsForm", {
         page: "newsform",
         successMessage: req.flash("success"),
+        breadcrumb: req.breadcrumb,
     });
 });
 
@@ -18,12 +20,13 @@ async(req, res) => {
     res.redirect("/admin/news/add");
 });
 
-router.get("/news/table", async (req, res) => {
+router.get("/news/table", breadcrumb, async (req, res) => {
     const news = await model.getNews();
     res.render("admin/newsTable", {
         news,
         page: "newsTable",
         successMessage: req.flash("success"),
+        breadcrumb: req.breadcrumb,
     });
 });
 
