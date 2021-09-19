@@ -59,6 +59,7 @@ INSERT INTO contact(
 -- insert comment_course
 INSERT INTO comment_course (
     name,
+    number,
     body
 ) VALUES 
 (

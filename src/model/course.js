@@ -28,13 +28,13 @@ WHERE course_id = $1;
 `
 
 const INSERT_DATA = `
-INSERT INTO contact(
+INSERT INTO comment_course (
     name,
     number,
     body
 ) VALUES 
 ( $1, $2, $3)
-RETURNING contact_id;
+RETURNING comment_id;
 `
 
 exports.getCourses = () => fetchAll(SELECT_ALL);

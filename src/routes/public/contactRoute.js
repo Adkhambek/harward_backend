@@ -6,4 +6,9 @@ router.get("/aloqa", async (req, res) => {
   res.render("public/aloqa", { info });
 });
 
+router.post("/aloqa", async (req, res) => {
+	await model.inserData(req.body);
+	res.redirect("/aloqa");
+})
+
 module.exports = router;
