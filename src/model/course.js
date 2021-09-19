@@ -4,7 +4,7 @@ const SELECT_ALL = `
 SELECT 
     course_id,
     image,
-    name,
+    title,
     teacher,
     prise
 FROM courses;

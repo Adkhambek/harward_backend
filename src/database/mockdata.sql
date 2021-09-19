@@ -133,7 +133,6 @@ INSERT INTO news (
 -- insert courses
 INSERT INTO courses (
     image,
-    name,
     title,
     body,
     teacher,
@@ -143,7 +142,6 @@ INSERT INTO courses (
 (
     'https://picsum.photos/400?random=1',
     'Ingliz tili',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptas!',
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.',
     'Palonchi Palonchiyev1',
     10,
@@ -152,7 +150,6 @@ INSERT INTO courses (
 (
     'https://picsum.photos/400?random=2',
     'Rus tili',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptas!',
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.',
     'Palonchi Palonchiyev2',
     20,
@@ -161,7 +158,6 @@ INSERT INTO courses (
 (
     'https://picsum.photos/400?random=3',
     'Arab tili tili',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptas!',
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.',
     'Palonchi Palonchiyev3',
     12,
@@ -170,7 +166,6 @@ INSERT INTO courses (
 (
     'https://picsum.photos/400?random=4',
     'Dasturlash',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptas!',
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.',
     'Palonchi Palonchiyev4',
     30,
@@ -179,7 +174,6 @@ INSERT INTO courses (
 (
     'https://picsum.photos/400?random=5',
     'Data sciense',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptas!',
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.',
     'Palonchi Palonchiyev5',
     100,
@@ -188,7 +182,6 @@ INSERT INTO courses (
 (
     'https://picsum.photos/400?random=4',
     'AI',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptas!',
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.',
     'Palonchi Palonchiyev6',
     60,
