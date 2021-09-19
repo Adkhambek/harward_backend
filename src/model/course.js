@@ -7,7 +7,8 @@ SELECT
     title,
     teacher,
     prise
-FROM courses;
+FROM courses
+ORDER BY course_id DESC
 `
 
 const SELECT_INFO = `
@@ -37,10 +38,70 @@ INSERT INTO comment_course (
 RETURNING comment_id;
 `
 
+const INSERT_COURSE = `
+INSERT INTO courses (
+    title,
+    teacher,
+    counts,
+    prise,
+    body,
+    image
+) VALUES ($1, $2, $3, $4, $5, $6) 
+`
+
+const SELECT_IMAGE = `
+SELECT image
+FROM courses
+WHERE course_id = $1
+`
+
+const DELETE_COURSE =`
+DELETE 
+FROM courses
+WHERE course_id = $1 
+`
+
+const UPDATE_COURSE = `
+UPDATE courses 
+SET title = $1, teacher = $2, counts = $3, prise = $4, body = $5, image = $6
+WHERE course_id = $7
+`;
+
+const UPDATE_WITHOUT_IMAGE = `
+UPDATE courses 
+SET title = $1, teacher = $2, counts = $3, prise = $4, body = $5
+WHERE course_id = $6
+`;
+
 exports.getCourses = () => fetchAll(SELECT_ALL);
 
 exports.getInfo = () => fetch(SELECT_INFO);
 
 exports.getCourse = (id) => fetch(SELECT_ONE, id);
 
+exports.getImage = (id) => fetch(SELECT_IMAGE, id);
+
 exports.inserData = ({ name, phones, text }) => fetch(INSERT_DATA, name, phones, text);
+
+exports.addCourse = (data, imageName) => fetch(INSERT_COURSE, data.title, data.teacher, +data.lessons, +data.prize, data.body, imageName);
+
+exports.deleteCourse = (id) => fetch(DELETE_COURSE, id);
+
+exports.updateCourse = (id, data, ImageName) => fetch(
+    UPDATE_COURSE, 
+    data.title, 
+    data.teacher,
+    data.lessons,
+    data.prize,
+    data.body, 
+    ImageName, 
+    id);
+
+exports.updateWithoutImage = (id, data) => fetch(
+    UPDATE_WITHOUT_IMAGE, 
+    data.title, 
+    data.teacher,
+    data.lessons,
+    data.prize,
+    data.body,  
+    id);

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <meta name="author" content="Bdtask">
-    <title>News update</title>
+    <title>Course update</title>
     <!--Global Styles(used by all pages)-->
     <link href="/admin/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/admin/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
@@ -24,7 +24,7 @@
 <body>
      <%- include("includes/loader.ejs")%>
     <div class="wrapper">
-        <%- include("includes/sidebar.ejs", {page: "UpdateNews"} ) %>
+        <%- include("includes/sidebar.ejs", {page: "UpdateCourse"} ) %>
     <div class="content-wrapper">
         <div class="main-content">
             <%- include("includes/header.ejs")%>
@@ -33,8 +33,8 @@
                     <div class="media">
                         <div class="header-icon text-success mr-3"><i class="typcn typcn-puzzle-outline"></i></div>
                         <div class="media-body">
-                            <h1 class="font-weight-bold">Update News</h1>
-                            <small>Update old news</small>
+                            <h1 class="font-weight-bold">Update Course</h1>
+                            <small>Update old course</small>
                         </div>
                     </div>
                 </div>
@@ -53,30 +53,38 @@
                         <div class="card mb-4">
                             <div class="card-header">
                                 <div>
-                                    <h6 class="fs-17 font-weight-600 mb-0">Editting News</h6>
+                                    <h6 class="fs-17 font-weight-600 mb-0">Editting Course</h6>
                                 </div>
                             </div>
                             <div class="card-body">
-                                <form action="/admin/news/update/<%= news_id%>" method="POST" enctype ="multipart/form-data">
+                                <form action="/admin/course/update/<%= course_id%>" method="POST" enctype ="multipart/form-data">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1" class="font-weight-600">Title:</label>
                                         <input name="title" type="text" class="form-control mt-2"
-                                        value=<%=title %>>
+                                        value="<%=title%>">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1" class="font-weight-600">Author:</label>
-                                        <input name="author" type="text" class="form-control mt-2"
-                                        value=<%=author%>>
+                                        <label for="exampleInputEmail1" class="font-weight-600">Teacher:</label>
+                                        <input name="teacher" type="text" class="form-control mt-2"
+                                        value="<%=teacher%>">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleFormControlSelect1" class="font-weight-600">News body</label>
+                                        <label for="exampleInputEmail1" class="font-weight-600">Lessons:</label>
+                                        <input name="lessons" type="number" class="form-control mt-2" value="<%=counts%>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1" class="font-weight-600">Prize:</label>
+                                        <input name="prize" type="number" class="form-control mt-2" value="<%=prise%>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1" class="font-weight-600">Course body</label>
                                         <textarea id="summernote" name="body" required>
                                             <%= body%>
                                         </textarea>
                                     </div> 
                                     <div class="form-group">
                                         <label for="exampleInputEmail1" class="font-weight-600"> <p>Image:</p> 
-                                            <img src="/images/yangiliklar/<%= image%>" class="mb-2" width="150" alt="image">
+                                            <img src="/images/kurslar/<%= image%>" class="mb-2" width="150" alt="image">
                                         </label>
                                         <input type="file" name="image" id="file-2" class="custom-input-file custom-input-file--2" data-multiple-caption="{count} files selected">
                                         <label for="file-2">

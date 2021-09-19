@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <meta name="author" content="Bdtask">
-    <title>News Table</title>
+    <title>Course Table</title>
     <!--Global Styles(used by all pages)-->
     <link href="/admin/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/admin/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
@@ -24,7 +24,7 @@
 
     <div class="wrapper">
         <!-- Sidebar  -->
-        <%- include("includes/sidebar.ejs", {page: "newsTable"}) %>
+        <%- include("includes/sidebar.ejs", {page: "courseTable"}) %>
 
         <div class="content-wrapper">
             <div class="main-content">
@@ -46,8 +46,8 @@
                         <div class="media">
                             <div class="header-icon text-success mr-3"><i class="typcn typcn-puzzle-outline"></i></div>
                             <div class="media-body">
-                                <h1 class="font-weight-bold">News Table</h1>
-                                <small>In this page, you see all news</small>
+                                <h1 class="font-weight-bold">Course Table</h1>
+                                <small>In this page, you see all courses</small>
                             </div>
                         </div>
                     </div>
@@ -65,7 +65,7 @@
                         <div class="card-header">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
-                                    <h6 class="fs-17 font-weight-600 mb-0">News table</h6>
+                                    <h6 class="fs-17 font-weight-600 mb-0">Course table</h6>
                                 </div>
 
                             </div>
@@ -78,7 +78,8 @@
                             <tr>
                                 <th>Number</th>
                                 <th>Title</th>
-                                <th>Date</th>
+                                <th>Teacher</th>
+                                <th>Prize</th>
                                 <th>Image</th>
                                 <th>Actions</th>
                             </tr>
@@ -86,22 +87,23 @@
                         </thead>
                         <tbody>
                             <% let i = 0 %>
-                            <% for(item of news){%>
+                            <% for(item of courses){%>
                             <tr>
                                 <td><%= ++i %></td>
                                 <td><%= item.title %></td>
-                                <td><%= item.time %></td>
+                                <td><%= item.teacher %></td>
+                                <td><%= item.prise %> so'm</td>
                                 <td>
-                                    <img src="/images/yangiliklar/<%= item.image%>" width="150" alt="news image">
+                                    <img src="/images/kurslar/<%= item.image%>" width="150" alt="news image">
                                 </td>
                                 <td class="d-flex">
-                                    <a href="/news/<%= item.news_id %>" class="btn btn-primary mr-1">
+                                    <a href="/lesson/<%= item.course_id %>" class="btn btn-primary mr-1">
                                         <span class="fas fa-eye" ></span>
                                     </a>
-                                    <a href="/admin/news/update/<%= item.news_id %>" class="btn btn-warning mr-1">
+                                    <a href="/admin/course/update/<%= item.course_id %>" class="btn btn-warning mr-1">
                                         <span class="fas fa-edit" ></span>
                                     </a>
-                                    <a href="/admin/news/delete/<%= item.news_id %>" class="btn btn-danger">
+                                    <a href="/admin/course/delete/<%= item.course_id %>" class="btn btn-danger">
                                         <span class="fas fa-trash-alt" ></span>
                                     </a>
                                 </td>
