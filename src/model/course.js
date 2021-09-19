@@ -10,6 +10,10 @@ SELECT
 FROM courses;
 `
 
+const SELECT_INFO = `
+SELECT * FROM info;
+`
+
 const SELECT_ONE = `
 SELECT 
     course_id,
@@ -34,6 +38,8 @@ RETURNING contact_id;
 `
 
 exports.getCourses = () => fetchAll(SELECT_ALL);
+
+exports.getInfo = () => fetch(SELECT_INFO);
 
 exports.getCourse = (id) => fetch(SELECT_ONE, id);
 
