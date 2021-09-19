@@ -56,6 +56,38 @@ INSERT INTO contact(
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.'
 );
 
+-- insert comment_course
+INSERT INTO comment_course (
+    name,
+    number,
+    body
+) VALUES 
+(
+    'Palonchi Palonchiyev1',
+    '+998999999999',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.'
+),
+(
+    'Palonchi Palonchiyev2',
+    '+998999999999',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.'
+),
+(
+    'Palonchi Palonchiyev3',
+    '+998999999999',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.'
+),
+(
+    'Palonchi Palonchiyev4',
+    '+998999999999',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.'
+),
+(
+    'Palonchi Palonchiyev5',
+    '+998999999999',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.'
+);
+
 -- insert news
 INSERT INTO news (
     title,
@@ -142,7 +174,6 @@ INSERT INTO courses (
 (
     'https://picsum.photos/400?random=1',
     'Ingliz tili',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptas!',
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.',
     'Palonchi Palonchiyev1',
     10,
@@ -151,7 +182,6 @@ INSERT INTO courses (
 (
     'https://picsum.photos/400?random=2',
     'Rus tili',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptas!',
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.',
     'Palonchi Palonchiyev2',
     20,
@@ -160,7 +190,6 @@ INSERT INTO courses (
 (
     'https://picsum.photos/400?random=3',
     'Arab tili tili',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptas!',
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.',
     'Palonchi Palonchiyev3',
     12,
@@ -169,7 +198,6 @@ INSERT INTO courses (
 (
     'https://picsum.photos/400?random=4',
     'Dasturlash',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptas!',
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.',
     'Palonchi Palonchiyev4',
     30,
@@ -178,7 +206,6 @@ INSERT INTO courses (
 (
     'https://picsum.photos/400?random=5',
     'Data sciense',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptas!',
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.',
     'Palonchi Palonchiyev5',
     100,
@@ -187,38 +214,11 @@ INSERT INTO courses (
 (
     'https://picsum.photos/400?random=4',
     'AI',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptas!',
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.',
     'Palonchi Palonchiyev6',
     60,
     300
 );
-
--- insert comment_course
--- INSERT INTO comment_course (
---     name,
---     body
--- ) VALUES 
--- (
---     'Palonchi Palonchiyev1',
---     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.'
--- ),
--- (
---     'Palonchi Palonchiyev2',
---     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.'
--- ),
--- (
---     'Palonchi Palonchiyev3',
---     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.'
--- ),
--- (
---     'Palonchi Palonchiyev4',
---     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.'
--- ),
--- (
---     'Palonchi Palonchiyev5',
---     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.'
--- );
 
 -- insert about
 INSERT INTO about (

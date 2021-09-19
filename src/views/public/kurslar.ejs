@@ -65,7 +65,7 @@
                         <div class="blocks">
                             <img src="images/main/<%= course.image %>" alt="Yangilik">
                             <div class="context">
-                                <h3><%= course.name %></h3>
+                                <h3><%= course.title %></h3>
                                 <div class="price">
                                     <div class="left">
                                         <h6><%= course.teacher %></h6>
@@ -79,7 +79,7 @@
                     </div>
                 <% } %>
                 </div>
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-lg-12">
                         <div class="owl-carousel">
                             <div class="blocks">
@@ -174,7 +174,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
         
@@ -182,29 +182,7 @@
         
         <section class="footer">
             <div class="container">
-                <%- include("footer.ejs") %>
-                
-                <div class="row seconds d-flex align-items-start start">
-                    <div class="col-lg-4 col-md-4 col-sm-4 d-flex justify-content-end end">
-                        <div class="contact">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                            <a href="#">Harvard@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 d-flex justify-content-center end">
-                        <div class="contact">
-                            <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
-                            <p class="p-0 m-0">+998941756227</p>
-                            <p class="p-0 m-0">+998941756227</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 d-flex justify-content-start end">
-                        <div class="contact">
-                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            <p>Mirzo Ulug'bek ko'chasi 70-uy</p>
-                        </div>
-                    </div>
-                </div>
+                <%- include("footer.ejs", info ) %>
             </div>
         </section>
         

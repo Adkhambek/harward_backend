@@ -18,7 +18,7 @@ SELECT
 FROM home_contact;
 
 -- select contact
-SELECT 
+SELECT
     name,
     number,
     body,
@@ -34,12 +34,32 @@ SELECT
 FROM contact
 WHERE checked = 1;
 
--- update contact
 UPDATE contact
 SET checked = 1
 WHERE contact_id = 1;
 
--- select news
+-- select comment_course
+SELECT 
+    name,
+    number,
+    body,
+    TO_CHAR(time, 'yyyy-MM-dd HH24:MI:SS') as time
+FROM comment_course
+WHERE checked = 0;
+
+SELECT 
+    name,
+    number,
+    body,
+    TO_CHAR(time, 'yyyy-MM-dd HH24:MI:SS') as time
+FROM comment_course
+WHERE checked = 1;
+
+UPDATE comment_course
+SET checked = 1
+WHERE comment_id = 1;
+
+-- news
 SELECT 
     title,
     body,

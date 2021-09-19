@@ -82,6 +82,10 @@ SET title = $1, author = $2, body = $3
 WHERE news_id = $4
 `;
 
+const SELECT_INFO = `
+SELECT * FROM info;
+`
+
 exports.getNews = () => fetchAll(SELECT_NEWS);
 
 exports.getOneNews = (id) => fetch(SELECT_ONE, id);
@@ -117,3 +121,5 @@ exports.updateWithoutImage = (id, data) => fetch(
     data.author, 
     data.body, 
     id);
+
+exports.getInfo = () => fetch(SELECT_INFO);
