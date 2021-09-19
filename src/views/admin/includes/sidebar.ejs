@@ -4,7 +4,7 @@
     <a href="/" class="logo"><img src="/images/main/logo.png" alt="logo" /></a>
   </div>
 
-  <div class="sidebar-body">
+  <div style="height: 100vh !important;" class="sidebar-body">
     <nav class="sidebar-nav">
       <ul class="metismenu">
         <li class="nav-label">Main Menu</li>
@@ -61,90 +61,16 @@
             <li class="<% if(page == 'courseForm') { %>mm-active<% }%>">
               <a href="/admin/course/add">Add course</a>
             </li>
+            <li class="<% if(page == 'comments') { %>mm-active<% }%>">
+              <a href="/admin/course/comments">Comments</a>
+            </li>
           </ul>
         </li>
-        <li>
-          <a class="has-arrow material-ripple" href="#">
+        <li class="<% if(page == 'contacts') { %>mm-active<% }%>">
+          <a href="/admin/contacts">
             <i class="typcn typcn-contacts mr-2"></i>
-            Contact & Comments
+            Contacts
           </a>
-          <ul class="nav-second-level">
-            <li class="">
-              <a href="contact">Contact</a>
-            </li>
-            <li class="">
-              <a href="comments">Comments</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-label">Pages</li>
-
-        <li class="">
-          <a href="aboutus"
-            ><i class="typcn typcn-info-large mr-2"></i>AboutUs</a
-          >
-        </li>
-        <li>
-          <a class="has-arrow material-ripple" href="#"
-            ><i class="typcn typcn-contacts mr-2"></i>Portfolio</a
-          >
-          <ul class="nav-second-level">
-            <li class="">
-              <a href="portfolio">Portfolio</a>
-            </li>
-            <li class="">
-              <a href="service">Services</a>
-            </li>
-            <li class="">
-              <a href="mywork">My works</a>
-            </li>
-            <li class="">
-              <a href="knowledge">Knowledge</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-label">Extra</li>
-        <li>
-          <a class="has-arrow material-ripple" href="#">
-            <i class="typcn typcn-flash-outline mr-2"></i>
-            SEO
-          </a>
-          <ul class="nav-second-level">
-            <li><a href="#">Main Page</a></li>
-            <li><a href="#">Post Page</a></li>
-            <li><a href="#">Course Page</a></li>
-            <li><a href="#">Book Page</a></li>
-            <li><a href="#">About Page</a></li>
-            <li><a href="#">Partfolio</a></li>
-          </ul>
-        </li>
-        <li>
-          <a class="has-arrow material-ripple" href="#">
-            <i class="typcn typcn-link-outline mr-2"></i>
-            Advertisement
-          </a>
-          <ul class="nav-second-level">
-            <li><a href="#">Main Page</a></li>
-            <li><a href="#">Post Page</a></li>
-            <li><a href="#">Course Page</a></li>
-            <li><a href="#">Book Page</a></li>
-          </ul>
-        </li>
-
-        <li>
-          <a href="blank-page.html" aria-expanded="true"
-            ><i class="typcn typcn-bookmark mr-2"></i>Blank page</a
-          >
-        </li>
-        <li>
-          <a href="blank-page.html" aria-expanded="true"
-            ><i class="typcn typcn-bookmark mr-2"></i>Blank page</a
-          >
-        </li>
-        <li>
-          <a href="blank-page.html" aria-expanded="true"
-            ><i class="typcn typcn-bookmark mr-2"></i>Blank page</a
-          >
         </li>
       </ul>
     </nav>
