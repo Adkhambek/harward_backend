@@ -1,4 +1,5 @@
 CREATE DATABASE harward_db;
+CREATE EXTENSION pgcrypto;
 
 -- create info table
 CREATE TABLE info(
@@ -79,4 +80,9 @@ CREATE TABLE more_about(
     title varchar(100) not null,
     body text not null,
     vidoe text not null
+);
+
+CREATE TABLE admin(
+    username varchar(70) not null,
+    password text not null
 );

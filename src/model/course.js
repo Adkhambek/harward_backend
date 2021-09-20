@@ -7,8 +7,7 @@ SELECT
     title,
     teacher,
     prise
-FROM courses
-ORDER BY course_id DESC
+FROM courses;
 `
 
 const SELECT_INFO = `

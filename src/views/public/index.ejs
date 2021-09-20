@@ -106,71 +106,21 @@
                 </div>
                 <div class="col-lg-12" data-aos="fade-right">
                     <div class="owl-carousel">
-                        <div class="box">
-                            <div class="img">
-                                <img src="/images/main/yangilik.png" alt="yangiliklar">
-                                <div class="top">
-                                    <p>Yangi</p>
+                        <% for(let item of news) {%> 
+                            <div class="box">
+                                <div class="img">
+                                    <img src="<%= item.image %>" alt="yangiliklar">
+                                    <div class="top">
+                                        <p>Yangi</p>
+                                    </div>
+                                </div>
+                                <div class="contents">
+                                    <h3><%= item.title %></h3>
+                                    <p><%= item.body %></p>
+                                    <a href="/news/<%= item.news_id %>">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                                 </div>
                             </div>
-                            <div class="contents">
-                                <h3>Ramazon oyi munosabati bilan chegirmalarni kutib oling</h3>
-                                <p>Ramazon oyi munosabati bilan chegirmalarni kutib oling.Nemis tili 50% va boshqa nimadur nimadur va yana nimadur</p>
-                                <a href="#">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="img">
-                                <img src="/images/main/yangilik.png" alt="yangiliklar">
-                                <div class="top green">
-                                    <p>Skidka</p>
-                                </div>
-                            </div>
-                            <div class="contents">
-                                <h3>Ramazon oyi munosabati bilan chegirmalarni kutib oling</h3>
-                                <p>Ramazon oyi munosabati bilan chegirmalarni kutib oling.Nemis tili 50% va boshqa nimadur nimadur va yana nimadur</p>
-                                <a href="#">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="img">
-                                <img src="/images/main/yangilik.png" alt="yangiliklar">
-                                <div class="top">
-                                    <p>Yangi</p>
-                                </div>
-                            </div>
-                            <div class="contents">
-                                <h3>Ramazon oyi munosabati bilan chegirmalarni kutib oling</h3>
-                                <p>Ramazon oyi munosabati bilan chegirmalarni kutib oling.Nemis tili 50% va boshqa nimadur nimadur va yana nimadur</p>
-                                <a href="#">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="img">
-                                <img src="/images/main/yangilik.png" alt="yangiliklar">
-                                <div class="top green">
-                                    <p>Yangi</p>
-                                </div>
-                            </div>
-                            <div class="contents">
-                                <h3>Ramazon oyi munosabati bilan chegirmalarni kutib oling</h3>
-                                <p>Ramazon oyi munosabati bilan chegirmalarni kutib oling.Nemis tili 50% va boshqa nimadur nimadur va yana nimadur</p>
-                                <a href="#">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="img">
-                                <img src="/images/main/yangilik.png" alt="yangiliklar">
-                                <div class="top">
-                                    <p>Skidka</p>
-                                </div>
-                            </div>
-                            <div class="contents">
-                                <h3>Ramazon oyi munosabati bilan chegirmalarni kutib oling</h3>
-                                <p>Ramazon oyi munosabati bilan chegirmalarni kutib oling.Nemis tili 50% va boshqa nimadur nimadur va yana nimadur</p>
-                                <a href="#">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
+                        <% } %>
                     </div>
                 </div>
             </div>
@@ -232,102 +182,27 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Yangiliklar</h2>
+                    <h2>Kurslar</h2>
                 </div>
             </div>
             <div class="row"  data-aos="fade-right">
                 <div class="col-lg-12">
                     <div class="owl-carousel">
-                        <div class="blocks">
-                            <img src="/images/main/yangilik.png" alt="Yangilik">
-                            <div class="context">
-                                <h3>Ingliz tili Grammatikasi</h3>
-                                <div class="price">
-                                    <div class="left">
-                                        <h6>Xudoyberdi To'xtaboyev</h6>
-                                        <p>Narxi: <span>100.000 So'm</span></p>
+                        <% for(let item of courses) { %> 
+                            <div class="blocks">
+                                <img src="/images/kurslar/<%= item.image %>" alt="Yangilik">
+                                <div class="context">
+                                    <h3><%= item.title %></h3>
+                                    <div class="price">
+                                        <div class="left">
+                                            <h6><%= item.teacher %></h6>
+                                            <p>Narxi: <span><%= item.prise %> So'm</span></p>
+                                        </div>
                                     </div>
-                                    <div class="image">
-                                        <img src="/images/main/teacher.png" alt="Teacher">
-                                    </div>
-                                    
+                                    <a href="/lesson/<%= item.course_id %>" class="btm">Batafsil</a>
                                 </div>
-                                <a href="/lesson" class="btm">Batafsil</a>
-                                
                             </div>
-                        </div>
-                        <div class="blocks">
-                            <img src="/images/main/yangilik.png" alt="Yangilik">
-                            <div class="context">
-                                <h3>Ingliz tili Grammatikasi</h3>
-                                <div class="price">
-                                    <div class="left">
-                                        <h6>Xudoyberdi To'xtaboyev</h6>
-                                        <p>Narxi: <span>100.000 So'm</span></p>
-                                    </div>
-                                    <div class="image">
-                                        <img src="/images/main/teacher.png" alt="Teacher">
-                                    </div>
-                                    
-                                </div>
-                                <a href="/lesson" class="btm">Batafsil</a>
-                                
-                            </div>
-                        </div>
-                        <div class="blocks">
-                            <img src="/images/main/yangilik.png" alt="Yangilik">
-                            <div class="context">
-                                <h3>Ingliz tili Grammatikasi</h3>
-                                <div class="price">
-                                    <div class="left">
-                                        <h6>Xudoyberdi To'xtaboyev</h6>
-                                        <p>Narxi: <span>100.000 So'm</span></p>
-                                    </div>
-                                    <div class="image">
-                                        <img src="/images/main/teacher.png" alt="Teacher">
-                                    </div>
-                                    
-                                </div>
-                                <a href="/lesson" class="btm">Batafsil</a>
-                                
-                            </div>
-                        </div>
-                        <div class="blocks">
-                            <img src="/images/main/yangilik.png" alt="Yangilik">
-                            <div class="context">
-                                <h3>Ingliz tili Grammatikasi</h3>
-                                <div class="price">
-                                    <div class="left">
-                                        <h6>Xudoyberdi To'xtaboyev</h6>
-                                        <p>Narxi: <span>100.000 So'm</span></p>
-                                    </div>
-                                    <div class="image">
-                                        <img src="/images/main/teacher.png" alt="Teacher">
-                                    </div>
-                                    
-                                </div>
-                                <a href="lesson" class="btm">Batafsil</a>
-                                
-                            </div>
-                        </div>
-                        <div class="blocks">
-                            <img src="images/main/yangilik.png" alt="Yangilik">
-                            <div class="context">
-                                <h3>Ingliz tili Grammatikasi</h3>
-                                <div class="price">
-                                    <div class="left">
-                                        <h6>Xudoyberdi To'xtaboyev</h6>
-                                        <p>Narxi: <span>100.000 So'm</span></p>
-                                    </div>
-                                    <div class="image">
-                                        <img src="images/main/teacher.png" alt="Teacher">
-                                    </div>
-                                    
-                                </div>
-                                <a href="lesson" class="btm">Batafsil</a>
-                                
-                            </div>
-                        </div>
+                        <% } %>
                     </div>
                 </div>
             </div>
@@ -338,7 +213,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>O'quvchilaning fikri</h2>
+                    <h2>O'quvchilarning fikri</h2>
                 </div>
                 <div class="col-lg-12"  data-aos="fade-right">
                     <div class="owl-carousel">
@@ -457,21 +332,21 @@
                 </div>
                 
             </div>
-            <div class="row">
+            <form action="/birnima" method="POST" class="row">
                 <div class="col-lg-4 col-md-4">
                     <div class="input">
-                        <input type="text" placeholder="Ismingiz" required>
+                        <input type="text" name="name" placeholder="Ismingiz" required>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 mb-3">
                     <div class="input">
-                        <input type="text" placeholder="Telefon raqamingiz" required>
+                        <input type="text" name="number" placeholder="Telefon raqamingiz" required>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4">
-                    <button class="send">Jo'natish</button>
+                    <button type="submit" class="send">Jo'natish</button>
                 </div>
-            </div>
+            </form>
         </div>
     </section>
     
