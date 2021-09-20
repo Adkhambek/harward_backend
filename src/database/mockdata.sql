@@ -291,4 +291,55 @@ INSERT INTO more_about (
     'nimadir_birnima.mp4'
 );
 
+-- admin
 INSERT INTO admin ( username, password ) VALUES ( 'admin', crypt('admin', gen_salt('bf')) );
+
+-- student_comment
+INSERT INTO student_comments (
+    student_first_name,
+    student_last_name,
+    job,
+    age,
+    image,
+    comment
+) VALUES 
+(
+    'Palonchi',
+    'Palonchiyev1',
+    'o''quvchi',
+    18,
+    'https://picsum.photos/400',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremqu'
+),
+(
+    'Palonchi',
+    'Palonchiyev2',
+    'o''quvchi',
+    15,
+    'https://picsum.photos/400',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremqu'
+),
+(
+    'Palonchi',
+    'Palonchiyev3',
+    'o''quvchi',
+    19,
+    'https://picsum.photos/400',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremqu'
+),
+(
+    'Palonchi',
+    'Palonchiyev4',
+    'o''quvchi',
+    25,
+    'https://picsum.photos/400',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremqu'
+),
+(
+    'Palonchi',
+    'Palonchiyev5',
+    'o''quvchi',
+    20,
+    'https://picsum.photos/400',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremqu'
+);

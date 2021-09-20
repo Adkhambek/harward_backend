@@ -127,4 +127,20 @@ UPDATE admin
 SET username = 'imron',
     password = crypt('imron', gen_salt('bf'));
 
-SELECT * FROM admin;    
+SELECT * FROM admin;
+
+-- student_comments
+SELECT 
+    *
+FROM student_comments;
+
+UPDATE
+SET student_first_name = '',
+    student_last_name = '',
+    job = '',
+    age = ,
+    image = '',
+    comment = '';
+
+DELETE student_comments
+WHERE student_id = 1;
