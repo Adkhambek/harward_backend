@@ -28,12 +28,12 @@ CREATE TABLE contact(
     time timestamptz default current_timestamp
 );
 
--- create table comment_course
-CREATE TABLE comment_course(
-    comment_id serial primary key,
+-- create table enrolements
+CREATE TABLE enrolements(
+    id serial primary key,
+    course_id int not null references courses(course_id),
     name varchar(70) not null,
     number varchar(13) not null,
-    body text not null,
     checked smallint default 0,
     time timestamptz default current_timestamp
 );

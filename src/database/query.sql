@@ -45,13 +45,14 @@ WHERE contact_id = 1;
 DELETE contact
 WHERE contact_id = 1;
 
--- select comment_course
+-- select enrolements
 SELECT 
-    name,
-    number,
-    body,
-    TO_CHAR(time, 'yyyy-MM-dd HH24:MI:SS') as time
-FROM comment_course
+    title,
+    e.name,
+    e.number,
+    TO_CHAR(e.time, 'yyyy-MM-dd HH24:MI:SS') as time
+FROM enrolements e
+RIGHT JOIN courses c ON c.course_id = e.course_id
 WHERE checked = 0;
 
 SELECT 
