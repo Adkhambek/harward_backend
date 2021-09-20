@@ -14,12 +14,6 @@
             Dashboard
           </a>
         </li>
-        <li class="<% if(page == 'about') { %>mm-active<% }%>">
-          <a href="/admin/about">
-            <i class="typcn typcn-info-large-outline mr-2"></i>
-            About
-          </a>
-        </li>
 
         <li>
           <a class="has-arrow material-ripple" href="#">
@@ -51,7 +45,7 @@
         </li>
         <li>
           <a class="has-arrow material-ripple" href="#">
-            <i class="typcn typcn-tags mr-2"></i>
+            <i class="typcn typcn-globe-outline mr-2"></i>
              Courses
           </a>
           <ul class="nav-second-level">
@@ -61,15 +55,39 @@
             <li class="<% if(page == 'courseForm') { %>mm-active<% }%>">
               <a href="/admin/course/add">Add course</a>
             </li>
-            <li class="<% if(page == 'comments') { %>mm-active<% }%>">
-              <a href="/admin/course/comments">Comments</a>
+          </ul>
+        </li>
+        <li>
+          <a class="has-arrow material-ripple" href="#">
+            <i class="typcn typcn-group mr-2"></i>
+             Students
+          </a>
+          <ul class="nav-second-level">
+            <li class="<% if(page == 'enrolement') { %>mm-active<% }%>">
+              <a href="/admin/students/enrolement">Enrolements</a>
+            </li>
+            <li class="<% if(page == 'courseForm') { %>mm-active<% }%>">
+              <a href="/admin/students/comments">Comments</a>
             </li>
           </ul>
+        </li>
+         <li class="nav-label">Others</li>
+        <li class="<% if(page == 'about') { %>mm-active<% }%>">
+          <a href="/admin/about">
+            <i class="typcn typcn-info-large-outline mr-2"></i>
+            About
+          </a>
         </li>
         <li class="<% if(page == 'contacts') { %>mm-active<% }%>">
           <a href="/admin/contacts">
             <i class="typcn typcn-contacts mr-2"></i>
             Contacts
+          </a>
+        </li>
+        <li class="<% if(page == 'quick-contacts') { %>mm-active<% }%>">
+          <a href="/admin/quick-contacts">
+            <i class="typcn typcn-phone-outline mr-2"></i>
+            Quick contacts
           </a>
         </li>
       </ul>

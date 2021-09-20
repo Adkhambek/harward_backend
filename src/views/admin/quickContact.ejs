@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <meta name="author" content="Bdtask">
-    <title>Contact</title>
+    <title>Quick Contacts</title>
     <!--Global Styles(used by all pages)-->
     <link href="/admin/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/admin/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
@@ -16,7 +16,6 @@
     <!--Third party Styles(used by this page)-->
     <link href="/admin/plugins/datatables/dataTables.bootstrap4.min.css" 
     rel="stylesheet">
-    <link href="/admin/plugins/modals/component.css" rel="stylesheet">
     <!--Start Your Custom Style Now-->
     <link href="/admin/dist/css/style.css" rel="stylesheet">
 </head>
@@ -26,7 +25,7 @@
 
     <div class="wrapper">
         <!-- Sidebar  -->
-        <%- include("includes/sidebar.ejs", {page: "contacts"}) %>
+        <%- include("includes/sidebar.ejs", {page: "quick-contacts"}) %>
 
         <div class="content-wrapper">
             <div class="main-content">
@@ -48,8 +47,8 @@
                         <div class="media">
                             <div class="header-icon text-success mr-3"><i class="typcn typcn-puzzle-outline"></i></div>
                             <div class="media-body">
-                                <h1 class="font-weight-bold">Contact</h1>
-                                <small>In this page, you can see all contacts</small>
+                                <h1 class="font-weight-bold">Quick contacts</h1>
+                                <small>In this page, you can see all quick contacts</small>
                             </div>
                         </div>
                     </div>
@@ -94,11 +93,8 @@
                                 <td><%= item.name %></td>
                                 <td><%= item.number %></td>
                                 <td><%= item.time %></td>
-                                <td class="d-flex">
-                                    <button class="btn btn-primary md-trigger mr-1" data-modal="modal-<%=item.contact_id%>">
-                                        <span class="fas fa-eye" ></span>
-                                    </button>
-                                    <a href="/admin/contacts/checked/<%= item.contact_id%>" class="btn btn-success">
+                                <td>
+                                    <a href="/admin/quick-contacts/checked/<%= item.home_contact_id%>" class="btn btn-success">
                                         <span class="fas fa-check" ></span>
                                     </a>
                                 </td>
@@ -130,7 +126,6 @@
                                 <th>Name</th>
                                 <th>Tel</th>
                                 <th>Date</th>
-                                <th>Detail</th>
                             </tr>
                             
                         </thead>
@@ -142,29 +137,13 @@
                                 <td><%= item.name %></td>
                                 <td><%= item.number %></td>
                                 <td><%= item.time %></td>
-                                <td>
-                                    <button class="btn btn-primary md-trigger mr-1" data-modal="modal-<%=item.contact_id%>">
-                                        <span class="fas fa-eye" ></span>
-                                    </button>
-                                </td>
                             </tr>
                             <% } %>
                         </tbody>
                     </table> 
                 </div>
                 </div>
-                    </div>
-                    <% for(item of contactDetail){%>     
-                        <div class="md-modal md-effect-1" id="modal-<%=item.contact_id%>">
-                            <div class="md-content">
-                                <h4 class="font-weight-600 mb-0">Contact Detail</h4>
-                                <div class="n-modal-body">
-                                    <p><%= item.body%></p>
-                                    <button class="btn btn-success md-close">Close</button>
-                                </div>
-                            </div>
-                        </div>
-                        <% } %>
+            </div>
                         <div class="md-overlay"></div>
                 </div>
             </div>
@@ -191,8 +170,6 @@
     <!-- Third Party Scripts(used by this page)-->
     <script src="/admin/plugins/datatables/dataTables.min.js"></script>
     <script src="/admin/plugins/datatables/dataTables.bootstrap4.min.js"></script>
-    <script src="/admin/plugins/modals/classie.js"></script>
-    <script src="/admin/plugins/modals/modalEffects.js"></script>
     <!--Page Active Scripts(used by this page)-->
     <script src="/admin/plugins/datatables/data-basic.active.js"></script>
     </section>

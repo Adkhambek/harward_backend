@@ -19,7 +19,6 @@ SELECT
     contact_id,
     name,
     number,
-    body,
     TO_CHAR(time, 'yyyy-MM-dd HH24:MI:SS') as time
 FROM contact
 WHERE checked = 0
@@ -31,12 +30,18 @@ SELECT
     contact_id,
     name,
     number,
-    body,
     TO_CHAR(time, 'yyyy-MM-dd HH24:MI:SS') as time
 FROM contact
 WHERE checked = 1
 ORDER BY contact_id DESC;
 `;
+
+const SELECT_DETAILS = `
+SELECT
+    contact_id,
+    body
+FROM contact
+`
 
 const CHECK_CONTACT = `
 UPDATE contact 
@@ -53,3 +58,5 @@ exports.getCheckedContacts = () => fetchAll(SELECT_CONTACTS_CHECKED);
 exports.inserData = ({ name, phones, text }) => fetch(INSERT_DATA, name, phones, text);
 
 exports.checkContact = (id) => fetch(CHECK_CONTACT, id);
+
+exports.getContactDetails = () => fetchAll(SELECT_DETAILS)

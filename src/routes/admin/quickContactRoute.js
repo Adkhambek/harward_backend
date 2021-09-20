@@ -1,26 +1,24 @@
 const router = require("express").Router();
 const breadcrumb = require("../../middleware/breadcrumb");
-const model = require("../../model/contact");
+const model = require("../../model/quickContact");
 
-router.get("/contacts", breadcrumb, async (req, res) => {
+router.get("/quick-contacts", breadcrumb, async (req, res) => {
     const contacts = await model.getContacts();
     const checkedContacts = await model.getCheckedContacts();
-    const contactDetail = await model.getContactDetails();
-    res.render("admin/contact", {
+    res.render("admin/quickContact", {
         contacts,
         checkedContacts,
-        contactDetail,
-        page: "contact",
+        page: "quickContact",
         breadcrumb: req.breadcrumb,
         successMessage: req.flash("success"),
     })
 });
 
-router.get("/contacts/checked/:id", async (req, res) => {
+router.get("/quick-contacts/checked/:id", async (req, res) => {
     const contactId = req.params.id * 1;
     await model.checkContact(contactId);
     req.flash("success", `the contact (id = ${contactId}) was checked. You can see it below`);
-    res.redirect("/admin/contacts");
+    res.redirect("/admin/quick-contacts");
 });
 
-module.exports = router
+module.exports = router;
