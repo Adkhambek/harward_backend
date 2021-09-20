@@ -2,10 +2,11 @@ const router = require("express").Router();
 const model = require("../../model/news");
 const multer = require("../../lib/multer");
 const breadcrumb = require("../../middleware/breadcrumb");
+const redirect = require("../../middleware/redirect");
 const fs = require("fs");
 const path = require("path");
 
-router.get("/news/add", breadcrumb, async (req, res) => {
+router.get("/news/add", redirect, breadcrumb, async (req, res) => {
     res.render("admin/newsForm", {
         page: "newsform",
         successMessage: req.flash("success"),
@@ -13,14 +14,14 @@ router.get("/news/add", breadcrumb, async (req, res) => {
     });
 });
 
-router.post("/news/add", multer("images/yangiliklar"), 
+router.post("/news/add", redirect, multer("images/yangiliklar"), 
 async(req, res) => {
     await model.addNews(req.body, req.file.filename);
     req.flash("success", "new news was added successfully");
     res.redirect("/admin/news/add");
 });
 
-router.get("/news/table", breadcrumb, async (req, res) => {
+router.get("/news/table", redirect, breadcrumb, async (req, res) => {
     const news = await model.getNews();
     res.render("admin/newsTable", {
         news,
@@ -30,7 +31,7 @@ router.get("/news/table", breadcrumb, async (req, res) => {
     });
 });
 
-router.get("/news/delete/:id", async (req, res) => {
+router.get("/news/delete/:id", redirect, async (req, res) => {
     const newsId = req.params.id * 1;
     const { image } = await model.getImage(newsId);
     fs.unlinkSync(
@@ -44,13 +45,13 @@ router.get("/news/delete/:id", async (req, res) => {
     res.redirect("/admin/news/table");
 });
 
-router.get("/news/update/:id", async (req, res) => {
+router.get("/news/update/:id", redirect, async (req, res) => {
     const newsId = req.params.id * 1;
     const data = await model.getOneNews(newsId);
     res.render("admin/newsUpdate", { ...data, successMessage: req.flash("success") });
 });
 
-router.post("/news/update/:id", multer("images/yangiliklar"), async (req, res) => {
+router.post("/news/update/:id", redirect, multer("images/yangiliklar"), async (req, res) => {
     const newsId = req.params.id * 1;
     if (req.file) {
         const { image } = await model.getImage(newsId);

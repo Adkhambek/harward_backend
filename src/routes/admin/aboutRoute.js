@@ -2,10 +2,11 @@ const router = require("express").Router();
 const model = require("../../model/about");
 const multer = require("../../lib/multer");
 const breadcrumb = require("../../middleware/breadcrumb");
+const redirect = require("../../middleware/redirect");
 const fs = require("fs");
 const path = require("path");
 
-router.get("/about", breadcrumb, async (req, res) => {
+router.get("/about", redirect, breadcrumb, async (req, res) => {
   const data = await model.selectAllData();
   res.render("admin/about", { 
     ...data, 
@@ -14,7 +15,7 @@ router.get("/about", breadcrumb, async (req, res) => {
   });
 });
 
-router.post("/about", multer("video"), async (req, res) => {
+router.post("/about", redirect, multer("video"), async (req, res) => {
   if (req.file) {
     const { vidoe } = await model.getVideoName();
     fs.unlinkSync(path.join(process.cwd(), "src/public/video", vidoe));

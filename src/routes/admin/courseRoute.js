@@ -2,10 +2,11 @@ const router = require("express").Router();
 const model = require("../../model/course");
 const multer = require("../../lib/multer");
 const breadcrumb = require("../../middleware/breadcrumb");
+const redirect = require("../../middleware/redirect");
 const fs = require("fs");
 const path = require("path");
 
-router.get("/course/add", breadcrumb,  async (req, res) => {
+router.get("/course/add", redirect, breadcrumb,  async (req, res) => {
     res.render("admin/courseForm", {
         page: "courseForm",
         successMessage: req.flash("success"),
@@ -13,14 +14,14 @@ router.get("/course/add", breadcrumb,  async (req, res) => {
     });
 });
 
-router.post("/course/add", multer("images/kurslar"),  async(req, res) => {
+router.post("/course/add", redirect, multer("images/kurslar"),  async(req, res) => {
         await model.addCourse(req.body, req.file.filename);
         req.flash("success", "new course was added successfully");
         res.redirect("/admin/course/add");
     }
 );
 
-router.get("/course/table", breadcrumb, async (req, res) => {
+router.get("/course/table", redirect, breadcrumb, async (req, res) => {
     const courses = await model.getCourses();
     res.render("admin/courseTable", {
         courses,
@@ -30,7 +31,7 @@ router.get("/course/table", breadcrumb, async (req, res) => {
     });
 });
 
-router.get("/course/delete/:id", async (req, res) => {
+router.get("/course/delete/:id", redirect, async (req, res) => {
     const courseId = req.params.id * 1;
     const { image } = await model.getImage(courseId);
     fs.unlinkSync(
@@ -44,13 +45,13 @@ router.get("/course/delete/:id", async (req, res) => {
     res.redirect("/admin/course/table");
 });
 
-router.get("/course/update/:id", async (req, res) => {
+router.get("/course/update/:id", redirect, async (req, res) => {
     const courseId = req.params.id * 1;
     const data = await model.getCourse(courseId);
     res.render("admin/courseUpdate", { ...data, successMessage: req.flash("success") });
 });
 
-router.post("/course/update/:id", multer("images/kurslar"), async (req, res) => {
+router.post("/course/update/:id", redirect, multer("images/kurslar"), async (req, res) => {
     const courseId = req.params.id * 1;
     if (req.file) {
         const { image } = await model.getImage(courseId);

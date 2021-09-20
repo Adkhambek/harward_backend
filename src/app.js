@@ -7,6 +7,7 @@ const path = require("path");
 const flash = require("connect-flash")
 const { PORT } = require("./config/keys");
 const routes = require("./routes");
+const cookie = require("cookie-parser");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
@@ -18,6 +19,7 @@ app.use(session({
     resave: true
 }))
 app.use(flash());
+app.use(cookie());
 
 //ejs setting:
 app.set("view engine", "ejs");
