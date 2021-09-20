@@ -1,5 +1,7 @@
 const router = require("express").Router();
 const model = require("../../model/admin");
+const { maxAge } = require("../../config/keys");
+const {sign} = require("../../lib/jwt");
 
 router.get("/login", (req, res) => {
   res.render("admin/login", {
@@ -16,12 +18,13 @@ router.post("/login", async (req, res) => {
     } else {
         const auth = await model.checkLogin(username, password);
         if(auth) {
-            res.redirect("/admin")
+            res.cookie("token", sign(auth), {maxAge});
+            res.redirect("/admin");
         } else {
             req.flash("error", "username or password is incorrect. Please, try one more time.");
             res.redirect("/admin/login");  
         }
     }
-  });
+});
 
 module.exports = router;

@@ -1,6 +1,7 @@
 const router = require("express").Router();
+const redirect = require("../../middleware/redirect");
 
-router.get("/", (req, res) => {
+router.get("/", redirect, (req, res) => {
   res.render("admin/index", { page: "dashboard"});
 });
 
