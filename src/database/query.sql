@@ -17,6 +17,10 @@ SELECT
     TO_CHAR(time, 'yyyy-MM-dd HH24:MI:SS') as time
 FROM home_contact;
 
+UPDATE home_contact
+SET checked = 1
+WHERE home_contact_id = 1;
+
 -- select contact
 SELECT
     name,
@@ -36,6 +40,9 @@ WHERE checked = 1;
 
 UPDATE contact
 SET checked = 1
+WHERE contact_id = 1;
+
+DELETE contact
 WHERE contact_id = 1;
 
 -- select comment_course
