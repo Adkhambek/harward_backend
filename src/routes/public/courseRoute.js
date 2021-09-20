@@ -14,7 +14,7 @@ router.get("/lesson/:id", async (req, res) => {
 });
 
 router.post("/lesson/:id", async (req, res) => {
-	await model.inserData(req.body);
+	await model.inserData(req.body, req.params.id);
 	res.redirect("/lesson/" + req.params.id);
 })
 
