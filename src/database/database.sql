@@ -14,6 +14,7 @@ CREATE TABLE home_contact(
     home_contact_id serial primary key,
     name varchar(70) not null,
     number varchar(13) not null,
+    checked smallint default 0,
     time timestamptz default current_timestamp
 );
 
@@ -76,13 +77,20 @@ CREATE TABLE teachers(
     teacher_detail text not null
 );
 
+-- more about
 CREATE TABLE more_about(
     title varchar(100) not null,
     body text not null,
     vidoe text not null
 );
 
+-- admin
 CREATE TABLE admin(
     username varchar(70) not null,
     password text not null
+);
+
+-- students_comment 
+CREATE TABLE students_comment(
+    student_id 
 );
