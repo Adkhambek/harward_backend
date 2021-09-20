@@ -2,9 +2,9 @@ const { fetch, fetchAll } = require("../lib/database");
 
 const SELECT_CONTACTS = `
 SELECT 
-    home_contact_id
-    name
-    number
+    home_contact_id,
+    name,
+    number,
     TO_CHAR(time, 'yyyy-MM-dd HH24:MI:SS') as time
 FROM home_contact
 WHERE checked = 0
@@ -13,8 +13,8 @@ ORDER BY home_contact_id DESC;
 
 const SELECT_CONTACTS_CHECKED = `
 SELECT 
-    name
-    number
+    name,
+    number,
     TO_CHAR(time, 'yyyy-MM-dd HH24:MI:SS') as time
 FROM home_contact
 WHERE checked = 1
