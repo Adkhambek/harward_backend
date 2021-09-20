@@ -290,3 +290,5 @@ INSERT INTO more_about (
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque',
     'nimadir_birnima.mp4'
 );
+
+INSERT INTO admin ( username, password ) VALUES ( 'admin', crypt('admin', gen_salt('bf')) );

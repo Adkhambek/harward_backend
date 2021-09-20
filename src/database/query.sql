@@ -112,7 +112,15 @@ FROM teachers;
 SELECT * FROM more_about;
 
 -- update more_about
-UPDATE
+UPDATE more_about
 SET title = '',
     body = '',
     vidoe = '';
+
+
+-- admin
+UPDATE admin
+SET username = 'imron',
+    password = crypt('imron', gen_salt('bf'));
+
+SELECT * FROM admin;
