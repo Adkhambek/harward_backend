@@ -4,5 +4,7 @@ const adminRoutes = require("./admin");
 
 router.use("/admin", adminRoutes);
 router.use("/", publicRoutes);
-
+router.use((req, res) => {
+    res.render("404.ejs")
+})
 module.exports = router;

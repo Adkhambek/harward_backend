@@ -113,8 +113,6 @@ SELECT
     teacher_last_name
 FROM teachers;
 
-
-
 -- select more_about
 SELECT * FROM more_about;
 
@@ -124,10 +122,9 @@ SET title = '',
     body = '',
     vidoe = '';
 
-
 -- admin
 UPDATE admin
 SET username = 'imron',
     password = crypt('imron', gen_salt('bf'));
 
-SELECT * FROM admin;
+SELECT * FROM admin;    

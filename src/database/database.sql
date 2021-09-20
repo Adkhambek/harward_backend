@@ -91,6 +91,10 @@ CREATE TABLE admin(
 );
 
 -- students_comment 
-CREATE TABLE students_comment(
-    student_id 
+CREATE TABLE students_comments(
+    student_id serial primary key,
+    student_first_name varchar(50) not null,
+    student_last_name varchar(50) not null,
+    job varchar(50) not null,
+    
 );
