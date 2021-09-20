@@ -7,7 +7,7 @@ router.get("/", async (req, res) => {
 	let news = await model.getNews();
 	let courses = await model.getCourses();
 	let comments = await model.getComments();
-	res.render("public/index", { ...moreData, info, news, courses } );
+	res.render("public/index", { ...moreData, info, news, courses, comments } );
 });
 
 router.post("/birnima", async (req, res) => {

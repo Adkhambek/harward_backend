@@ -217,104 +217,22 @@
                 </div>
                 <div class="col-lg-12"  data-aos="fade-right">
                     <div class="owl-carousel">
-                        <div class="box1">
-                            <div class="head">
-                                <div class="img">
-                                    <img src="images/main/student.png" alt="">
+                        <% for(let comment of comments) {%> 
+                            <div class="box1">
+                                <div class="head">
+                                    <div class="img">
+                                        <img src="images/main/<%= comment.image %>" alt="image">
+                                    </div>
+                                    <div class="name">
+                                        <h3><%= comment.student_name %></h3>
+                                        <p><%= comment.job + ' ' + comment.age %> yosh</p>
+                                    </div>
                                 </div>
-                                <div class="name">
-                                    <h3>Amir Xamidov</h3>
-                                    <p>O'quvchi 17 yosh</p>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <p>Harvar school bu meni hayotimdagi engzor qilgan tanlovim deb hisoblayman.Harvardda o'qiganimdan faxrlanaman va Sizlarga ham Harvard schoolda o'qishni tavsiya qilaman</p>
-                            </div>
-                        </div>
-                        <div class="box1">
-                            <div class="head">
-                                <div class="img">
-                                    <img src="images/main/student.png" alt="">
-                                </div>
-                                <div class="name">
-                                    <h3>Amir Xamidov</h3>
-                                    <p>O'quvchi 17 yosh</p>
+                                <div class="content">
+                                    <p><%= comment.comment %></p>
                                 </div>
                             </div>
-                            <div class="content">
-                                <p>Harvar school bu meni hayotimdagi engzor qilgan tanlovim deb hisoblayman.Harvardda o'qiganimdan faxrlanaman va Sizlarga ham Harvard schoolda o'qishni tavsiya qilaman</p>
-                            </div>
-                        </div>
-                        <div class="box1">
-                            <div class="head">
-                                <div class="img">
-                                    <img src="images/main/student.png" alt="">
-                                </div>
-                                <div class="name">
-                                    <h3>Amir Xamidov</h3>
-                                    <p>O'quvchi 17 yosh</p>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <p>Harvar school bu meni hayotimdagi engzor qilgan tanlovim deb hisoblayman.Harvardda o'qiganimdan faxrlanaman va Sizlarga ham Harvard schoolda o'qishni tavsiya qilaman</p>
-                            </div>
-                        </div>
-                        <div class="box1">
-                            <div class="head">
-                                <div class="img">
-                                    <img src="images/main/student.png" alt="">
-                                </div>
-                                <div class="name">
-                                    <h3>Amir Xamidov</h3>
-                                    <p>O'quvchi 17 yosh</p>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <p>Harvar school bu meni hayotimdagi engzor qilgan tanlovim deb hisoblayman.Harvardda o'qiganimdan faxrlanaman va Sizlarga ham Harvard schoolda o'qishni tavsiya qilaman</p>
-                            </div>
-                        </div>
-                        <div class="box1">
-                            <div class="head">
-                                <div class="img">
-                                    <img src="images/main/student.png" alt="">
-                                </div>
-                                <div class="name">
-                                    <h3>Amir Xamidov</h3>
-                                    <p>O'quvchi 17 yosh</p>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <p>Harvar school bu meni hayotimdagi engzor qilgan tanlovim deb hisoblayman.Harvardda o'qiganimdan faxrlanaman va Sizlarga ham Harvard schoolda o'qishni tavsiya qilaman</p>
-                            </div>
-                        </div>
-                        <div class="box1">
-                            <div class="head">
-                                <div class="img">
-                                    <img src="images/main/student.png" alt="">
-                                </div>
-                                <div class="name">
-                                    <h3>Amir Xamidov</h3>
-                                    <p>O'quvchi 17 yosh</p>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <p>Harvar school bu meni hayotimdagi engzor qilgan tanlovim deb hisoblayman.Harvardda o'qiganimdan faxrlanaman va Sizlarga ham Harvard schoolda o'qishni tavsiya qilaman</p>
-                            </div>
-                        </div>
-                        <div class="box1">
-                            <div class="head">
-                                <div class="img">
-                                    <img src="images/main/student.png" alt="">
-                                </div>
-                                <div class="name">
-                                    <h3>Amir Xamidov</h3>
-                                    <p>O'quvchi 17 yosh</p>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <p>Harvar school bu meni hayotimdagi engzor qilgan tanlovim deb hisoblayman.Harvardda o'qiganimdan faxrlanaman va Sizlarga ham Harvard schoolda o'qishni tavsiya qilaman</p>
-                            </div>
-                        </div>
+                        <% } %>
                     </div>
                     
                     

@@ -30,7 +30,13 @@ FROM courses;
 `
 
 const SELECT_COMMENTS = `
-
+SELECT 
+    student_first_name || ' ' || student_last_name student_name,
+    job,
+    age,
+    image,
+    comment
+FROM student_comments;
 `
 
 const INSERT_DATA = `

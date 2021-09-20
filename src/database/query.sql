@@ -56,16 +56,17 @@ RIGHT JOIN courses c ON c.course_id = e.course_id
 WHERE checked = 0;
 
 SELECT 
-    name,
-    number,
-    body,
-    TO_CHAR(time, 'yyyy-MM-dd HH24:MI:SS') as time
-FROM comment_course
+    title,
+    e.name,
+    e.number,
+    TO_CHAR(e.time, 'yyyy-MM-dd HH24:MI:SS') as time
+FROM enrolements e
+RIGHT JOIN courses c ON c.course_id = e.course_id
 WHERE checked = 1;
 
-UPDATE comment_course
+UPDATE enrolements
 SET checked = 1
-WHERE comment_id = 1;
+WHERE id = 1;
 
 -- news
 SELECT 
@@ -132,7 +133,11 @@ SELECT * FROM admin;
 
 -- student_comments
 SELECT 
-    *
+    student_first_name || ' ' || student_last_name student_name,
+    job,
+    age,
+    image,
+    comment
 FROM student_comments;
 
 UPDATE
