@@ -28,13 +28,13 @@ WHERE course_id = $1;
 `
 
 const INSERT_DATA = `
-INSERT INTO comment_course (
+INSERT INTO enrolements (
+    course_id,
     name,
-    number,
-    body
-) VALUES 
+    number
+) VALUES
 ( $1, $2, $3)
-RETURNING comment_id;
+RETURNING id;
 `
 
 const INSERT_COURSE = `
@@ -80,7 +80,7 @@ exports.getCourse = (id) => fetch(SELECT_ONE, id);
 
 exports.getImage = (id) => fetch(SELECT_IMAGE, id);
 
-exports.inserData = ({ name, phones, text }) => fetch(INSERT_DATA, name, phones, text);
+exports.inserData = ({ name, phones }, id ) => fetch(INSERT_DATA, id, name, phones);
 
 exports.addCourse = (data, imageName) => fetch(INSERT_COURSE, data.title, data.teacher, +data.lessons, +data.prize, data.body, imageName);
 

@@ -45,26 +45,28 @@ WHERE contact_id = 1;
 DELETE contact
 WHERE contact_id = 1;
 
--- select comment_course
+-- select enrolements
 SELECT 
-    name,
-    number,
-    body,
-    TO_CHAR(time, 'yyyy-MM-dd HH24:MI:SS') as time
-FROM comment_course
+    title,
+    e.name,
+    e.number,
+    TO_CHAR(e.time, 'yyyy-MM-dd HH24:MI:SS') as time
+FROM enrolements e
+RIGHT JOIN courses c ON c.course_id = e.course_id
 WHERE checked = 0;
 
 SELECT 
-    name,
-    number,
-    body,
-    TO_CHAR(time, 'yyyy-MM-dd HH24:MI:SS') as time
-FROM comment_course
+    title,
+    e.name,
+    e.number,
+    TO_CHAR(e.time, 'yyyy-MM-dd HH24:MI:SS') as time
+FROM enrolements e
+RIGHT JOIN courses c ON c.course_id = e.course_id
 WHERE checked = 1;
 
-UPDATE comment_course
+UPDATE enrolements
 SET checked = 1
-WHERE comment_id = 1;
+WHERE id = 1;
 
 -- news
 SELECT 
@@ -113,8 +115,6 @@ SELECT
     teacher_last_name
 FROM teachers;
 
-
-
 -- select more_about
 SELECT * FROM more_about;
 
@@ -124,10 +124,29 @@ SET title = '',
     body = '',
     vidoe = '';
 
-
 -- admin
 UPDATE admin
 SET username = 'imron',
     password = crypt('imron', gen_salt('bf'));
 
 SELECT * FROM admin;
+
+-- student_comments
+SELECT 
+    student_first_name || ' ' || student_last_name student_name,
+    job,
+    age,
+    image,
+    comment
+FROM student_comments;
+
+UPDATE
+SET student_first_name = '',
+    student_last_name = '',
+    job = '',
+    age = ,
+    image = '',
+    comment = '';
+
+DELETE student_comments
+WHERE student_id = 1;

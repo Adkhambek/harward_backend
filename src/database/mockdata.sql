@@ -56,36 +56,36 @@ INSERT INTO contact(
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.'
 );
 
--- insert comment_course
-INSERT INTO comment_course (
+-- insert enrolements
+INSERT INTO enrolements (
+    course_id,
     name,
-    number,
-    body
+    number
 ) VALUES 
 (
+    1,
     'Palonchi Palonchiyev1',
-    '+998999999999',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.'
+    '+998999999999' 
 ),
 (
+    2,
     'Palonchi Palonchiyev2',
-    '+998999999999',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.'
+    '+998999999999' 
 ),
 (
+    3,
     'Palonchi Palonchiyev3',
-    '+998999999999',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.'
+    '+998999999999' 
 ),
 (
+    4,
     'Palonchi Palonchiyev4',
-    '+998999999999',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.'
+    '+998999999999' 
 ),
 (
+    5,
     'Palonchi Palonchiyev5',
-    '+998999999999',
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremque odit dolores magni numquam.'
+    '+998999999999' 
 );
 
 -- insert news
@@ -291,4 +291,55 @@ INSERT INTO more_about (
     'nimadir_birnima.mp4'
 );
 
+-- admin
 INSERT INTO admin ( username, password ) VALUES ( 'admin', crypt('admin', gen_salt('bf')) );
+
+-- student_comment
+INSERT INTO student_comments (
+    student_first_name,
+    student_last_name,
+    job,
+    age,
+    image,
+    comment
+) VALUES 
+(
+    'Palonchi',
+    'Palonchiyev1',
+    'o''quvchi',
+    18,
+    'https://picsum.photos/400',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremqu'
+),
+(
+    'Palonchi',
+    'Palonchiyev2',
+    'o''quvchi',
+    15,
+    'https://picsum.photos/400',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremqu'
+),
+(
+    'Palonchi',
+    'Palonchiyev3',
+    'o''quvchi',
+    19,
+    'https://picsum.photos/400',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremqu'
+),
+(
+    'Palonchi',
+    'Palonchiyev4',
+    'o''quvchi',
+    25,
+    'https://picsum.photos/400',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremqu'
+),
+(
+    'Palonchi',
+    'Palonchiyev5',
+    'o''quvchi',
+    20,
+    'https://picsum.photos/400',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio atque impedit tenetur iusto eveniet? Incidunt a omnis facere libero veritatis voluptatibus eius error enim ab, doloremqu'
+);
