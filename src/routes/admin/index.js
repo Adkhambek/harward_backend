@@ -6,6 +6,7 @@ const courseRoute = require("./courseRoute");
 const contactRoute = require("./contactRoute");
 const quickContactRoute = require("./quickContactRoute");
 const loginRoute = require("./loginRoute");
+const studentRoute = require("./studentRoute");
 
 module.exports = [
     homeRoute, 
@@ -15,5 +16,6 @@ module.exports = [
     courseRoute, 
     contactRoute,
     quickContactRoute,
-    loginRoute
+    loginRoute,
+    studentRoute
 ];
