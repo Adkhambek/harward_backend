@@ -126,8 +126,8 @@ SET title = '',
 
 -- admin
 UPDATE admin
-SET username = 'imron',
-    password = crypt('imron', gen_salt('bf'));
+SET username = 'admin',
+    password = crypt('admin', gen_salt('bf'));
 
 SELECT * FROM admin;
 
