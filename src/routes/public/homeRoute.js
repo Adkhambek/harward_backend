@@ -2,17 +2,34 @@ const router = require("express").Router();
 const model = require("../../model/home");
 
 router.get("/", async (req, res) => {
-	let moreData = await model.getMoreAbout();
-	let info = await model.getInfo();
-	let news = await model.getNews();
-	let courses = await model.getCourses();
-	let comments = await model.getComments();
-	res.render("public/index", { ...moreData, info, news, courses, comments } );
+	const moreData = await model.getMoreAbout();
+	const info = await model.getInfo();
+	const news = await model.getNews();
+	const courses = await model.getCourses();
+	const comments = await model.getComments();
+	res.render("public/index", { 
+		...moreData, 
+		info, 
+		news, 
+		courses, 
+		comments,
+		successMessage: req.flash("success"),
+		errorMessage: req.flash("erorr"),
+	});
 });
 
-router.post("/birnima", async (req, res) => {
-	await model.insertData(req.body);
-	res.redirect("/")
-})
+router.post("/", async (req, res) => {
+	const name = req.body.name
+	const tel = req.body.number
+	if(!name || !tel) {
+		req.flash("error", "bo'sh qator bor. Iltimos formani to'liq to'ldiring!")
+		res.redirect("/");
+	} else {
+		await model.insertData(req.body);
+		req.flash("success", "muvaffaqiyatli jo'natildi")
+		res.redirect("/");
+	}
+	
+});
 
 module.exports = router;

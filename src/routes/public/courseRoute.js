@@ -2,14 +2,14 @@ const router = require("express").Router();
 const model = require("../../model/course");
 
 router.get("/kurslar", async (req, res) => {
-	let courses = await model.getCourses();
-	let info = await model.getInfo();
+	const courses = await model.getCourses();
+	const info = await model.getInfo();
 	res.render("public/kurslar", { courses, info });
 });
 
 router.get("/lesson/:id", async (req, res) => {
-	let course = await model.getCourse(req.params.id);
-	let info = await model.getInfo();
+	const course = await model.getCourse(req.params.id);
+	const info = await model.getInfo();
 	res.render("public/lesson", { ...course, info });
 });
 
