@@ -5,10 +5,10 @@ const { sign } = require("../../lib/jwt");
 const redirect = require("../../middleware/redirect");
 
 router.get("/login", (req, res) => {
-  res.render("admin/login", {
-    successMessage: req.flash("success"),
-    errorMessage: req.flash("error")
-  });
+    res.render("admin/login", {
+        successMessage: req.flash("success"),
+        errorMessage: req.flash("error")
+    });
 });
 
 router.post("/login", async (req, res) => {
@@ -33,8 +33,12 @@ router.get("/logout", (req, res) => {
 })
 
 router.get("/password", redirect, (req, res) => {
-    res.render("admin/passwordForm", { page: "dashboard" } );
-})
+    res.render("admin/passwordForm", { 
+        page: "dashboard", 
+        successMessage: req.flash("success"),
+        errorMessage: req.flash("error") 
+    });
+});
 
 router.post("/password", async (req, res) => {
     const { oldPassword, newPassword, confirmPassword } = req.body;
@@ -42,15 +46,21 @@ router.post("/password", async (req, res) => {
         req.flash("error", "password is empty. Please, fill in all the required fields.");
         res.redirect("/admin/password");
     } else {
-        const changedPassword = await model.changePassword(oldPassword, newPassword);
-        console.log(changedPassword);
-        if(!changedPassword && newPassword == confirmPassword) {
-            res.redirect("/admin/login");
+        const password = await model.oldPassword(oldPassword);
+        if(password) {
+            if(newPassword == confirmPassword) {
+                await model.changePassword(newPassword);
+                req.flash("success", "password correctly changed")
+                res.redirect("/admin/login");
+            } else {
+                req.flash("error", "please write correct password.");
+                res.redirect("/admin/password");
+            }
         } else {
-            req.flash("error", "password is incorrect. Please, try one more time.");
-            res.redirect("/admin/password");  
+            req.flash("error", "old password is incorrect. Please, try one more time.");
+            res.redirect("/admin/password"); 
         }
     }
-})
+});
 
 module.exports = router;
