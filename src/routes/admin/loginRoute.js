@@ -2,6 +2,7 @@ const router = require("express").Router();
 const model = require("../../model/admin");
 const { maxAge } = require("../../config/keys");
 const { sign } = require("../../lib/jwt");
+const redirect = require("../../middleware/redirect");
 
 router.get("/login", (req, res) => {
   res.render("admin/login", {
@@ -29,6 +30,27 @@ router.post("/login", async (req, res) => {
 
 router.get("/logout", (req, res) => {
     res.clearCookie('token').redirect("/admin/login")
+})
+
+router.get("/password", redirect, (req, res) => {
+    res.render("admin/passwordForm", { page: "dashboard" } );
+})
+
+router.post("/password", async (req, res) => {
+    const { oldPassword, newPassword, confirmPassword } = req.body;
+    if(!oldPassword || !newPassword || !confirmPassword) {
+        req.flash("error", "password is empty. Please, fill in all the required fields.");
+        res.redirect("/admin/password");
+    } else {
+        const changedPassword = await model.changePassword(oldPassword, newPassword);
+        console.log(changedPassword);
+        if(!changedPassword && newPassword == confirmPassword) {
+            res.redirect("/admin/login");
+        } else {
+            req.flash("error", "password is incorrect. Please, try one more time.");
+            res.redirect("/admin/password");  
+        }
+    }
 })
 
 module.exports = router;
