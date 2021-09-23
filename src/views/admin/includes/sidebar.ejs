@@ -1,98 +1,104 @@
 <nav class="sidebar sidebar-bunker">
-  <div class="sidebar-header">
-    <!--<a href="index.html" class="logo"><span>bd</span>task</a>-->
-    <a href="/" class="logo"><img src="/images/main/logo.png" alt="logo" /></a>
-  </div>
-
-  <div style="height: 100vh !important;" class="sidebar-body">
-    <nav class="sidebar-nav">
-      <ul class="metismenu">
-        <li class="nav-label">Main Menu</li>
-        <li class="<% if(page == 'dashboard') { %>mm-active<% }%>">
-          <a href="/admin">
-            <i class="typcn typcn-home-outline mr-2"></i>
-            Dashboard
-          </a>
-        </li>
-
-        <li>
-          <a class="has-arrow material-ripple" href="#">
-            <i class="typcn typcn-mortar-board mr-2"></i>
-            Teacher
-          </a>
-          <ul class="nav-second-level">
-            <li class="<% if(page == 'teacherTable') { %>mm-active<% }%>">
-              <a href="/admin/teacher/table">Table</a>
-            </li>
-            <li class="<% if(page == 'teacherForm') { %>mm-active<% }%>">
-              <a href="/admin/teacher/add">Add teacher</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a class="has-arrow material-ripple" href="#">
-            <i class="typcn typcn-news mr-2"></i>
-            News
-          </a>
-          <ul class="nav-second-level">
-            <li class="<% if(page == 'newsTable') { %>mm-active<% }%>">
-              <a href="/admin/news/table">Table</a>
-            </li>
-            <li class="<% if(page == 'newsForm') { %>mm-active<% }%>">
-              <a href="/admin/news/add">Add news</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a class="has-arrow material-ripple" href="#">
-            <i class="typcn typcn-globe-outline mr-2"></i>
-             Courses
-          </a>
-          <ul class="nav-second-level">
-            <li class="<% if(page == 'courseTable') { %>mm-active<% }%>">
-              <a href="/admin/course/table">Table</a>
-            </li>
-            <li class="<% if(page == 'courseForm') { %>mm-active<% }%>">
-              <a href="/admin/course/add">Add course</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a class="has-arrow material-ripple" href="#">
-            <i class="typcn typcn-group mr-2"></i>
-             Students
-          </a>
-          <ul class="nav-second-level">
-            <li class="<% if(page == 'enrolement') { %>mm-active<% }%>">
-              <a href="/admin/students/enrolement">Enrolements</a>
-            </li>
-            <li class="<% if(page == 'courseForm') { %>mm-active<% }%>">
-              <a href="/admin/students/comments">Comments</a>
-            </li>
-          </ul>
-        </li>
-         <li class="nav-label">Others</li>
-        <li class="<% if(page == 'about') { %>mm-active<% }%>">
-          <a href="/admin/about">
-            <i class="typcn typcn-info-large-outline mr-2"></i>
-            About
-          </a>
-        </li>
-        <li class="<% if(page == 'contacts') { %>mm-active<% }%>">
-          <a href="/admin/contacts">
-            <i class="typcn typcn-contacts mr-2"></i>
-            Contacts
-          </a>
-        </li>
-        <li class="<% if(page == 'quick-contacts') { %>mm-active<% }%>">
-          <a href="/admin/quick-contacts">
-            <i class="typcn typcn-phone-outline mr-2"></i>
-            Quick contacts
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  <!-- sidebar-body -->
+	<div class="sidebar-header">
+		<!--<a href="index.html" class="logo"><span>bd</span>task</a>-->
+		<a href="/" class="logo"><img src="/images/main/logo.png" alt="logo" /></a>
+	</div>
+	
+	<div style="height: 100vh !important;" class="sidebar-body">
+		<nav class="sidebar-nav">
+			<ul class="metismenu">
+				<li class="nav-label">Main Menu</li>
+				<li class="<% if(page == 'dashboard') { %>mm-active<% }%>">
+					<a href="/admin">
+						<i class="typcn typcn-home-outline mr-2"></i>
+						Dashboard
+					</a>
+				</li>
+				
+				<li>
+					<a class="has-arrow material-ripple" href="#">
+						<i class="typcn typcn-mortar-board mr-2"></i>
+						Teacher
+					</a>
+					<ul class="nav-second-level">
+						<li class="<% if(page == 'teacherTable') { %>mm-active<% }%>">
+							<a href="/admin/teacher/table">Table</a>
+						</li>
+						<li class="<% if(page == 'teacherForm') { %>mm-active<% }%>">
+							<a href="/admin/teacher/add">Add teacher</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a class="has-arrow material-ripple" href="#">
+						<i class="typcn typcn-news mr-2"></i>
+						News
+					</a>
+					<ul class="nav-second-level">
+						<li class="<% if(page == 'newsTable') { %>mm-active<% }%>">
+							<a href="/admin/news/table">Table</a>
+						</li>
+						<li class="<% if(page == 'newsForm') { %>mm-active<% }%>">
+							<a href="/admin/news/add">Add news</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a class="has-arrow material-ripple" href="#">
+						<i class="typcn typcn-globe-outline mr-2"></i>
+						Courses
+					</a>
+					<ul class="nav-second-level">
+						<li class="<% if(page == 'courseTable') { %>mm-active<% }%>">
+							<a href="/admin/course/table">Table</a>
+						</li>
+						<li class="<% if(page == 'courseForm') { %>mm-active<% }%>">
+							<a href="/admin/course/add">Add course</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a class="has-arrow material-ripple" href="#">
+						<i class="typcn typcn-group mr-2"></i>
+						Students
+					</a>
+					<ul class="nav-second-level">
+						<li class="<% if(page == 'enrolement') { %>mm-active<% }%>">
+							<a href="/admin/students/enrolement">Enrolements</a>
+						</li>
+						<li class="<% if(page == 'courseForm') { %>mm-active<% }%>">
+							<a href="/admin/students/comments">Comments</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-label">Others</li>
+				<li class="<% if(page == 'about') { %>mm-active<% }%>">
+					<a href="/admin/about">
+						<i class="typcn typcn-info-large-outline mr-2"></i>
+						About
+					</a>
+				</li>
+				<li class="<% if(page == 'info') { %>mm-active<% }%>">
+					<a href="/admin/info">
+						<i class="typcn typcn-info-large-outline mr-2"></i>
+						Info
+					</a>
+				</li>
+				<li class="<% if(page == 'contacts') { %>mm-active<% }%>">
+					<a href="/admin/contacts">
+						<i class="typcn typcn-contacts mr-2"></i>
+						Contacts
+					</a>
+				</li>
+				<li class="<% if(page == 'quick-contacts') { %>mm-active<% }%>">
+					<a href="/admin/quick-contacts">
+						<i class="typcn typcn-phone-outline mr-2"></i>
+						Quick contacts
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<!-- sidebar-body -->
 </nav>
 <div class="overlay"></div>
