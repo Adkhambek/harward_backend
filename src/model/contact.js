@@ -1,9 +1,5 @@
 const { fetch, fetchAll } = require("../lib/database");
 
-const SELECT_INFO = `
-SELECT * FROM info;
-`;
-
 const INSERT_DATA = `
 INSERT INTO contact (
     name,
@@ -48,8 +44,6 @@ UPDATE contact
 SET checked = 1
 WHERE contact_id = $1;
 `; 
-
-exports.getInfo = () => fetch(SELECT_INFO);
 
 exports.getContacts = () => fetchAll(SELECT_CONTACTS);
 

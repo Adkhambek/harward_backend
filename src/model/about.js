@@ -26,8 +26,6 @@ SELECT
 FROM teachers;
 `;
 
-const SELECT_INFO = `SELECT * FROM info;`;
-
 exports.selectAllData = () => fetch(SELECT_ALL);
 
 exports.updateAbout = (data, videoName) =>
@@ -55,5 +53,3 @@ exports.getVideoName = () => fetch(GET_VIDEO_NAME);
 exports.getAbout = () => fetch(SELECT_ALL);
 
 exports.getTeachers = () => fetchAll(SELECT_TEACHERS);
-
-exports.getInfo = () => fetch(SELECT_INFO);

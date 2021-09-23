@@ -1,10 +1,6 @@
 const { fetch, fetchAll } = require("../lib/database");
 
-const SELECT_ABOUT = `SELECT * FROM about;`
-
-const SELECT_INFO = `
-SELECT * FROM info;
-`
+const SELECT_ABOUT = `SELECT * FROM about;` 
 
 const SELECT_NEWS = `
 SELECT 
@@ -46,9 +42,7 @@ INSERT INTO home_contact(
 ) VALUES ( $1, $2 );
 `
 
-exports.getAbout = () => fetch(SELECT_ABOUT);
-
-exports.getInfo = () => fetch(SELECT_INFO);
+exports.getAbout = () => fetch(SELECT_ABOUT); 
 
 exports.getNews = () => fetchAll(SELECT_NEWS);
 

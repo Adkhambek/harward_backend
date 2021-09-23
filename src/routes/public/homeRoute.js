@@ -1,9 +1,11 @@
 const router = require("express").Router();
 const model = require("../../model/home"); 
+const infoModel = require("../../model/info");
 const {truncation, cleanText} = require("../../lib/textFormat");
+
 router.get("/", async (req, res) => {
 	const moreData = await model.getAbout();
-	const info = await model.getInfo(); 
+	const info = await infoModel.getInfo(); 
 	let news = await model.getNews();
 	news = news.map(e => Object.assign(e, {body: truncation(cleanText( e.body), 150)}));
 	const courses = await model.getCourses();

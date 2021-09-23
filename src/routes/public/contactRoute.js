@@ -1,8 +1,9 @@
 const router = require("express").Router();
 const model = require("../../model/contact");
+const infoModel = require("../../model/info");
 
 router.get("/aloqa", async (req, res) => {
-	const info = await model.getInfo();
+	const info = await infoModel.getInfo();
   	res.render("public/aloqa", { 
 		info,  
 		successMessage: req.flash("success"),
