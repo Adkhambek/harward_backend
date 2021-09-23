@@ -49,6 +49,26 @@ SET checked = 1
 WHERE contact_id = $1;
 `;
 
+const SELECT_COURSES = `
+SELECT 
+    title,
+    e.name,
+    e.number
+FROM enrolements e
+RIGHT JOIN courses c ON c.course_id = e.course_id
+WHERE checked = 0
+LIMIT 2;;
+`;
+
+const SELECT_CONTACT = `
+SELECT 
+    name,
+    number
+FROM home_contact
+WHERE checked = 0
+LIMIT 2;
+`;
+
 exports.getInfo = () => fetch(SELECT_INFO);
 
 exports.getContacts = () => fetchAll(SELECT_CONTACTS);
@@ -59,4 +79,8 @@ exports.inserData = ({ name, phones, text }) => fetch(INSERT_DATA, name, phones,
 
 exports.checkContact = (id) => fetch(CHECK_CONTACT, id);
 
-exports.getContactDetails = () => fetchAll(SELECT_DETAILS)
+exports.getContactDetails = () => fetchAll(SELECT_DETAILS);
+
+exports.getCourses = () => fetchAll(SELECT_COURSES);
+
+exports.getContacts = () => fetchAll(SELECT_CONTACT);

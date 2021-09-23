@@ -32,11 +32,15 @@ router.get("/logout", (req, res) => {
     res.clearCookie('token').redirect("/admin/login")
 })
 
-router.get("/password", redirect, (req, res) => {
+router.get("/password", redirect, async (req, res) => {
+    const course = await model.getCourses();
+	const contact = await model.getContacts();
     res.render("admin/passwordForm", { 
         page: "dashboard", 
         successMessage: req.flash("success"),
-        errorMessage: req.flash("error") 
+        errorMessage: req.flash("error"),
+        course,
+        contact
     });
 });
 

@@ -8,11 +8,15 @@ const path = require("path");
 
 router.get("/teacher/table", redirect, breadcrumb, async (req, res) => {
     const data = await model.allTeachers();
+    const course = await model.getCourses();
+	const contact = await model.getContacts();
     res.render("admin/teacherTable", {
         teachers: data,
         page: "teacherTable",
         successMessage: req.flash("success"),
         breadcrumb: req.breadcrumb,
+        course,
+        contact
     });
 }); 
 
@@ -28,9 +32,13 @@ router.get("/teacher/delete/:id", redirect, async (req, res) => {
 });
 
 router.get("/teacher/add", redirect, breadcrumb, async (req, res) => {
+    const course = await model.getCourses();
+	const contact = await model.getContacts();
     res.render("admin/teacherForm", { 
         successMessage: req.flash("success"),
         breadcrumb: req.breadcrumb,
+        course,
+        contact
     });
 });
 

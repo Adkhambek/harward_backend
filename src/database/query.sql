@@ -62,7 +62,7 @@ SELECT
     TO_CHAR(e.time, 'yyyy-MM-dd HH24:MI:SS') as time
 FROM enrolements e
 RIGHT JOIN courses c ON c.course_id = e.course_id
-WHERE checked = 1;
+WHERE checked = 0;
 
 UPDATE enrolements
 SET checked = 1
