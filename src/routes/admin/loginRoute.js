@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const model = require("../../model/admin");
+const notification = require("../../model/notification");
 const { maxAge } = require("../../config/keys");
 const { sign } = require("../../lib/jwt");
 const redirect = require("../../middleware/redirect");
@@ -33,8 +34,8 @@ router.get("/logout", (req, res) => {
 })
 
 router.get("/password", redirect, async (req, res) => {
-    const course = await model.getCourses();
-	const contact = await model.getContacts();
+    const course = await notification.getCourses();
+	const contact = await notification.getContacts();
     res.render("admin/passwordForm", { 
         page: "dashboard", 
         successMessage: req.flash("success"),

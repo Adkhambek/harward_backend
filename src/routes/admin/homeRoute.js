@@ -1,10 +1,10 @@
 const router = require("express").Router();
 const redirect = require("../../middleware/redirect");
-const model = require("../../model/homeAdmin");
+const notification = require("../../model/notification");
 
 router.get("/", redirect, async (req, res) => {
-	const course = await model.getCourses();
-	const contact = await model.getContacts();
+	const course = await notification.getCourses();
+	const contact = await notification.getContacts();
 	res.render("admin/index", { page: "dashboard", course, contact});
 });
 

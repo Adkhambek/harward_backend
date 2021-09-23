@@ -2,13 +2,14 @@ const router = require("express").Router();
 const breadcrumb = require("../../middleware/breadcrumb");
 const redirect = require("../../middleware/redirect");
 const model = require("../../model/student");
+const notification = require("../../model/notification");
 const multer = require("../../lib/multer");
 
 router.get("/students/enrolement", redirect, breadcrumb, async (req, res) => {
     const enrolements = await model.getEnrolement();
     const checkedEnrolements = await model.getCheckedEnrolement();
-    const course = await model.getCourses();
-	const contact = await model.getContacts();
+    const course = await notification.getCourses();
+	const contact = await notification.getContacts();
     res.render("admin/enrolement", {
         enrolements,
         checkedEnrolements,
@@ -28,8 +29,8 @@ router.get("/students/enrolement/checked/:id", redirect, async (req, res) => {
 });
 
 router.get("/students/comments", redirect, breadcrumb,  async (req, res) => {
-    const course = await model.getCourses();
-	const contact = await model.getContacts();
+    const course = await notification.getCourses();
+	const contact = await notification.getContacts();
     res.render("admin/comment", {
         page: "comments",
         successMessage: req.flash("success"),

@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const model = require("../../model/course");
+const notification = require("../../model/notification");
 const multer = require("../../lib/multer");
 const breadcrumb = require("../../middleware/breadcrumb");
 const redirect = require("../../middleware/redirect");
@@ -7,8 +8,8 @@ const fs = require("fs");
 const path = require("path");
 
 router.get("/course/add", redirect, breadcrumb,  async (req, res) => {
-    const course = await model.getCourses();
-	const contact = await model.getContacts();
+    const course = await notification.getCourses();
+	const contact = await notification.getContacts();
     res.render("admin/courseForm", {
         page: "courseForm",
         successMessage: req.flash("success"),
@@ -27,8 +28,8 @@ router.post("/course/add", redirect, multer("images/kurslar"),  async(req, res) 
 
 router.get("/course/table", redirect, breadcrumb, async (req, res) => {
     const courses = await model.getCourses();
-    const course = await model.getCourses();
-	const contact = await model.getContacts();
+    const course = await notification.getCourses();
+	const contact = await notification.getContacts();
     res.render("admin/courseTable", {
         courses,
         page: "courseTable",
