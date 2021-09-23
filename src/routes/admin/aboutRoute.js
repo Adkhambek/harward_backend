@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const model = require("../../model/about");
+const notification = require("../../model/notification");
 const multer = require("../../lib/multer");
 const breadcrumb = require("../../middleware/breadcrumb");
 const redirect = require("../../middleware/redirect");
@@ -8,8 +9,8 @@ const path = require("path");
 
 router.get("/about", redirect, breadcrumb, async (req, res) => {
 	const data = await model.selectAllData();
-	const course = await model.getCourses();
-	const contact = await model.getContacts();
+	const course = await notification.getCourses();
+	const contact = await notification.getContacts();
 	res.render("admin/about", { 
 		...data, 
 		successMessage: req.flash("success"),

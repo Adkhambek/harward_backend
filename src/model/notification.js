@@ -1,4 +1,4 @@
-const { fetch, fetchAll } = require("../lib/database");
+const { fetchAll } = require("../lib/database");
 
 const SELECT_COURSES = `
 SELECT 
@@ -8,7 +8,8 @@ SELECT
 FROM enrolements e
 RIGHT JOIN courses c ON c.course_id = e.course_id
 WHERE checked = 0
-LIMIT 2;;
+ORDER BY id DESC
+LIMIT 2;
 `;
 
 const SELECT_CONTACT = `
@@ -17,6 +18,7 @@ SELECT
     number
 FROM home_contact
 WHERE checked = 0
+ORDER BY home_contact_id DESC
 LIMIT 2;
 `;
 

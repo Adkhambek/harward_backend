@@ -2,12 +2,13 @@ const router = require("express").Router();
 const breadcrumb = require("../../middleware/breadcrumb");
 const redirect = require("../../middleware/redirect");
 const model = require("../../model/quickContact");
+const notification = require("../../model/notification");
 
 router.get("/quick-contacts", redirect, breadcrumb, async (req, res) => {
     const contacts = await model.getContacts();
     const checkedContacts = await model.getCheckedContacts();
-    const course = await model.getCourses();
-	const contact = await model.getContacts();
+    const course = await notification.getCourses();
+	const contact = await notification.getContacts(); 
     res.render("admin/quickContact", {
         contacts,
         checkedContacts,

@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const model = require("../../model/news");
+const notification = require("../../model/notification");
 const multer = require("../../lib/multer");
 const breadcrumb = require("../../middleware/breadcrumb");
 const redirect = require("../../middleware/redirect");
@@ -7,8 +8,8 @@ const fs = require("fs");
 const path = require("path");
 
 router.get("/news/add", redirect, breadcrumb, async (req, res) => {
-    const course = await model.getCourses();
-	const contact = await model.getContacts();
+    const course = await notification.getCourses();
+	const contact = await notification.getContacts();
     res.render("admin/newsForm", {
         page: "newsform",
         successMessage: req.flash("success"),
@@ -27,8 +28,8 @@ async(req, res) => {
 
 router.get("/news/table", redirect, breadcrumb, async (req, res) => {
     const news = await model.getNews();
-    const course = await model.getCourses();
-	const contact = await model.getContacts();
+    const course = await notification.getCourses();
+	const contact = await notification.getContacts();
     res.render("admin/newsTable", {
         news,
         page: "newsTable",
