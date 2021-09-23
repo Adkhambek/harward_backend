@@ -4,7 +4,7 @@ const infoModel = require("../../model/info");
 
 router.get("/test", async (req, res) => {
   const info = await infoModel.getInfo();
-  res.render("public/test", {info});
+  res.render("public/test", {info, section: "test"});
 });
 
 module.exports = router;

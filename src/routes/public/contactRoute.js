@@ -8,6 +8,7 @@ router.get("/aloqa", async (req, res) => {
 		info,  
 		successMessage: req.flash("success"),
 		errorMessage: req.flash("error"),
+		section: "contact",
 	});
 });
 

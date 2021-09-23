@@ -18,6 +18,7 @@ router.get("/", async (req, res) => {
 		comments,
 		successMessage: req.flash("success"),
 		errorMessage: req.flash("error"),
+		section: "home"
 	});
 });
 

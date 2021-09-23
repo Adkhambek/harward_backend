@@ -13,7 +13,7 @@ router.get("/news", async (req, res) => {
 		pages: totalPages,
 		page: 1, 
 		info, 
-		section: "news" 
+		section: "news",
 	});
 });
 
