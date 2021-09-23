@@ -7,7 +7,8 @@ SELECT
     image,
     TO_CHAR(time, 'yyyy-MM-dd HH24:MI:SS') as time
 FROM news
-ORDER BY news_id DESC;
+ORDER BY news_id DESC
+LIMIT $1;
 `;
 
 const SELECT_IMAGE = `
@@ -94,7 +95,7 @@ SELECT
 FROM enrolements e
 RIGHT JOIN courses c ON c.course_id = e.course_id
 WHERE checked = 0
-LIMIT 2;;
+LIMIT 2;
 `;
 
 const SELECT_CONTACT = `
@@ -122,7 +123,7 @@ SELECT COUNT(news_id)
 FROM news
 `
 
-exports.getNews = () => fetchAll(SELECT_NEWS);
+exports.getNews = (limit) => fetchAll(SELECT_NEWS, limit);
 
 exports.getOneNews = (id) => fetch(SELECT_ONE, id);
 

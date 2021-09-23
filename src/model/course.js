@@ -92,7 +92,7 @@ WHERE checked = 0
 LIMIT 2;
 `;
 
-exports.getCourses = () => fetchAll(SELECT_ALL);
+exports.getCourseList = () => fetchAll(SELECT_ALL);
 
 exports.getInfo = () => fetch(SELECT_INFO);
 

@@ -1,8 +1,8 @@
 const router = require("express").Router();
-const model = require("../../model/home");
+const model = require("../../model/home"); 
 
 router.get("/", async (req, res) => {
-	const moreData = await model.getMoreAbout();
+	const moreData = await model.getAbout();
 	const info = await model.getInfo();
 	const news = await model.getNews();
 	const courses = await model.getCourses();
