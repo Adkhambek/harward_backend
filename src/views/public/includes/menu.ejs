@@ -6,12 +6,12 @@
         <img src="/images/main/close.svg" alt="" id="close">
     </div>
     <ul class="nav-list">
-        <li><a href="/" class="actives">Bosh sahifa</a></li>
-        <li><a href="/news">Yangiliklar</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/kurslar">Kurslar</a></li>
-        <li><a href="/about">Biz haqimizda</a></li>
-        <li><a href="/test">Test topshirish</a></li>
-        <li><a href="/aloqa">Aloqa</a></li>
+        <li><a href="/" class="<% if(section === 'home'){ %> actives <%}%>">Bosh sahifa</a></li>
+        <li><a href="/news" class="<% if(section === 'news'){ %> actives <%}%>">Yangiliklar</a></li>
+        <li><a href="/blog" class="<% if(section === 'blog'){ %> actives <%}%>">Blog</a></li>
+        <li><a href="/kurslar" class="<% if(section === 'courses'){ %> actives <%}%>">Kurslar</a></li>
+        <li><a href="/about" class="<% if(section === 'about'){ %> actives <%}%>">Biz haqimizda</a></li>
+        <li><a href="/test" class="<% if(section === 'test'){ %> actives <%}%>">Test topshirish</a></li>
+        <li><a href="/aloqa" class="<% if(section === 'contact'){ %> actives <%}%>">Aloqa</a></li>
     </ul>
 </div>

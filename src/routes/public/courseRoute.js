@@ -5,7 +5,11 @@ const infoModel = require("../../model/info");
 router.get("/kurslar", async (req, res) => {
 	const courses = await model.getCourseList();
 	const info = await infoModel.getInfo();
-	res.render("public/kurslar", { courses, info });
+	res.render("public/kurslar", { 
+		courses, 
+		info,
+		section: "courses"
+	 });
 });
 
 router.get("/kurslar/:id", async (req, res) => {
