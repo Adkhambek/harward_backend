@@ -7,10 +7,14 @@ const fs = require("fs");
 const path = require("path");
 
 router.get("/course/add", redirect, breadcrumb,  async (req, res) => {
+    const course = await model.getCourses();
+	const contact = await model.getContacts();
     res.render("admin/courseForm", {
         page: "courseForm",
         successMessage: req.flash("success"),
         breadcrumb: req.breadcrumb,
+        course,
+        contact
     });
 });
 
@@ -23,11 +27,15 @@ router.post("/course/add", redirect, multer("images/kurslar"),  async(req, res) 
 
 router.get("/course/table", redirect, breadcrumb, async (req, res) => {
     const courses = await model.getCourses();
+    const course = await model.getCourses();
+	const contact = await model.getContacts();
     res.render("admin/courseTable", {
         courses,
         page: "courseTable",
         successMessage: req.flash("success"),
         breadcrumb: req.breadcrumb,
+        course,
+        contact
     });
 });
 

@@ -7,6 +7,8 @@ router.get("/contacts", redirect, breadcrumb, async (req, res) => {
     const contacts = await model.getContacts();
     const checkedContacts = await model.getCheckedContacts();
     const contactDetail = await model.getContactDetails();
+    const course = await model.getCourses();
+	const contact = await model.getContacts();
     res.render("admin/contact", {
         contacts,
         checkedContacts,
@@ -14,6 +16,8 @@ router.get("/contacts", redirect, breadcrumb, async (req, res) => {
         page: "contact",
         breadcrumb: req.breadcrumb,
         successMessage: req.flash("success"),
+        course,
+        contact
     })
 });
 

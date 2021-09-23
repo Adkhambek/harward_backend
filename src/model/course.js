@@ -72,6 +72,26 @@ SET title = $1, teacher = $2, counts = $3, prise = $4, body = $5
 WHERE course_id = $6
 `;
 
+const SELECT_COURSES = `
+SELECT 
+    title,
+    e.name,
+    e.number
+FROM enrolements e
+RIGHT JOIN courses c ON c.course_id = e.course_id
+WHERE checked = 0
+LIMIT 2;;
+`;
+
+const SELECT_CONTACT = `
+SELECT 
+    name,
+    number
+FROM home_contact
+WHERE checked = 0
+LIMIT 2;
+`;
+
 exports.getCourses = () => fetchAll(SELECT_ALL);
 
 exports.getInfo = () => fetch(SELECT_INFO);
@@ -104,3 +124,8 @@ exports.updateWithoutImage = (id, data) => fetch(
     data.prize,
     data.body,  
     id);
+
+exports.getCourses = () => fetchAll(SELECT_COURSES);
+
+exports.getContacts = () => fetchAll(SELECT_CONTACT);
+
