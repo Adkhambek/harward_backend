@@ -27,7 +27,7 @@ router.post("/course/add", redirect, multer("images/kurslar"),  async(req, res) 
 );
 
 router.get("/course/table", redirect, breadcrumb, async (req, res) => {
-    const courses = await model.getCourses();
+    const courses = await model.getCourseList();
     const course = await notification.getCourses();
 	const contact = await notification.getContacts();
     res.render("admin/courseTable", {

@@ -20,7 +20,7 @@ router.get("/about", redirect, breadcrumb, async (req, res) => {
 	});
 });
 
-router.post("/about", redirect, multer("video"), async (req, res) => {
+router.post("/about", redirect, multer("video", "video"), async (req, res) => {
 	if (req.file) {
 		const { vidoe } = await model.getVideoName();
 		fs.unlinkSync(path.join(process.cwd(), "src/public/video", vidoe));

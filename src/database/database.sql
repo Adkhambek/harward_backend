@@ -28,6 +28,17 @@ CREATE TABLE contact(
     time timestamptz default current_timestamp
 );
 
+-- create courses table
+CREATE TABLE courses(
+    course_id serial primary key,
+    image varchar(100) not null,
+    title varchar(70) not null,
+    body text not null,
+    teacher varchar(100) not null,
+    counts smallint not null,
+    prise int not null
+);
+
 -- create table enrolements
 CREATE TABLE enrolements(
     id serial primary key,
@@ -48,16 +59,6 @@ CREATE TABLE news(
     time timestamptz default current_timestamp
 );
 
--- create courses table
-CREATE TABLE courses(
-    course_id serial primary key,
-    image varchar(100) not null,
-    title varchar(70) not null,
-    body text not null,
-    teacher varchar(100) not null,
-    counts smallint not null,
-    prise int not null
-);
 
 -- create table about
 CREATE TABLE about(
@@ -65,7 +66,7 @@ CREATE TABLE about(
     vidoe text not null,
     students int not null,
     teachers int not null,
-    exprience smallint not null,
+    exprience smallint not null
 );
 
 -- create table teachres
