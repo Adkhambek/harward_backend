@@ -21,31 +21,8 @@
     
     <section class="news" id="news">
         <div class="container">
-            <%- include("header.ejs") %>
-            
-            <div class="menu" id="menu">
-                <div class="logon">
-                    <img src="images/main/logo.png" alt="">
-                </div>
-                <div class="close" onclick="remove()">
-                    <img src="images/main/close.svg" alt="" id="close">
-                </div>
-                <div class="links additional">
-                    
-                    <a href="registr" class="register">Ro'yxatdan o'tish</a>
-                    <a href="registr2" class="enter">Kirish</a>
-                </div>
-                <ul class="nav-list">
-                    <li><a href="/">Bosh sahifa</a></li>
-                    <li><a href="news">Yangiliklar</a></li>
-                    <li><a href="blog" class="actives">Blog</a></li>
-                    <li><a href="kurslar">Kurslar</a></li>
-                    <li><a href="about">Biz haqimizda</a></li>
-                    <li><a href="subjects">Test topshirish</a></li>
-                    <li><a href="aloqa">Aloqa</a></li>
-                </ul>
-            </div>
-        </div>
+            <%- include("includes/header.ejs") %>
+            <%- include("includes/menu.ejs") %></div>
         
         
         <section class="asosiy">
@@ -462,7 +439,7 @@
         
         <section class="footer">
             <div class="container">
-                <%- include("footer.ejs") %>
+                <%- include("includes/footer.ejs"), info %>
                 
                 <div class="row seconds d-flex align-items-start start">
                     <div class="col-lg-4 col-md-4 col-sm-4 d-flex justify-content-end end">

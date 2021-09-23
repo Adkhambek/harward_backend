@@ -20,30 +20,10 @@
     
     <section class="aloqa" id="aloqa">
         <div class="container">
-            <%- include("header.ejs") %> 
+            <%- include("includes/header.ejs") %> 
+            <%- include("includes/menu.ejs") %> 
             
-            <div class="menu" id="menu">
-                <div class="logon">
-                    <img src="images/main/logo.png" alt="">
-                </div>
-                <div class="close" onclick="remove()">
-                    <img src="images/main/close.svg" alt="" id="close">
-                </div>
-                <div class="links additional">
-                    
-                    <a href="registr" class="register">Ro'yxatdan o'tish</a>
-                    <a href="registr2" class="enter">Kirish</a>
-                </div>
-                <ul class="nav-list">
-                    <li><a href="/">Bosh sahifa</a></li>
-                    <li><a href="news">Yangiliklar</a></li>
-                    <li><a href="blog">Blog</a></li>
-                    <li><a href="kurslar">Kurslar</a></li>
-                    <li><a href="about">Biz haqimizda</a></li>
-                    <li><a href="subjects" class="actives">Test topshirish</a></li>
-                    <li><a href="aloqa">Aloqa</a></li>
-                </ul>
-            </div>
+            
         </div>
         
         <section class="subjects">
@@ -134,7 +114,7 @@
         
         <section class="footer">
             <div class="container">
-                <%- include("footer.ejs") %>
+                <%- include("includes/footer.ejs") %>
             </div>
         </section>
         

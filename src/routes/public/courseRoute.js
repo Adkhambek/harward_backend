@@ -7,15 +7,30 @@ router.get("/kurslar", async (req, res) => {
 	res.render("public/kurslar", { courses, info });
 });
 
-router.get("/lesson/:id", async (req, res) => {
+router.get("/kurslar/:id", async (req, res) => {
 	const course = await model.getCourse(req.params.id);
 	const info = await model.getInfo();
-	res.render("public/lesson", { ...course, info });
+	res.render("public/lesson", { 
+		...course, 
+		info,
+		successMessage: req.flash("success"),
+		errorMessage: req.flash("error") 
+	});
 });
 
-router.post("/lesson/:id", async (req, res) => {
-	await model.inserData(req.body, req.params.id);
-	res.redirect("/lesson/" + req.params.id);
+router.post("/kurslar/:id", async (req, res) => {
+	const name = req.body.name;
+	const tel = req.body.phones;
+	const courseId = req.params.id;
+	if(!name || !tel) {
+		req.flash("error", "bo'sh qator bor. Iltimos formani to'liq to'ldiring!");
+		res.redirect("/kurslar/" + courseId);	
+	} else {
+		await model.inserData(req.body, courseId);
+		req.flash("success", "Sizning so'rovingiz adminga yuborildi, qo'ng'iroqni kuting.");
+		res.redirect("/kurslar/" + courseId);
+	}
+	
 })
 
 module.exports = router;

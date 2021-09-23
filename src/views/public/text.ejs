@@ -16,61 +16,18 @@
     
 </head>
 <body>
-    
     <section class="news" id="news">
         <div class="container">
-            <div class="row navbar">
-                <div class="col-lg-4 col-md-4">
-                    <div class="hamb" onclick="add()">
-                        <img src="/images/main/menu.svg" alt="" id="hamb">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 d-flex justify-content-center">
-                    <a href="/" class="logo">      
-                        <img src="/images/main/logo.png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-4 d-flex justify-content-end">
-                    <div class="links">
-                        <a href="registr2" class="enter">Kirish</a>
-                        <a href="registr" class="register">Ro'yxatdan o'tish</a>
-                    </div>
-                </div>
-            </div>
-            <div class="menu" id="menu">
-                <div class="logon">
-                    <img src="/images/main/logo.png" alt="">
-                </div>
-                <div class="close" onclick="remove()">
-                    <img src="/images/main/close.svg" alt="" id="close">
-                </div>
-                <div class="links additional">
-                    
-                    <a href="/registr" class="register">Ro'yxatdan o'tish</a>
-                    <a href="/registr2" class="enter">Kirish</a>
-                </div>
-                <ul class="nav-list">
-                    <li><a href="/" class="actives">Bosh sahifa</a></li>
-                    <li><a href="/news">Yangiliklar</a></li>
-                    <li><a href="/blog">Blog</a></li>
-                    <li><a href="/kurslar">Kurslar</a></li>
-                    <li><a href="/about">Biz haqimizda</a></li>
-                    <li><a href="/text">Test topshirish</a></li>
-                    <li><a href="/aloqa">Aloqa</a></li>
-                </ul>
-            </div>
+            <%- include("includes/header.ejs")%>
+            <%- include("includes/menu.ejs")%>
         </div>
-        
-        
         <section class="asosiy">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 mb-5">
                         <a href="/news"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Ortga </a>
                     </div>
-                    
                 </div>
-                
                 <div class="row long mb-5">
                     <div class="col-lg-9 col-md-8">
                         <div class="contents">
@@ -83,7 +40,6 @@
                             </p>
                         </div>
                     </div>
-                    
                     <div class="col-lg-3 col-md-4">
                         <% for(let item of latestSeven) { %>
                             <div class="content ones">
@@ -94,10 +50,7 @@
                         <% } %>
                         </div>
                     </div>
-                    
-                    
-                    
-                    <div class="row">
+                     <div class="row">
                         <% for(let item of latestFour) { %>
                             <div class="col-lg-3 col-md-4 col-sm-4 church">
                                 <img src="/images/<%= item.image %>" alt="Church">
@@ -110,22 +63,14 @@
                             </div>
                         <% } %>
                     </div>
-                    
-                </div>
-                
-            </section>
-            
-            <section class="footer">
+                 </div>
+               </section>
+             <section class="footer">
                 <div class="container">
-                    <%- include("footer.ejs", info ) %>
+                    <%- include("includes/footer.ejs", info ) %>
                 </div>
             </section>
-            
-            
-            
         </section>
-        
-        
         <script src="/js/jquery.min.js"></script>
         <script src="/js/bootstrap.min.js"></script>
         <script src="/js/owl.carousel.min.js"></script>

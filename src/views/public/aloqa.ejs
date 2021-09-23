@@ -14,37 +14,13 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/aos.css">
     <link rel="stylesheet" href="/sass/style.css">
-    
-    
 </head>
 <body>
-    
     <section class="aloqa" id="aloqa">
         <div class="container">
-            <%- include("header.ejs") %> 
-
-            <div class="menu" id="menu">
-                <div class="logon">
-                    <img src="images/main/logo.png" alt="">
-                </div>
-                <div class="close" onclick="remove()">
-                    <img src="images/main/close.svg" alt="" id="close">
-                </div>
-                <div class="links additional">
-                    
-                    <a href="registr" class="register">Ro'yxatdan o'tish</a>
-                    <a href="registr2" class="enter">Kirish</a>
-                </div>
-                <ul class="nav-list">
-                    <li><a href="/">Bosh sahifa</a></li>
-                    <li><a href="news">Yangiliklar</a></li>
-                    <li><a href="blog">Blog</a></li>
-                    <li><a href="kurslar">Kurslar</a></li>
-                    <li><a href="about">Biz haqimizda</a></li>
-                    <li><a href="subjects">Test topshirish</a></li>
-                    <li><a href="aloqa" class="actives">Aloqa</a></li>
-                </ul>
-            </div>
+            <%- include("includes/header.ejs") %> 
+            <%- include("includes/menu.ejs") %> 
+           
         </div>
         
         <section class="contacts">
@@ -103,6 +79,18 @@
                 
                 <form action="/aloqa" method="POST" class="row form"  data-aos="fade-up">
                     <div class="col-lg-10">
+                        <% if(successMessage != "") { %>
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <%= successMessage %>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            <% } %>
+                            <% if(errorMessage != "") { %>
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <%= errorMessage %>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            <% } %>
                         <div class="row justify-content-between">
                             <div class="col-lg-5 col-sm-12 inputs">
                                 <label for="name">Ismingiz</label>
@@ -117,9 +105,7 @@
                     <div class="col-lg-10">
                         <div class="message">
                             <label for="message">Murojatingiz</label>
-                            <textarea name="text" id="text">
-                                
-                            </textarea>
+                            <textarea name="text" id="text"></textarea>
                         </div>
                     </div>
                     
@@ -132,7 +118,7 @@
         
         <section class="footer">
             <div class="container">
-                <%- include("footer.ejs", info ) %>
+                <%- include("includes/footer.ejs", info ) %>
             </div>
         </section>
         

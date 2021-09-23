@@ -22,33 +22,10 @@
     
     <section class="firstt" id="firstt">
         <div class="container">
-            <%- include("header.ejs") %>
+            <%- include("includes/header.ejs") %>
         </div>
-        
-        <div class="menu" id="menu">
-            <div class="logon">
-                <img src="images/main/logo.png" alt="">
-            </div>
-            <div class="close" onclick="remove()">
-                <img src="images/main/close.svg" alt="" id="close">
-            </div>
-            <div class="links additional">
-                
-                <a href="registr" class="register">Ro'yxatdan o'tish</a>
-                <a href="registr2" class="enter">Kirish</a>
-            </div>
-            <ul class="nav-list">
-                <li><a href="/">Bosh sahifa</a></li>
-                <li><a href="news">Yangiliklar</a></li>
-                <li><a href="blog">Blog</a></li>
-                <li><a href="kurslar" class="actives">Kurslar</a></li>
-                <li><a href="about">Biz haqimizda</a></li>
-                <li><a href="subjects">Test topshirish</a></li>
-                <li><a href="aloqa">Aloqa</a></li>
-            </ul>
-        </div>
-        
-        
+            <%- include("includes/menu.ejs") %>
+    
     </section>
     
     
@@ -72,123 +49,21 @@
                                         <p>Narxi: <span><%= course.prise %> So'm</span></p>
                                     </div>
                                 </div>
-                                <a href="lesson/<%= course.course_id %>" class="btm">Batafsil</a>
+                                <a href="/kurslar/<%= course.course_id %>" class="btm">Batafsil</a>
                                 
                             </div>
                         </div>
                     </div>
                 <% } %>
-                </div>
-                <!-- <div class="row">
-                    <div class="col-lg-12">
-                        <div class="owl-carousel">
-                            <div class="blocks">
-                                <img src="images/main/yangilik.png" alt="Yangilik">
-                                <div class="context">
-                                    <h3>Ingliz tili Grammatikasi</h3>
-                                    <div class="price">
-                                        <div class="left">
-                                            <h6>Xudoyberdi To'xtaboyev</h6>
-                                            <p>Narxi: <span>100.000 So'm</span></p>
-                                        </div>
-                                        <div class="image">
-                                            <img src="images/main/teacher.png" alt="Teacher">
-                                        </div>
-                                        
-                                    </div>
-                                    <a href="lesson" class="btm">Batafsil</a>
-                                    
-                                </div>
-                            </div>
-                            <div class="blocks">
-                                <img src="images/main/yangilik.png" alt="Yangilik">
-                                <div class="context">
-                                    <h3>Ingliz tili Grammatikasi</h3>
-                                    <div class="price">
-                                        <div class="left">
-                                            <h6>Xudoyberdi To'xtaboyev</h6>
-                                            <p>Narxi: <span>100.000 So'm</span></p>
-                                        </div>
-                                        <div class="image">
-                                            <img src="images/main/teacher.png" alt="Teacher">
-                                        </div>
-                                        
-                                    </div>
-                                    <a href="lesson" class="btm">Batafsil</a>
-                                    
-                                </div>
-                            </div>
-                            <div class="blocks">
-                                <img src="images/main/yangilik.png" alt="Yangilik">
-                                <div class="context">
-                                    <h3>Ingliz tili Grammatikasi</h3>
-                                    <div class="price">
-                                        <div class="left">
-                                            <h6>Xudoyberdi To'xtaboyev</h6>
-                                            <p>Narxi: <span>100.000 So'm</span></p>
-                                        </div>
-                                        <div class="image">
-                                            <img src="images/main/teacher.png" alt="Teacher">
-                                        </div>
-                                        
-                                    </div>
-                                    <a href="lesson" class="btm">Batafsil</a>
-                                    
-                                </div>
-                            </div>
-                            <div class="blocks">
-                                <img src="images/main/yangilik.png" alt="Yangilik">
-                                <div class="context">
-                                    <h3>Ingliz tili Grammatikasi</h3>
-                                    <div class="price">
-                                        <div class="left">
-                                            <h6>Xudoyberdi To'xtaboyev</h6>
-                                            <p>Narxi: <span>100.000 So'm</span></p>
-                                        </div>
-                                        <div class="image">
-                                            <img src="images/main/teacher.png" alt="Teacher">
-                                        </div>
-                                        
-                                    </div>
-                                    <a href="lesson" class="btm">Batafsil</a>
-                                    
-                                </div>
-                            </div>
-                            <div class="blocks">
-                                <img src="images/main/yangilik.png" alt="Yangilik">
-                                <div class="context">
-                                    <h3>Ingliz tili Grammatikasi</h3>
-                                    <div class="price">
-                                        <div class="left">
-                                            <h6>Xudoyberdi To'xtaboyev</h6>
-                                            <p>Narxi: <span>100.000 So'm</span></p>
-                                        </div>
-                                        <div class="image">
-                                            <img src="images/main/teacher.png" alt="Teacher">
-                                        </div>
-                                        
-                                    </div>
-                                    <a href="lesson" class="btm">Batafsil</a>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
-        </section>
-        
-        
-        
-        <section class="footer">
+            
+        </div>
+    </section>
+    <section class="footer">
             <div class="container">
-                <%- include("footer.ejs", info ) %>
+                <%- include("includes/footer.ejs", info ) %>
             </div>
-        </section>
-        
-        
-        
-        
+    </section>
         <script src="/js/jquery.min.js"></script>
         <script src="/js/bootstrap.min.js"></script>
         <script src="/js/owl.carousel.min.js"></script>
