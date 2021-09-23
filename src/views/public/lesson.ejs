@@ -21,25 +21,8 @@
     
     <section class="lessons aloqa" id="lesson"> <!-- aloqani sassdan to'g'irlash kerak -->
         <div class="container">
-            <div class="row navbar">
-                <div class="col-lg-4 col-md-4">
-                    <div class="hamb" onclick="add()">
-                        <img src="/images/main/menu.svg" alt="" id="hamb">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 d-flex justify-content-center">
-                    <a href="/" class="logo">      
-                        <img src="images/main/logo.png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-4 d-flex justify-content-end">
-                    <div class="links">
-                        <a href="/registr2" class="enter">Kirish</a>
-                        <a href="/registr" class="register">Ro'yxatdan o'tish</a>
-                    </div>
-                </div>
-            </div>
-           <%- include("includes/menu.ejs") %>
+            <%- include("includes/header.ejs") %>
+            <%- include("includes/menu.ejs") %>
         </div>
         <section class="les">
             <div class="container">
