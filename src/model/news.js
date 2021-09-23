@@ -84,7 +84,7 @@ WHERE news_id = $4
 `;
 
 const SELECT_INFO = `
-SELECT * FROM info;
+SELECT * FROM info`;
 
 const PAGINATON = `
 SELECT 
