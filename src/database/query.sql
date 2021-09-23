@@ -62,7 +62,7 @@ SELECT
     TO_CHAR(e.time, 'yyyy-MM-dd HH24:MI:SS') as time
 FROM enrolements e
 RIGHT JOIN courses c ON c.course_id = e.course_id
-WHERE checked = 1;
+WHERE checked = 0;
 
 UPDATE enrolements
 SET checked = 1
@@ -126,8 +126,12 @@ SET title = '',
 
 -- admin
 UPDATE admin
-SET username = 'imron',
-    password = crypt('imron', gen_salt('bf'));
+SET password = crypt('imron', gen_salt('bf'))
+WHERE 
+    password = crypt('ppp', gen_salt('bf')) AND
+    password = (
+        SELECT password FROM admin
+    );
 
 SELECT * FROM admin;
 

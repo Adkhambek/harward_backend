@@ -6,12 +6,16 @@ const model = require("../../model/quickContact");
 router.get("/quick-contacts", redirect, breadcrumb, async (req, res) => {
     const contacts = await model.getContacts();
     const checkedContacts = await model.getCheckedContacts();
+    const course = await model.getCourses();
+	const contact = await model.getContacts();
     res.render("admin/quickContact", {
         contacts,
         checkedContacts,
         page: "quickContact",
         breadcrumb: req.breadcrumb,
         successMessage: req.flash("success"),
+        course,
+        contact
     })
 });
 

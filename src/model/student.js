@@ -43,6 +43,26 @@ INSERT INTO student_comments (
 ) VALUES ($1, $2, $3, $4, $5, $6);
 `
 
+const SELECT_COURSES = `
+SELECT 
+    title,
+    e.name,
+    e.number
+FROM enrolements e
+RIGHT JOIN courses c ON c.course_id = e.course_id
+WHERE checked = 0
+LIMIT 2;;
+`;
+
+const SELECT_CONTACT = `
+SELECT 
+    name,
+    number
+FROM home_contact
+WHERE checked = 0
+LIMIT 2;
+`;
+
 exports.getEnrolement = () => fetchAll(SELECT_ENROLEMENTS);
 
 exports.getCheckedEnrolement = () => fetchAll(SELECT_ENROLEMENTS_CHECKED);
@@ -50,3 +70,7 @@ exports.getCheckedEnrolement = () => fetchAll(SELECT_ENROLEMENTS_CHECKED);
 exports.checkEnrolement = (id) => fetch(CHECK_ENROLEMENTS, id);
 
 exports.addComments = (data, imageName) => fetch(INSERT_COMMENT, data.firstname, data.lastname, data.job, data.age, data.comment, imageName);
+
+exports.getCourses = () => fetchAll(SELECT_COURSES);
+
+exports.getContacts = () => fetchAll(SELECT_CONTACT);

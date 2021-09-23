@@ -7,10 +7,14 @@ const fs = require("fs");
 const path = require("path");
 
 router.get("/news/add", redirect, breadcrumb, async (req, res) => {
+    const course = await model.getCourses();
+	const contact = await model.getContacts();
     res.render("admin/newsForm", {
         page: "newsform",
         successMessage: req.flash("success"),
         breadcrumb: req.breadcrumb,
+        course,
+        contact
     });
 });
 
@@ -23,11 +27,15 @@ async(req, res) => {
 
 router.get("/news/table", redirect, breadcrumb, async (req, res) => {
     const news = await model.getNews();
+    const course = await model.getCourses();
+	const contact = await model.getContacts();
     res.render("admin/newsTable", {
         news,
         page: "newsTable",
         successMessage: req.flash("success"),
         breadcrumb: req.breadcrumb,
+        course,
+        contact
     });
 });
 

@@ -25,7 +25,28 @@ SELECT
     teacher_detail
 FROM teachers;
 `;
+
 const SELECT_INFO = `SELECT * FROM info;`;
+
+const SELECT_COURSES = `
+SELECT 
+    title,
+    e.name,
+    e.number
+FROM enrolements e
+RIGHT JOIN courses c ON c.course_id = e.course_id
+WHERE checked = 0
+LIMIT 2;;
+`;
+
+const SELECT_CONTACT = `
+SELECT 
+    name,
+    number
+FROM home_contact
+WHERE checked = 0
+LIMIT 2;
+`;
 
 exports.selectAllData = () => fetch(SELECT_ALL);
 
@@ -56,3 +77,7 @@ exports.getAbout = () => fetch(SELECT_ALL);
 exports.getTeachers = () => fetchAll(SELECT_TEACHERS);
 
 exports.getInfo = () => fetch(SELECT_INFO);
+
+exports.getCourses = () => fetchAll(SELECT_COURSES);
+
+exports.getContacts = () => fetchAll(SELECT_CONTACT);
