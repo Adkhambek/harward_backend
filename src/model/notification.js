@@ -2,6 +2,7 @@ const { fetchAll } = require("../lib/database");
 
 const SELECT_COURSES = `
 SELECT 
+    id,
     title,
     e.name,
     e.number
@@ -14,6 +15,7 @@ LIMIT 2;
 
 const SELECT_CONTACT = `
 SELECT 
+    home_contact_id as id,
     name,
     number
 FROM home_contact

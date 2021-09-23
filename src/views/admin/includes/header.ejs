@@ -11,22 +11,6 @@
 				</a>
 				<div class="dropdown-menu dropdown-menu-right">
 					<div class="nav-grid-row row">
-						<!-- <a href="dashboard.php" class="icon-menu-item col-4">
-							<i class="typcn typcn-home d-block"></i>
-							<span>Home</span>
-						</a>
-						<a href="#" class="icon-menu-item col-4">
-							<i class="typcn typcn-group-outline d-block"></i>
-							<span>Users</span>
-						</a>
-						<a href="#" class="icon-menu-item col-4">
-							<i class="typcn typcn-puzzle-outline d-block"></i>
-							<span>Components</span>
-						</a>
-						<a href="#" class="icon-menu-item col-4">
-							<i class="typcn typcn-chart-bar-outline d-block"></i>
-							<span>Profits</span>
-						</a> -->
 						<a href="/admin/password" class="icon-menu-item col-4">
 							<i class="typcn typcn-time d-block"></i>
 							<span>Password change</span>
@@ -38,71 +22,6 @@
 					</div>
 				</div>
 			</li>
-			<!--/.dropdown-->
-			<li class="nav-item dropdown notification">
-				<div class="dropdown-menu dropdown-menu-right">
-					<h6 class="notification-title">Notifications</h6>
-					<p class="notification-text">You have 3 unread notification</p>
-					<div class="notification-list">
-						<div class="media new">
-							<div class="img-user">
-								<img src="assets/dist/img/avatar.png" alt="" />
-							</div>
-							<div class="media-body">
-								<h6>
-									Congratulate <strong>Socrates Itumay</strong> for work
-									anniversaries
-								</h6>
-								<span>Mar 15 12:32pm</span>
-							</div>
-						</div>
-						<!--/.media -->
-						<div class="media new">
-							<div class="img-user online">
-								<img src="assets/dist/img/avatar.png" alt="" />
-							</div>
-							<div class="media-body">
-								<h6>
-									<strong>Joyce Chua</strong> just created a new blog post
-								</h6>
-								<span>Mar 13 04:16am</span>
-							</div>
-						</div>
-						<!--/.media -->
-						<div class="media">
-							<div class="img-user">
-								<img src="assets/dist/img/avatar.png" alt="" />
-							</div>
-							<div class="media-body">
-								<h6>
-									<strong>Althea Cabardo</strong> just created a new blog post
-								</h6>
-								<span>Mar 13 02:56am</span>
-							</div>
-						</div>
-						<!--/.media -->
-						<div class="media">
-							<div class="img-user">
-								<img src="assets/dist/img/avatar.png" alt="" />
-							</div>
-							<div class="media-body">
-								<h6>
-									<strong>Adrian Monino</strong> added new comment on your photo
-								</h6>
-								<span>Mar 12 10:40pm</span>
-							</div>
-						</div>
-						<!--/.media -->
-					</div>
-					<!--/.notification -->
-					<div class="dropdown-footer">
-						<a href="#">View All Notifications</a>
-					</div>
-				</div>
-				<!--/.dropdown-menu -->
-			</li>
-			<!--/.dropdown-->
-			
 			<li class="nav-item dropdown notification">
 				<a
 				class="nav-link dropdown-toggle badge-dot"
@@ -115,21 +34,14 @@
 				<h6 class="notification-title">Notifications</h6>
 				<p class="notification-text">You have <%= contact.length + course.length %> unread notification</p>
 				<div class="notification-list">
-					<!--/.media -->
 					<% for(let item of course) { %>
 						<a href="/admin/students/enrolement">
 							<div class="media new">
-								<!-- <div class="img-user online">
-									<img
-									src="https://www.gravatar.com/avatar/<?php echo md5(strtolower(trim($email))); ?>"
-									alt=""
-									/>
-								</div> -->
 								<div class="media-body">
-									<span>courses</span>
-									<h6><%= item.name %></h6>
-									<span><%= item.title %></span>
-									<a href="tel:+%<= course.number %>"><%= item.number %></a>
+									<span>Courses:</span>
+									<h6><%= item.title %></h6>
+									<span>Tel:</span>
+									<h6>+<%= item.number %></h6>
 								</div>
 							</div>
 						</a>
@@ -137,16 +49,11 @@
 					<% for(let item of contact) { %>
 						<a href="/admin/course/table">
 							<div class="media new">
-								<!-- <div class="img-user online">
-									<img
-									src="https://www.gravatar.com/avatar/<?php echo md5(strtolower(trim($email))); ?>"
-									alt=""
-									/>
-								</div> -->
 								<div class="media-body">
-									<span>contacts</span>
+									<span>Contacts:</span>
 									<h6><%= item.name %></h6>
-									<a href="tel:+%<= contact.number %>"><%= item.number %></a> 
+									<span>Tel:</span>
+									<h6>+<%= item.number %></h6> 
 								</div>
 							</div>
 						</a>
@@ -160,7 +67,7 @@
 				</div>
 			</div>
 			<!--/.dropdown-menu -->
-		</li>
+		    </li>
 		<!--/.dropdown-->
 	</ul>
 	<!--/.navbar nav-->
