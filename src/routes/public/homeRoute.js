@@ -3,14 +3,11 @@ const model = require("../../model/home");
 const {truncation, cleanText} = require("../../lib/textFormat");
 router.get("/", async (req, res) => {
 	const moreData = await model.getAbout();
-	moreData.body = cleanText(moreData.body);
-	moreData.body = truncation(moreData.body, 100);
 	const info = await model.getInfo(); 
 	let news = await model.getNews();
 	news = news.map(e => Object.assign(e, {body: truncation(cleanText( e.body), 150)}));
 	const courses = await model.getCourses();
-	let comments = await model.getComments();
-	comments = comments.map(e => Object.assign(e, {comment: truncation(cleanText( e.comment), 150)}));
+	const comments = await model.getComments();
 	res.render("public/index", { 
 		...moreData, 
 		info, 
