@@ -7,7 +7,8 @@ SELECT
     image,
     TO_CHAR(time, 'yyyy-MM-dd HH24:MI:SS') as time
 FROM news
-ORDER BY news_id DESC;
+ORDER BY news_id DESC
+LIMIT $1;
 `;
 
 const SELECT_IMAGE = `
@@ -84,7 +85,6 @@ WHERE news_id = $4
 
 const SELECT_INFO = `
 SELECT * FROM info;
-` 
 
 const PAGINATON = `
 SELECT 
@@ -102,7 +102,7 @@ SELECT COUNT(news_id)
 FROM news
 `
 
-exports.getNews = () => fetchAll(SELECT_NEWS);
+exports.getNews = (limit) => fetchAll(SELECT_NEWS, limit);
 
 exports.getOneNews = (id) => fetch(SELECT_ONE, id);
 

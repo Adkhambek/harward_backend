@@ -2,7 +2,7 @@ const router = require("express").Router();
 const model = require("../../model/course");
 
 router.get("/kurslar", async (req, res) => {
-	const courses = await model.getCourses();
+	const courses = await model.getCourseList();
 	const info = await model.getInfo();
 	res.render("public/kurslar", { courses, info });
 });

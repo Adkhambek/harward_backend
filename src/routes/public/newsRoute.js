@@ -5,7 +5,7 @@ const limit = require("../../config/keys").pageLimit
 router.get("/news", async (req, res) => {
 	const { count } = await model.countNews();
 	const totalPages = Math.ceil(count / limit);
-	const news = await model.getNews();
+	const news = await model.getNews(limit);
 	const info = await model.getInfo();
 	res.render("public/news", { 
 		news,

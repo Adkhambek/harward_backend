@@ -72,7 +72,7 @@ SET title = $1, teacher = $2, counts = $3, prise = $4, body = $5
 WHERE course_id = $6
 `; 
 
-exports.getCourses = () => fetchAll(SELECT_ALL);
+exports.getCourseList = () => fetchAll(SELECT_ALL);
 
 exports.getInfo = () => fetch(SELECT_INFO);
 

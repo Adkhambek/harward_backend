@@ -6,7 +6,7 @@ router.get("/aloqa", async (req, res) => {
   	res.render("public/aloqa", { 
 		info,  
 		successMessage: req.flash("success"),
-		errorMessage: req.flash("erorr"),
+		errorMessage: req.flash("error"),
 	});
 });
 
