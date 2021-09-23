@@ -106,6 +106,22 @@ WHERE checked = 0
 LIMIT 2;
 `;
 
+const PAGINATON = `
+SELECT 
+    news_id,
+    title,
+    image,
+    TO_CHAR(time, 'yyyy-MM-dd HH24:MI:SS') as time
+FROM news
+ORDER BY news_id DESC
+OFFSET $1 LIMIT $2;
+`;
+
+const COUNT_NEWS = `
+SELECT COUNT(news_id)
+FROM news
+`
+
 exports.getNews = () => fetchAll(SELECT_NEWS);
 
 exports.getOneNews = (id) => fetch(SELECT_ONE, id);
@@ -147,3 +163,7 @@ exports.getInfo = () => fetch(SELECT_INFO);
 exports.getCourses = () => fetchAll(SELECT_COURSES);
 
 exports.getContacts = () => fetchAll(SELECT_CONTACT);
+
+exports.pagination = (offset, limit) => fetchAll(PAGINATON, offset, limit);
+
+exports.countNews = () => fetch(COUNT_NEWS);

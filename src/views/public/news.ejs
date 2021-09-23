@@ -5,20 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harvard</title>
-    <link rel="stylesheet" href="sass/slick.css">
-    <link rel="stylesheet" href="sass/slick-theme.css">
-    <link rel="stylesheet" href="sass/owl.carousel.min.css">
-    <link rel="stylesheet" href="sass/owl.theme.default.css">
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="/sass/slick.css">
+    <link rel="stylesheet" href="/sass/slick-theme.css">
+    <link rel="stylesheet" href="/sass/owl.carousel.min.css">
+    <link rel="stylesheet" href="/sass/owl.theme.default.css">
+    <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="sass/style.css">
-    
-    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/aos.css">
+    <link rel="stylesheet" href="/sass/style.css">
 </head>
 <body>
-    
     <section class="news" id="news">
         <div class="container">
             <%- include("includes/header.ejs") %> 
@@ -26,29 +23,58 @@
         </div>
         <section class="asosiy">
             <div class="container">
-                <div class="row">
+                    <div class="row">
                     <div class="col-lg-12">
                         <h2>Yangiliklar</h2>
                     </div>
                     
-                </div>
+                    </div>
 
-                <br><br>
+                    <br><br>
                 
-                <div class="row" data-aos="fade-up">
+                    <div class="row" data-aos="fade-up">
                     <% for(let item of news) { %>
+                        <% if(section === "news") { %>
                         <div class="col-lg-3 col-md-4 col-sm-4 church">
-                            <img src="/images/<%= item.image %> " alt="Church">
+                            <img src="/images/yangiliklar/<%= item.image %> " alt="Church">
                             <div class="contents">
                                 <p><%= item.time %></p>
                                 <h2> <%= item.title %> </h2>
                                 <a href="/news/<%= item.news_id %>">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
+                        <% } else if(section === "pagination") {%>
+                            <div class="col-lg-3 col-md-4 col-sm-4 church">
+                                <img src="/images/yangiliklar/<%= item.image %> " alt="Church">
+                                <div class="contents">
+                                    <p><%= item.time %></p>
+                                    <h2> <%= item.title %> </h2>
+                                    <a href="/news/<%= item.news_id %>">Davomi <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        <% } %>   
                     <% } %>
                     </div>
-                    
-                </div>
+                    <nav class="mb-5">
+                        <ul class="pagination">
+                          <li class="page-item <%if(page === 1) {%> disabled <%}%>">
+                        <a class="page-link" href="/news/page/<%= page - 1%>" tabindex="-1" aria-disabled="true">
+                            <span class="fa fa-chevron-left"></span>
+                        </a>
+                          </li>
+                          <% for (let i = 1; i <= pages; i++) {%>
+                          <li class="page-item <%if(page === i) {%> active <%}%>" aria-current="page">
+                            <a class="page-link" href="/news/page/<%= i%>"><%=i%></a>
+                          </li>
+                          <%}%>
+                          <li class="page-item <%if(page === pages) {%> disabled <%}%>">
+                            <a class="page-link" href="#">
+                                <span class="fa fa-chevron-right"></span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>   
+            </div>
                 
             </section>
             
@@ -65,7 +91,7 @@
         <script src="/js/bootstrap.min.js"></script>
         <script src="/js/owl.carousel.min.js"></script>
         <script src="/js/slick.js"></script>
-        <script src="css/aos.js"></script>
+        <script src="/css/aos.js"></script>
         <script src="/js/main.js"></script>
     </body>
     </html>
