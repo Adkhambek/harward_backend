@@ -13,7 +13,8 @@ router.get("/info", redirect, breadcrumb, async (req, res) => {
 		successMessage: req.flash("success"),
 		breadcrumb: req.breadcrumb,
 		course,
-		contact
+		contact,
+		page: "info"
 	});
 });
 

@@ -16,4 +16,12 @@ INSERT INTO about (
     5
 );
 
+INSERT INTO info (
+    mail,
+    number1,
+    number2,
+    address
+) VALUES 
+('Harvard@gmail.com', '+998941756227', '+998941756227', 'Mirzo Ulug''bek ko''chasi 70-uy');
+
  
