@@ -56,8 +56,10 @@ router.get("/course/delete/:id", redirect, async (req, res) => {
 
 router.get("/course/update/:id", redirect, async (req, res) => {
     const courseId = req.params.id * 1;
+    const course = await notification.getCourses();
+	const contact = await notification.getContacts();
     const data = await model.getCourse(courseId);
-    res.render("admin/courseUpdate", { ...data, successMessage: req.flash("success") });
+    res.render("admin/courseUpdate", { ...data, successMessage: req.flash("success"), course, contact });
 });
 
 router.post("/course/update/:id", redirect, multer("images/kurslar"), async (req, res) => {

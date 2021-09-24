@@ -57,7 +57,9 @@ router.get("/news/delete/:id", redirect, async (req, res) => {
 router.get("/news/update/:id", redirect, async (req, res) => {
     const newsId = req.params.id * 1;
     const data = await model.getOneNews(newsId);
-    res.render("admin/newsUpdate", { ...data, successMessage: req.flash("success") });
+    const course = await notification.getCourses();
+	const contact = await notification.getContacts();
+    res.render("admin/newsUpdate", { ...data, successMessage: req.flash("success"), course, contact });
 });
 
 router.post("/news/update/:id", redirect, multer("images/yangiliklar"), async (req, res) => {
